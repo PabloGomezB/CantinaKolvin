@@ -1,0 +1,38 @@
+form {
+    height: 500px;
+}
+
+h1{
+    text-align: center;
+}
+
+#usuario{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#contra{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#recordar{
+    margin-left: 43%;
+    margin-bottom: 50px;
+}
+
+#enviar{
+    text-align: center;
+}
+
+.usuPass{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#login{
+    width: 255px;
+    height: 30px;
+    border-radius: 5px;
+}
