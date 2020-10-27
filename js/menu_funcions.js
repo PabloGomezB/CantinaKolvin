@@ -55,6 +55,7 @@ function elementsBuilder() {
         liElement.onclick = function () {
             comandaArray.push(element);
             anadirElementoSidebar(element);
+            
         };
         ulElement.appendChild(liElement);
 
@@ -70,13 +71,16 @@ function elementsBuilder() {
 function anadirElementoSidebar(element) {
     let sidebarElement = document.querySelector("#mySidebar");
     sidebarElement.insertAdjacentHTML("beforeend","<div>"+ element.nombre +"</div><br>");
+    let comandaArrayElement = document.querySelector("#arrayComanda"); 
+    comandaArrayElement.setAttribute("value",prepareJsonToPhp());
+     prepareJsonToPhp();
 }
 
-function comprar() {
+function prepareJsonToPhp() {
+    return JSON.stringify(comandaArray); 
 
 }
 
 window.onload = function () {
     elementsBuilder();
-    comprar();
 }
