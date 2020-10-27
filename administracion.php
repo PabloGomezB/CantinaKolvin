@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/administracion.css">
 </head>
 <body>
-    <form action="" method="POST">
+    <form action="login.php" method="POST">
         <h1>Cantina Kolvin</h1>
         <div id="usuario">
             <input type="text" name="usuario" placeholder="Usuario" class="usuPass">
