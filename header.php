@@ -6,7 +6,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="administracion.php">Login<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
@@ -16,7 +16,7 @@
         </li>
         </ul>
     </div>
-    <form action="administracion.php" method="post">
-        <input style="margin-left: 92%; width: 150px; border-radius: 10px; padding: 20px;" type="submit" name="login" value="Login"/>
-    </form>
+    <!-- <form action="administracion.php" method="post">
+        <input style="width: 150px; border-radius: 10px; padding: 20px;" type="submit" name="login" value="Login"/>
+    </form> -->
 </nav>
