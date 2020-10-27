@@ -39,6 +39,7 @@
     ?>
 
     <!-- Div del banner -->
+    <header><?php include("header.php"); ?></header>
     <div id="header">
         <h1 style="font-size:80px">Bienvenido</h1>
         <h1>Cantina Kolvin</h1>
