@@ -1,16 +1,22 @@
-<html>
+<?php
+    ob_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <link rel="stylesheet" href="css/menu.css">
-    </style>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <?php include("includes.inc") ?>
 
-    <script type="text/javascript" src="js/menu_funcions.js"></script>
+        <link rel="stylesheet" href="css/menu.css">
+        <script type="text/javascript" src="js/menu_funcions.js"></script>
 
-</head>
+    </head>
 
 <body>
 
+<!-- HEADER -->
     <header style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("header.php"); ?>
@@ -29,7 +35,12 @@
         <div id="items"></div>
     </div>
 
-    <?php include("footer.php"); ?>
+<!-- FOOTER -->
+    <footer>
+
+            <?php include("footer.php"); ?>
+
+        </footer>
 </body>
 
 </html>

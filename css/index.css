@@ -1,16 +1,10 @@
-/* body, html {
-    height: 100%;
-    margin: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-*/
 #headerDiv {
     margin-top: 90px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/index/banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 200px;
+    height: 500px;
 }
 
 /* header {
@@ -19,13 +13,7 @@
     text-align: center;
     color: rgb(167, 14, 14);
 }
-
-footer {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-} */
+*/
 
 h1 {
     color: white;

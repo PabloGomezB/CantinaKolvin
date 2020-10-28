@@ -36,15 +36,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <?php include("includes.inc") ?>
         
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="./css/index.css">
-
+        <link rel="stylesheet" href="css/index.css">
         <title>Bienvenido</title>
 
     </head>
     <body>
+<!-- HEADER -->
         <header>
         <!-- <div style="position: fixed; width: 100%"> -->
                 <?php include("header.php"); ?>
@@ -61,6 +62,37 @@
             <!-- </div> -->
         </header>
 
-        <?php include("footer.php"); ?>
+
+        <section class="features-icons text-center" style="margin-top: 60px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="img/index/quality.png" width="150" height="150">
+                        <h3>La mejor calidad</h3>
+                        <p class="lead mb-0">Materia prima de la buena para nuestros alumnos!</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="img/index/broke.png" width="150" height="150">
+                        <h3>Los mejores precios</h3>
+                        <p class="lead mb-0">Sabemos que no tenéis ni un duro...<br>Por eso estamos que lo regalamos todo ;)</p>
+                    </div>
+                        
+                    <div class="col-lg-4">
+                        <img src="img/index/covid-free.png" width="150" height="150">
+                        <h3>Coronavirus free</h3>
+                        <p class="lead mb-0">Aquí puedes quitarte la mascarilla.<br>Si no hay mascarilla, es que no hay virus!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<!-- FOOTER -->
+        <footer>
+
+            <?php include("footer.php"); ?>
+
+        </footer>
+        
     </body>
 </html>
