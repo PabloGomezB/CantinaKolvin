@@ -2,8 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <script type="text/javascript" src="js/menu_funcions.js"></script>
 
@@ -11,7 +11,7 @@
 
 <body>
 
-    <header>
+    <header style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("header.php"); ?>
 
@@ -31,7 +31,6 @@
     </div>
 
     <?php include("footer.php"); ?>
-
 </body>
 
 </html>

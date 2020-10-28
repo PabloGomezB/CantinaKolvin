@@ -52,6 +52,7 @@ function elementsBuilder() {
     for (let i = 0; i < array_items.length; i++) {
         const element = array_items[i];
         let liElement = document.createElement("li");
+        liElement.classList.add("listaMenu");
         liElement.onclick = function () {
             comandaArray.push(element);
             anadirElementoSidebar(element);
