@@ -74,11 +74,13 @@ input[type=submit]{
 
 
 /* menu.php ************************************************************************************/
-.lista_articulos {
+
+
+/* .lista_articulos {
     list-style: none;
-    /* display: grid;
+    display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%; */
+    grid-template-rows: 33% 33% 33%;
 }
 
 .sidebar {
@@ -86,12 +88,12 @@ input[type=submit]{
     height: 100%;
     width: 200px;
     position: fixed;
-    /* z-index: 1; */
+    z-index: 1;
     top: 0;
     right: 0;
     background-color: #F5F2F5;
-    /* overflow-x: hidden; */
-    /* padding-top: 60px; */
+    overflow-x: hidden; 
+     padding-top: 60px; 
 }
 
 #no_bar {
@@ -105,7 +107,9 @@ input[type=submit]{
 #comprar{
     position: fixed;
     bottom: 0;
-}
+} */
+
+
 /*****************************************************************************************************************************************/
 
 
