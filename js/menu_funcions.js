@@ -3,42 +3,42 @@ let array_items = [{
     "descripcion": "Esto es un cafe que mas quieres",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/cafe.jpg"
+    "url_image": "img/menu/cafe.jpg"
 },
 {
     "nombre": "bocadillo de queso",
     "descripcion": "Dioooos que hambre.",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/queso.jpg"
+    "url_image": "img/menu/queso.jpg"
 },
 {
     "nombre": "cruasan",
     "descripcion": "Mmm un cruasan to rico.",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/cruasan.jpg"
+    "url_image": "img/menu/cruasan.jpg"
 },
 {
     "nombre": "ensaimada",
     "descripcion": "Mmm un ensaimada to rico.",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/ensaimada.jpg"
+    "url_image": "img/menu/ensaimada.jpg"
 },
 {
     "nombre": "bocadillo de fuet",
     "descripcion": "Mmm un fuet to rico.",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/fuet.jpg"
+    "url_image": "img/menu/fuet.jpg"
 },
 {
     "nombre": "Monster",
     "descripcion": "Mmm un monster to rico.",
     "precio": 1,
     // "cantidad": 0,
-    "url_image": "img/monster.jpg"
+    "url_image": "img/menu/monster.jpg"
 }
 ];
 
