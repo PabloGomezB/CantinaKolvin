@@ -105,7 +105,7 @@ window.onload = function () {
     }
 
     function prepareJsonToPhp() {
-        let arrayComanda =[];
+        let arrayComanda = new Array();
         carrito.forEach(item => {
             let itemDelArray_items = array_items.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == item;
@@ -122,7 +122,7 @@ window.onload = function () {
         let carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach(function (item, indice) {
-            // Obtenemos el item que necesitamos de la variable base de datos
+            // Obtenemos el item que necesitamos de la variable array_items
             let itemDelArray_items = array_items.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == item;
             });

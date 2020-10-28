@@ -29,7 +29,9 @@
             // print_r($arrayObject);
 
             foreach ($arrayObject as $object => $value) {
-                echo "object: ".$value->nombre;
+                print_r($object."<br>");
+                echo "nombre: ".$value->nombre;
+                echo "<br>";
                 echo "<br>";
                 // echo "value: ".$value;
                 // echo "<br>";
