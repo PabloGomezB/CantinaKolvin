@@ -106,11 +106,13 @@ window.onload = function () {
 
     function prepareJsonToPhp() {
         let arrayComanda = new Array();
+
         carrito.forEach(item => {
+
             let itemDelArray_items = array_items.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == item;
             });
-            arrayComanda.push(itemDelArray_items);
+            arrayComanda.push(itemDelArray_items[0]);
         });
         return JSON.stringify(arrayComanda); 
     }
