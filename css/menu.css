@@ -7,6 +7,7 @@ grid-template-rows: 33% 33% 33%; */
 }
 
 .sidebar {
+    margin-top: 80px;
     height: 100%;
     width: 200px;
     position: fixed;
@@ -22,6 +23,15 @@ grid-template-rows: 33% 33% 33%; */
     padding: 16px;
 }
 
+.listaMenu {
+    margin: 100px;
+}
+
+#comprar{
+    position: fixed;
+    bottom: 0;
+}
+
 li {
     margin: 100px;
 }
@@ -30,3 +40,25 @@ li {
     position: fixed;
     bottom: 0;
 }
+
+#titol{
+    /* text-align: center; */
+}
+
+header{
+    margin-bottom: 80px;
+}
+
+#comprar{
+    margin: auto;
+}
+
+#tituloCesta{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* #listaCesta{
+
+} */

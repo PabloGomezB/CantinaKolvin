@@ -70,7 +70,7 @@ function elementsBuilder() {
 
 function anadirElementoSidebar(element) {
     let sidebarElement = document.querySelector("#mySidebar");
-    sidebarElement.insertAdjacentHTML("beforeend","<div>"+ element.nombre +"</div><br>");
+    sidebarElement.insertAdjacentHTML("beforeend","<div>"+ element.nombre +"</div><button>+</button><button>-</button><br>");
     let comandaArrayElement = document.querySelector("#arrayComanda"); 
     comandaArrayElement.setAttribute("value",prepareJsonToPhp());
      prepareJsonToPhp();
@@ -81,6 +81,9 @@ function prepareJsonToPhp() {
 
 }
 
+
+
 window.onload = function () {
     elementsBuilder();
+
 }
