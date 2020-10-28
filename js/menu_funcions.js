@@ -1,46 +1,46 @@
 window.onload = function () {
 
     let array_items = [{
-        id: 1,
-        nombre: "cafe",
-        descripcion: "Esto es un cafe que mas quieres",
-        precio: 1,
-        url_image: "img/cafe.jpg"
+        "id": 1,
+        "nombre": "cafe",
+        "descripcion": "Esto es un cafe que mas quieres",
+        "precio": 1,
+        "url_image": "img/cafe.jpg"
     },
     {
-        id: 2,
-        nombre: "bocadillo de queso",
-        descripcion: "Dioooos que hambre.",
-        precio: 2,
-        url_image: "img/queso.jpg"
+        "id": 2,
+        "nombre": "bocadillo de queso",
+        "descripcion": "Dioooos que hambre.",
+        "precio": 2,
+        "url_image": "img/queso.jpg"
     },
     {
-        id: 3,
-        nombre: "cruasan",
-        descripcion: "Mmm un cruasan to rico.",
-        precio: 3,
-        url_image: "img/cruasan.jpg"
+        "id": 3,
+        "nombre": "cruasan",
+        "descripcion": "Mmm un cruasan to rico.",
+        "precio": 3,
+        "url_image": "img/cruasan.jpg"
     },
     {
-        id: 4,
-        nombre: "ensaimada",
-        descripcion: "Mmm un ensaimada to rico.",
-        precio: 4,
-        url_image: "img/ensaimada.jpg"
+        "id": 4,
+        "nombre": "ensaimada",
+        "descripcion": "Mmm un ensaimada to rico.",
+        "precio": 4,
+        "url_image": "img/ensaimada.jpg"
     },
     {
-        id: 5,
-        nombre: "bocadillo de fuet",
-        descripcion: "Mmm un fuet to rico.",
-        precio: 5,
-        url_image: "img/fuet.jpg"
+        "id": 5,
+        "nombre": "bocadillo de fuet",
+        "descripcion": "Mmm un fuet to rico.",
+        "precio": 5,
+        "url_image": "img/fuet.jpg"
     },
     {
-        id: 6,
-        nombre: "Monster",
-        descripcion: "Mmm un monster to rico.",
-        precio: 6,
-        url_image: "img/monster.jpg"
+        "id": 6,
+        "nombre": "Monster",
+        "descripcion": "Mmm un monster to rico.",
+        "precio": 6,
+        "url_image": "img/monster.jpg"
     }
     ];
 
@@ -80,7 +80,7 @@ window.onload = function () {
             buttonPlusElement.classList.add('btn', 'btn-primary');
             buttonPlusElement.textContent = '+';
             buttonPlusElement.setAttribute('marcador', item.id);
-            buttonPlusElement.addEventListener('click', anadirCarrito(item));
+            buttonPlusElement.addEventListener('click', anadirCarrito);
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
@@ -92,21 +92,27 @@ window.onload = function () {
 
     }
 
-    function anadirCarrito(item) {
+    function anadirCarrito() {
         //Elemento que hemos clickado se añade en el array carrito
         carrito.push(this.getAttribute('marcador'));
-        comandaArray.push(item)
         //Renderizamos carrito
         renderizarCarrito();
         //Calculamos total
         calcularTotal();
-
+        //Modificamos el valor del array que se va a enviar a finalizacion.php
         comandaElement.setAttribute("value", prepareJsonToPhp());
         console.log(prepareJsonToPhp());
     }
 
     function prepareJsonToPhp() {
-        return JSON.stringify(carrito); 
+        let arrayComanda =[];
+        carrito.forEach(item => {
+            let itemDelArray_items = array_items.filter(function (item_of_array_items) {
+                return item_of_array_items['id'] == item;
+            });
+            arrayComanda.push(itemDelArray_items);
+        });
+        return JSON.stringify(arrayComanda); 
     }
 
     function renderizarCarrito() {
