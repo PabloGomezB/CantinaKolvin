@@ -5,42 +5,42 @@ window.onload = function () {
         "nombre": "cafe",
         "descripcion": "Esto es un cafe que mas quieres",
         "precio": 1,
-        "url_image": "img/cafe.jpg"
+        "url_image": "img/menu/cafe.jpg"
     },
     {
         "id": 2,
         "nombre": "bocadillo de queso",
         "descripcion": "Dioooos que hambre.",
         "precio": 2,
-        "url_image": "img/queso.jpg"
+        "url_image": "img/menu/queso.jpg"
     },
     {
         "id": 3,
         "nombre": "cruasan",
         "descripcion": "Mmm un cruasan to rico.",
         "precio": 3,
-        "url_image": "img/cruasan.jpg"
+        "url_image": "img/menu/cruasan.jpg"
     },
     {
         "id": 4,
         "nombre": "ensaimada",
         "descripcion": "Mmm un ensaimada to rico.",
         "precio": 4,
-        "url_image": "img/ensaimada.jpg"
+        "url_image": "img/menu/ensaimada.jpg"
     },
     {
         "id": 5,
         "nombre": "bocadillo de fuet",
         "descripcion": "Mmm un fuet to rico.",
         "precio": 5,
-        "url_image": "img/fuet.jpg"
+        "url_image": "img/menu/fuet.jpg"
     },
     {
         "id": 6,
         "nombre": "Monster",
         "descripcion": "Mmm un monster to rico.",
         "precio": 6,
-        "url_image": "img/monster.jpg"
+        "url_image": "img/menu/monster.jpg"
     }
     ];
 
