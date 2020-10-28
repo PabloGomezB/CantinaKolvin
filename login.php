@@ -8,15 +8,14 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Pantalla de login</title>
 
-    <?php include("includes.inc") ?>
+    <?php include("include/includes.inc") ?>
 
-    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
 <!-- HEADER -->
     <header>
-        <?php include("header.php"); ?>
+        <?php include("include/header.php"); ?>
     </header>
 
     <?php
@@ -40,7 +39,7 @@
 
 <!-- HEADER -->
     <footer>
-        <?php include("footer.php"); ?>
+        <?php include("include/footer.php"); ?>
     </footer>
 </body>
 </html>

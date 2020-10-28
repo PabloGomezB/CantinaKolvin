@@ -37,10 +37,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <?php include("includes.inc") ?>
-        
+        <?php include("include/includes.inc") ?>
 
-        <link rel="stylesheet" href="css/index.css">
         <title>Bienvenido</title>
 
     </head>
@@ -48,7 +46,7 @@
 <!-- HEADER -->
         <header>
         <!-- <div style="position: fixed; width: 100%"> -->
-                <?php include("header.php"); ?>
+                <?php include("include/header.php"); ?>
             
                 <!-- Div del banner -->
                 <div id="headerDiv">
@@ -90,7 +88,7 @@
 <!-- FOOTER -->
         <footer>
 
-            <?php include("footer.php"); ?>
+            <?php include("include/footer.php"); ?>
 
         </footer>
         

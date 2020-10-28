@@ -5,11 +5,6 @@ body, html {
     position: relative;
 }
 
-.centrar{
-    margin-left: auto;
-    margin-right: auto;
-}
-
 footer {
     display: flex;
     background-color: #e3f2fd;
@@ -20,3 +15,157 @@ footer {
 header {
     margin-bottom: 90px;
 }
+
+.centrar{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*****************************************************************************************************************************************/
+
+
+
+
+/* index.php ************************************************************************************/
+#headerDiv {
+    margin-top: 90px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/index/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+
+h1 {
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+/*
+a#entrar {
+    display: block;
+    text-align: center;
+    width: 150px;
+    margin: 0px auto;
+    padding: 20px;
+    color: white;
+    text-transform: uppercase;
+    font-family: Arial;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+*/
+input[type=submit]{
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin: 0px auto;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: Arial;
+    border: 1px solid #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+/*****************************************************************************************************************************************/
+
+
+
+
+
+/* menu.php ************************************************************************************/
+.lista_articulos {
+    list-style: none;
+    /* display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%; */
+}
+
+.sidebar {
+    margin-top: 80px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    /* z-index: 1; */
+    top: 0;
+    right: 0;
+    background-color: #F5F2F5;
+    /* overflow-x: hidden; */
+    /* padding-top: 60px; */
+}
+
+#no_bar {
+    padding: 16px;
+}
+
+.listaMenu {
+    margin: 100px;
+}
+
+#comprar{
+    position: fixed;
+    bottom: 0;
+}
+/*****************************************************************************************************************************************/
+
+
+/* administracion.php ************************************************************************************/
+#usuario{
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#contra{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#recordar{
+    margin-left: 43%;
+    margin-bottom: 50px;
+}
+
+#enviar{
+    text-align: center;
+}
+
+.usuPass{
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+#login{
+    width: 255px;
+    height: 30px;
+    border-radius: 5px;
+}
+/*****************************************************************************************************************************************/
+
+
+
+/* finalizacion.php ************************************************************************************/
+.buttonFinalizacion {
+    border: none;
+    color: white;
+    padding: 10px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 26px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttonFinalizacionAzul {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+  
+.buttonFinalizacionAzul:hover {
+    background-color: #008CBA;
+    color: white;
+}
+/*****************************************************************************************************************************************/

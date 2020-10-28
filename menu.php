@@ -7,9 +7,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <?php include("includes.inc") ?>
+        <?php include("include/includes.inc") ?>
 
-        <link rel="stylesheet" href="css/menu.css">
         <script type="text/javascript" src="js/menu_funcions.js"></script>
 
     </head>
@@ -19,7 +18,7 @@
 <!-- HEADER -->
     <header style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
-        <?php include("header.php"); ?>
+        <?php include("include/header.php"); ?>
 
     </header>
 
@@ -38,7 +37,7 @@
 <!-- FOOTER -->
     <footer>
 
-            <?php include("footer.php"); ?>
+            <?php include("include/footer.php"); ?>
 
         </footer>
 </body>

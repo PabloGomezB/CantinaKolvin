@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Pantalla de finalizacion</title>
 
-    <?php include("includes.inc") ?>
+    <?php include("include/includes.inc") ?>
+    <script type="text/javascript" src="js/finalizacion.js"></script>
 
-    <link rel="stylesheet" href="css/finalizacion.css">
 </head>
 <body>
 
 <!-- HEADER -->
     <header>
-        <?php include("header.php"); ?>
+        <?php include("include/header.php"); ?>
     </header>
 
     <h1>FINALIZACION</h1>
@@ -37,9 +37,13 @@
         }
     ?>
 
+    <br>
+    <br>
+    <button class="buttonFinalizacion buttonFinalizacionAzul" onclick="">Confirmar</button>
+
 <!-- HEADER -->
     <footer>
-        <?php include("footer.php"); ?>
+        <?php include("include/footer.php"); ?>
     </footer>
 </body>
 </html>
