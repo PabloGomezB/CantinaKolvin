@@ -35,12 +35,14 @@
                 // echo "value: ".$value;
                 // echo "<br>";
             }
+
         }
+
     ?>
 
     <br>
     <br>
-    <button class="buttonFinalizacion buttonFinalizacionAzul" onclick="">Confirmar</button>
+    <button id="btnConfirmar" class="buttonFinalizacion buttonFinalizacionAzul">Confirmar</button>
 
 <!-- HEADER -->
     <footer>
