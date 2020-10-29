@@ -1,13 +1,24 @@
+<?php
+    ob_start();
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Pantalla de administración</title>
-    <link rel="stylesheet" href="css/administracion.css">
+    <title>Pantalla de administracion</title>
+
+    <?php include("include/includes.inc") ?>
+
 </head>
 <body>
-    <form action="login.php" method="POST">
+
+<!-- HEADER -->
+    <header>
+        <?php include("include/header.php"); ?>
+    </header>
+
+    <form action="login.php" method="POST" style="height: 500px;">
         <h1>Cantina Kolvin</h1>
         <div id="usuario">
             <input type="text" name="usuario" placeholder="Usuario" class="usuPass">
@@ -22,5 +33,11 @@
             <input type="submit" value="Iniciar sesión" id="login">
         </div>
     </form>
+
+
+<!-- HEADER -->
+    <footer>
+        <?php include("include/footer.php"); ?>
+    </footer>
 </body>
 </html>
