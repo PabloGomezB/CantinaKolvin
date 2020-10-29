@@ -31,10 +31,7 @@
                 <hr>
                 <p class="text-right">Total: <span id="total"></span></p>
                 <button id="botonVaciar" class="btn btn-danger">Vaciar</button>
-                <form method="post" action="finalizacion.php">
-                    <input type="hidden" name="arrayComanda" id="arrayComanda" value="">
-                    <input type="submit" id="comprar" class="btn btn-danger" value="Comprar">
-                </form>
+                <button id="comprar" class="btn btn-danger">Comprar</button>
             </aside>
         </div>
     </div>

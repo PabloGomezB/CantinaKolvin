@@ -48,11 +48,11 @@ window.onload = function () {
     let carrito = [];
     let total = 0;
 
-    let mainElement = document.querySelector("#items");
+    let itemsElement = document.querySelector("#items");
     let totalElement = document.querySelector('#total');
     let carritoElement = document.querySelector('#carrito');
     let botonVaciar = document.querySelector('#botonVaciar');
-    let comandaElement = document.querySelector("#arrayComanda");
+    let comprarElement = document.querySelector("#comprar");
 
     function renderItems(params) {
 
@@ -87,7 +87,7 @@ window.onload = function () {
             divCardBodyElement.appendChild(priceElement);
             divCardBodyElement.appendChild(buttonPlusElement);
             divElement.appendChild(divCardBodyElement);
-            mainElement.appendChild(divElement);
+            itemsElement.appendChild(divElement);
         });
 
     }
@@ -99,22 +99,6 @@ window.onload = function () {
         renderizarCarrito();
         //Calculamos total
         calcularTotal();
-        //Modificamos el valor del array que se va a enviar a finalizacion.php
-        comandaElement.setAttribute("value", prepareJsonToPhp());
-        console.log(prepareJsonToPhp());
-    }
-
-    function prepareJsonToPhp() {
-        let arrayComanda = new Array();
-
-        carrito.forEach(item => {
-
-            let itemDelArray_items = array_items.filter(function (item_of_array_items) {
-                return item_of_array_items['id'] == item;
-            });
-            arrayComanda.push(itemDelArray_items[0]);
-        });
-        return JSON.stringify(arrayComanda); 
     }
 
     function renderizarCarrito() {
@@ -190,6 +174,29 @@ window.onload = function () {
         calcularTotal();
     }
 
+    function prepareJson() {
+        let arrayComanda = new Array();
+
+        carrito.forEach(item => {
+
+            let itemDelArray_items = array_items.filter(function (item_of_array_items) {
+                return item_of_array_items['id'] == item;
+            });
+            arrayComanda.push(itemDelArray_items[0]);
+        });
+        return JSON.stringify(arrayComanda); 
+    }
+
+
+
+    comprarElement.addEventListener('click',function () {
+        if (carrito.length == 0) {
+            alert("ERROR. Añade al menos un item a tu compra.");
+        } else {
+            localStorage.setItem("carrito",prepareJson());
+            window.location.href = "finalizacion.php";
+        }
+    });
 
     botonVaciar.addEventListener('click', vaciarCarrito);
 
