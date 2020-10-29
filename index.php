@@ -2,27 +2,14 @@
     ob_start();
 ?>
 <?php
-    //foreach ($_COOKIE['fecha'] as $key => $value) {
-    //    echo $key .' - ' . $value;
-    //}
 
     // Este script se ejecuta cuando el user hace click en el boton entrar
-    // Si el usuario ha clickado en el boton "entrar" se ejecuta la funcion check()
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])){
-        check();
-    }
-
     // Esta funcion revisa si hay una cookie con el timepo ya creada
     // Si existe redirige a la pagina error.php
     // Si no existe la crea para las proximas 24h y redirige al menu.php
-    function check(){
-        $fecha = date('d-m-Y');
-        $hora = date (' H:i');
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])){
         if (!isset($_COOKIE['fecha'])) {
-            // setcookie("fecha[dia]", $fecha, time() + 24 * 3600);
-            // setcookie('fecha[hora]', $hora, time() + 24 * 3600);
-            // setcookie("fecha[dia]", $fecha, time() + 3);
-            // setcookie('fecha[hora]', $hora, time() + 3);
+
             header("Location: ./menu.php");
             die();
         }else{
@@ -30,6 +17,7 @@
             die();
         }
     }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -53,7 +41,7 @@
                     <h1 class="h1Index" style="font-size:60px">Bienvenido</h1>
                     <h1 class="h1Index" style="font-size:40px">Cantina Kolvin</h1>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-                        <input type="submit" name="entrar" value="Entrar"/>
+                        <input id="inputIndex" type="submit" name="entrar" value="Entrar"/>
                     </form>
                     <!--<a href="./menu.php" id="entrar">Entrar</a>-->
                 </div>

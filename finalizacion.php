@@ -5,7 +5,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de finalizacion</title>
 
     <?php include("include/includes.inc") ?>
@@ -42,7 +42,10 @@
 
     <br>
     <br>
-    <button id="btnConfirmar" class="buttonFinalizacion buttonFinalizacionAzul">Confirmar</button>
+    <form action="confirmacion.php" method="POST">
+        <input id="inputHidden" name="inputHidden" type="hidden" value="">
+        <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
+    </form>
 
 <!-- HEADER -->
     <footer>
