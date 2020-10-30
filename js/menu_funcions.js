@@ -2,47 +2,98 @@ window.onload = function () {
 
     let array_items = [{
         "id": 1,
-        "nombre": "cafe",
-        "descripcion": "Esto es un cafe que mas quieres",
+        "nombre": "Café",
+        "descripcion": "",
         "precio": 1,
-        "url_image": "img/menu/cafe.jpg"
+        "url_image": "img/menu/cafe.jpg",
+        "hora": "hora_pati"
     },
     {
         "id": 2,
-        "nombre": "bocadillo de queso",
-        "descripcion": "Dioooos que hambre.",
-        "precio": 2,
-        "url_image": "img/menu/queso.jpg"
+        "nombre": "Croissant",
+        "descripcion": "",
+        "precio": 1,
+        "url_image": "img/menu/croissant.jpg",
+        "hora": "hora_pati"
     },
     {
         "id": 3,
-        "nombre": "cruasan",
-        "descripcion": "Mmm un cruasan to rico.",
-        "precio": 3,
-        "url_image": "img/menu/cruasan.jpg"
+        "nombre": "Caracola",
+        "descripcion": "",
+        "precio": 1,
+        "url_image": "img/menu/caracola.jpg",
+        "hora": "hora_pati"
     },
     {
         "id": 4,
-        "nombre": "ensaimada",
-        "descripcion": "Mmm un ensaimada to rico.",
-        "precio": 4,
-        "url_image": "img/menu/ensaimada.jpg"
+        "nombre": "Pizza",
+        "descripcion": "",
+        "precio": 1,
+        "url_image": "img/menu/pizza.jpg",
+        "hora": "hora_pati"
     },
     {
         "id": 5,
-        "nombre": "bocadillo de fuet",
-        "descripcion": "Mmm un fuet to rico.",
-        "precio": 5,
-        "url_image": "img/menu/fuet.jpg"
+        "nombre": "Monster",
+        "descripcion": "",
+        "precio": 2,
+        "url_image": "img/menu/monster.jpg",
+        "hora": "hora_pati"
     },
     {
         "id": 6,
-        "nombre": "Monster",
-        "descripcion": "Mmm un monster to rico.",
-        "precio": 6,
-        "url_image": "img/menu/monster.jpg"
+        "nombre": "Ensaimada",
+        "descripcion": "",
+        "precio": 1,
+        "url_image": "img/menu/ensaimada.jpg",
+        "hora": "hora_pati"
+    },
+    {
+        "id": 7,
+        "nombre": "Sopa",
+        "descripcion": "Esto es un cafe que mas quieres",
+        "precio": 1,
+        "url_image": "img/menu/sopa.jpg",
+        "hora": "hora_dinar"
+    },
+    {
+        "id": 8,
+        "nombre": "Macarrones",
+        "descripcion": "Esto es un cafe que mas quieres",
+        "precio": 2,
+        "url_image": "img/menu/macarrones.jpg",
+        "hora": "hora_dinar"
+    },
+    {
+        "id": 9,
+        "nombre": "Espaguetis carbonara",
+        "descripcion": "Esto es un cafe que mas quieres",
+        "precio": 1,
+        "url_image": "img/menu/espaguetis_carbonara.jpg",
+        "hora": "hora_dinar"
+    },
+    {
+        "id": 10,
+        "nombre": "Escudella",
+        "descripcion": "Esto es un cafe que mas quieres",
+        "precio": 1,
+        "url_image": "img/menu/escudella.jpg",
+        "hora": "hora_dinar"
     }
     ];
+
+
+    let menu_array = [];
+    let fechaAhora = new Date();
+    let fechaCambio = new Date();
+    fechaCambio.setHours(11);
+    fechaCambio.setMinutes(30);
+
+    if (fechaAhora < fechaCambio) {
+        menu_array = array_items.filter(item => item.hora == "hora_pati");
+    } else {
+        menu_array = array_items.filter(item => item.hora == "hora_dinar");;
+    }
 
 
     let carrito = [];
@@ -56,7 +107,7 @@ window.onload = function () {
 
     function renderItems(params) {
 
-        array_items.forEach(item => {   //Por cada item en el array
+        menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
             let divElement = document.createElement('div');
             divElement.classList.add('card', 'col-sm-4');
@@ -109,7 +160,7 @@ window.onload = function () {
         // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach(function (item, indice) {
             // Obtenemos el item que necesitamos de la variable array_items
-            let itemDelArray_items = array_items.filter(function (item_of_array_items) {
+            let itemDelArray_items = menu_array.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == item;
             });
             // Cuenta el número de veces que se repite el producto
@@ -153,7 +204,7 @@ window.onload = function () {
         // Recorremos el array del carrito
         carrito.forEach(itemId => {
             //Filtramos en array_items el que tenga de id lo que hay carrito (itemId) y obtenemos es objeto
-            let itemSeleccionado = array_items.filter(function (item_of_array_items) {
+            let itemSeleccionado = menu_array.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == itemId;
             });
             //Añadimos el precio al total.
@@ -179,21 +230,21 @@ window.onload = function () {
 
         carrito.forEach(item => {
 
-            let itemDelArray_items = array_items.filter(function (item_of_array_items) {
+            let itemDelArray_items = menu_array.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == item;
             });
             arrayComanda.push(itemDelArray_items[0]);
         });
-        return JSON.stringify(arrayComanda); 
+        return JSON.stringify(arrayComanda);
     }
 
 
 
-    comprarElement.addEventListener('click',function () {
+    comprarElement.addEventListener('click', function () {
         if (carrito.length == 0) {
             alert("ERROR. Añade al menos un item a tu compra.");
         } else {
-            localStorage.setItem("carrito",prepareJson());
+            localStorage.setItem("carrito", prepareJson());
             window.location.href = "finalizacion.php";
         }
     });
