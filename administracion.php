@@ -13,6 +13,14 @@
 </head>
 <body>
 
+    <?php
+        session_start();
+        if (isset($_SESSION['usuario']) && !empty($_SESSION['usuario'])) {
+            header("Location: interfaz.php");
+        }
+    ?>
+
+
 <!-- HEADER -->
     <header>
         <?php include("include/header.php"); ?>
@@ -26,9 +34,9 @@
         <div id="contra">
             <input type="password" name="contra" placeholder="Contraseña" class="usuPass">
         </div>
-        <div id="recordar">
+        <!-- <div id="recordar">
             <label for=""><input type="checkbox" name="recordar">Recordar</label>
-        </div>
+        </div> -->
         <div id="enviar">
             <input type="submit" value="Iniciar sesión" id="login">
         </div>
