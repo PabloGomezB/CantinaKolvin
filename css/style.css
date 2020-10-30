@@ -35,7 +35,7 @@ header {
     height: 500px;
 }
 
-h1 {
+.h1Index {
     color: white;
     font-family: Arial;
     text-align: center;
@@ -55,7 +55,7 @@ a#entrar {
     border-radius: 10px;
 }
 */
-input[type=submit]{
+#inputIndex{
     display: block;
     text-align: center;
     width: 100px;
@@ -163,7 +163,7 @@ input[type=submit]{
 }
 
 .buttonFinalizacionAzul {
-    background-color: white; 
+    background-color: rgb(190, 240, 255); 
     color: black; 
     border: 2px solid #008CBA;
 }

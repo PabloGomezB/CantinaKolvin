@@ -1,5 +1,7 @@
 window.onload = function () {
+
     let comandaArray = localStorage.getItem("carrito");
+
     alert(comandaArray);
 
     //comandaArray = JSON.parse(comandaArray);
@@ -76,4 +78,10 @@ window.onload = function () {
     }
       
     genera_tabla();
+
+    console.log(comandaArray);
+    document.getElementById("inputHidden").setAttribute("value", comandaArray);
+
+
+
 }
