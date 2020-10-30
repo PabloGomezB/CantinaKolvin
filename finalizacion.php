@@ -20,10 +20,11 @@
     </header>
 
     <h1>FINALIZACION</h1>
-    <br>
-    
-    <div id="tabla"></div>
 
+    <br>
+
+    <div id="tabla"></div>
+    
     <br>
         
   
