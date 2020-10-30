@@ -34,22 +34,86 @@
                 setcookie("fecha[dia]", $fecha, time() + 3);
                 setcookie('fecha[hora]', $hora, time() + 3);
             }
-
+/*
             if(isset($_POST['inputHidden'])){
+                $total = 0;
+                //$file = fopen("comandas/$dia.txt", "w");
 
-                $file = fopen("comandas/$dia.txt", "w");
+                $array_items = array("cafe" => 0, "bocadillo de queso" => 0, "cruasan" => 0, "ensaimada" => 0, "bocadillo de fuet" => 0, "Monster" => 0);
 
-                $arrayObject = json_decode($_POST["inputHidden"]);
+                $arrayObject = json_decode($_POST["inputHidden"], true);
 
                 foreach ($arrayObject as $object => $value) {
-                    echo "nombre: ".$value->nombre;
-                    echo "<br>";
-                    fwrite($file, "Nombre: " . $value->nombre . PHP_EOL);
+
+                    switch($value["nombre"]){
+
+                        case "cafe":
+                            $array_items["cafe"] +=1;
+                            break;
+                        case "bocadillo de queso":
+                            $array_items["bocadillo de queso"] +=1;
+                            break;
+                        case "cruasan":
+                            $array_items["cruasan"] +=1;
+                            break;
+                        case "ensaimada":
+                            $array_items["ensaimada"] +=1;
+                            break;
+                        case "bocadillo de fuet":
+                            $array_items["bocadillo de fuet"] +=1;
+                            break;
+                        case "Monster":
+                            $array_items["Monster"] +=1;
+                            break;
+                        default:
+                            echo "<br>error<br>";
+                        break;
+                    }
+
+             //       echo "nombre: ".$value->nombre;
+             //       echo "<br>";
+                        //echo($value["nombre"]);
+                        //echo $array_items["Monster"];
+             //       echo "<br>";
+             //       $total += $value->precio;
+
+                    //fwrite($file, "Nombre: " . $value->nombre . PHP_EOL);
+  
                 }
 
-                fclose($file);
+
+                
+/*
+                $arrayLimpio = array_unique($arrayObject);
+                print_r($arrayLimpio);
+                
+                echo "<br>";
+                print_r($array_items["Monster"]);
+
+                // foreach($arrayLimpio as $objeto => $valor){
+
+                //     echo "<br>";
+                //     print_r($valor["nombre"]);
+                //     echo "<br>";
+                // }
+
+
+
+                // echo $array_items["cafe"] . "<br>";
+                // echo $array_items["bocadillo de queso"] . "<br>";
+                //echo $total;
+                //fwrite($file, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++" . PHP_EOL . "TOTAL: " . $total);
+                //fclose($file);
 
             }
+*/
+
+            if(isset($_POST['totalHidden'])){
+
+                print_r($_POST['totalHidden']);
+            }
+
+
 
             echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
