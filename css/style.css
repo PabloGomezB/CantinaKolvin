@@ -9,9 +9,9 @@ footer {
     background-color: #e3f2fd;
     color:white;
     text-align:center;
-    position:absolute;
     bottom:0;
     width:100%;
+    margin-top: 39%;
 }
 
 header {

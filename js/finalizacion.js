@@ -54,25 +54,35 @@ window.onload = function () {
             var tr = document.createElement('tr');
             tBody.appendChild(tr);
 
-            for (var o = 0; o < 4; o++) {
+            for (var o = 0; o < 1; o++) {
                 var td = document.createElement('td');
                 td.width = '75';
-                td.appendChild(document.createTextNode("Tabla creada 2"));
+                td.appendChild(document.createTextNode(JSON.stringify(comandaArray)));
+                tr.appendChild(td);
+            }
+
+            for (var p = 0; p < 1; p++) {
+                var td = document.createElement('td');
+                td.width = '75';
+                td.appendChild(document.createTextNode(JSON.stringify(comandaArray)));
+                tr.appendChild(td);
+            }
+
+            for (var q = 0; q < 1; q++) {
+                var td = document.createElement('td');
+                td.width = '75';
+                td.appendChild(document.createTextNode(JSON.stringify(comandaArray)));
+                tr.appendChild(td);
+            }
+
+            for (var r = 0; r < 1; r++) {
+                var td = document.createElement('td');
+                td.width = '75';
+                td.appendChild(document.createTextNode(JSON.stringify(comandaArray)));
                 tr.appendChild(td);
             }
         }
 
-        for (var p = 0; p < 1; p++) {
-            var tr = document.createElement('tr');
-            tBody.appendChild(tr);
-
-            for (var q = 0; q < 4; q++) {
-                var td = document.createElement('td');
-                td.width = '75';
-                td.appendChild(document.createTextNode("Tabla creada 3"));
-                tr.appendChild(td);
-            }
-        }
         miTabla.appendChild(tabla);
 
     }
