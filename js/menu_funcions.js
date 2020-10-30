@@ -60,7 +60,7 @@ window.onload = function () {
         "id": 8,
         "nombre": "Macarrones",
         "descripcion": "Esto es un cafe que mas quieres",
-        "precio": 1,
+        "precio": 2,
         "url_image": "img/menu/macarrones.jpg",
         "hora": "hora_dinar"
     },

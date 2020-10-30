@@ -20,27 +20,10 @@
     </header>
 
     <h1>FINALIZACION</h1>
-
-    <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-            // print_r($_POST["arrayComanda"]);
-            $arrayObject = json_decode($_POST["arrayComanda"]);
-            // print_r($arrayObject);
-
-            foreach ($arrayObject as $object => $value) {
-                echo "nombre: ".$value->nombre;
-                echo "<br>";
-                echo "<br>";
-                // echo "value: ".$value;
-                // echo "<br>";
-            }
-
-        }
-
-    ?>
-
     <br>
+    
+    <div id="tabla"></div>
+
     <br>
     <form action="confirmacion.php" method="POST">
         <input id="inputHidden" name="inputHidden" type="hidden" value="">
