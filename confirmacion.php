@@ -36,21 +36,15 @@
             }
 
             if(isset($_POST['inputHidden'])){
-
                 $file = fopen("comandas/$dia.txt", "w");
-
                 $arrayObject = json_decode($_POST["inputHidden"]);
-
                 foreach ($arrayObject as $object => $value) {
                     echo "nombre: ".$value->nombre;
                     echo "<br>";
                     fwrite($file, "Nombre: " . $value->nombre . PHP_EOL);
                 }
-
                 fclose($file);
-
             }
-
             echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
         
