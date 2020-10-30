@@ -3,7 +3,7 @@
         <a target="_blank" href="http://www.institutpedralbes.cat/">&copy; 2020 Institut Pedralbes</a> &middot;<a href="#">Términos y Condiciones</a>
     </td>
     <td>
-        <ul style="margin-top -100px;">
+        <ul>
             <li class="list-inline-item mr-3">
                 <a href="#">
                 <i class="fab fa-facebook fa-2x fa-fw"></i>
