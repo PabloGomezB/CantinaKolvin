@@ -40,6 +40,9 @@
 
     <br>
     <br>
+    <h3>Productos del carrito</h3>
+    <div id="tabla"></div>
+    </table>
     <button class="buttonFinalizacion buttonFinalizacionAzul" onclick="">Confirmar</button>
 
 <!-- HEADER -->
