@@ -51,7 +51,7 @@ window.onload = function () {
     {
         "id": 7,
         "nombre": "Sopa",
-        "descripcion": "Esto es un cafe que mas quieres",
+        "descripcion": "",
         "precio": 1,
         "url_image": "img/menu/sopa.jpg",
         "hora": "hora_dinar"
@@ -59,7 +59,7 @@ window.onload = function () {
     {
         "id": 8,
         "nombre": "Macarrones",
-        "descripcion": "Esto es un cafe que mas quieres",
+        "descripcion": "",
         "precio": 2,
         "url_image": "img/menu/macarrones.jpg",
         "hora": "hora_dinar"
@@ -67,7 +67,7 @@ window.onload = function () {
     {
         "id": 9,
         "nombre": "Espaguetis carbonara",
-        "descripcion": "Esto es un cafe que mas quieres",
+        "descripcion": "s",
         "precio": 1,
         "url_image": "img/menu/espaguetis_carbonara.jpg",
         "hora": "hora_dinar"
@@ -75,7 +75,7 @@ window.onload = function () {
     {
         "id": 10,
         "nombre": "Escudella",
-        "descripcion": "Esto es un cafe que mas quieres",
+        "descripcion": "",
         "precio": 1,
         "url_image": "img/menu/escudella.jpg",
         "hora": "hora_dinar"
@@ -159,18 +159,19 @@ window.onload = function () {
         let carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach(function (item, indice) {
-            // Obtenemos el item que necesitamos de la variable array_items
-            let itemDelArray_items = menu_array.filter(function (item_of_array_items) {
-                return item_of_array_items['id'] == item;
+            // Obtenemos el item que necesitamos de la variable menu_array
+            let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
+                return item_of_menu_array['id'] == item;
             });
             // Cuenta el número de veces que se repite el producto
             let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
                 return itemId === item ? total += 1 : total;
             }, 0);
+
             // Creamos el nodo del item del carrito
             let itemCarritoElement = document.createElement('li');
             itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
-            itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelArray_items[0]['nombre']} - ${itemDelArray_items[0]['precio']}€`;
+            itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
             // Boton de borrar
             let miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
@@ -228,23 +229,37 @@ window.onload = function () {
     function prepareJson() {
         let arrayComanda = new Array();
 
-        carrito.forEach(item => {
+        let carritoSinDuplicados = [...new Set(carrito)];
 
-            let itemDelArray_items = menu_array.filter(function (item_of_array_items) {
-                return item_of_array_items['id'] == item;
+        carritoSinDuplicados.forEach(function (item, indice) {
+            // Obtenemos el item que necesitamos de la variable menu_array
+            let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
+                return item_of_menu_array['id'] == item;
             });
-            arrayComanda.push(itemDelArray_items[0]);
-        });
+
+            // Cuenta el número de veces que se repite el producto
+            let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
+                return itemId === item ? total += 1 : total;
+            }, 0);
+
+            itemDelMenu_array[0].cantidad = numeroUnidadesItem;
+
+            arrayComanda.push(itemDelMenu_array[0]);
+
+        })
+
+        console.log(arrayComanda);
+
         return JSON.stringify(arrayComanda);
     }
-
-
 
     comprarElement.addEventListener('click', function () {
         if (carrito.length == 0) {
             alert("ERROR. Añade al menos un item a tu compra.");
         } else {
+            // prepareJson();
             localStorage.setItem("carrito", prepareJson());
+            localStorage.setItem("total",total)
             window.location.href = "finalizacion.php";
         }
     });

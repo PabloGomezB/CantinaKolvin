@@ -20,11 +20,13 @@
     </header>
 
     <h1>FINALIZACION</h1>
-    <br>
-    
-    <div id="tabla"></div>
 
     <br>
+
+    <div id="tabla"></div>
+    
+    <br>
+
     <form action="confirmacion.php" method="POST">
         <input id="inputHidden" name="inputHidden" type="hidden" value="">
         <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">

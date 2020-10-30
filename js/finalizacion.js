@@ -1,7 +1,7 @@
 window.onload = function () {
 
     let comandaArray = localStorage.getItem("carrito");
-    // console.log(comandaArray);
+    console.log(comandaArray);
 
     let comandaArrayJSON = JSON.parse(comandaArray);
 
@@ -19,6 +19,10 @@ window.onload = function () {
         tablaHTML += "<td>"
         tablaHTML += element.precio;
         tablaHTML += "</td>"
+
+        tablaHTML += "<td>"
+        tablaHTML += element.cantidad; // <-- AQUI
+        tablaHTML += "</td>"
         tablaHTML += "</tr>";
 
     });
@@ -30,6 +34,8 @@ window.onload = function () {
 
     document.getElementById("inputHidden").setAttribute("value", comandaArray);
 
-
-
 }
+
+//Para recibir la cantidad de un elemento --> element.cantidad
+//Para el total es lo cojeis de localStorage con id "total"
+//VAMOOS KEVIIIIIIIIIIIIIN
