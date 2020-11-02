@@ -9,7 +9,7 @@
 
         <?php include("include/includes.inc") ?>
 
-        <script type="text/javascript" src="js/menu_funcions.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
 
     </head>
 
