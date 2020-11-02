@@ -105,7 +105,7 @@ window.onload = function () {
     let botonVaciar = document.querySelector('#botonVaciar');
     let comprarElement = document.querySelector("#comprar");
 
-    function renderItems(params) {
+    function renderItems() {
 
         menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
@@ -158,7 +158,7 @@ window.onload = function () {
         // Quitamos los duplicados
         let carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
-        carritoSinDuplicados.forEach(function (item, indice) {
+        carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
             let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
                 return item_of_menu_array['id'] == item;
@@ -186,13 +186,16 @@ window.onload = function () {
     }
 
     function borrarItemCarrito() {
-        console.log()
+        console.log(carrito);
         // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
         // Borramos todos los productos
         carrito = carrito.filter(function (carritoId) {
             return carritoId !== id;
         });
+        console.log(carrito);
+
+        
         // volvemos a renderizar
         renderizarCarrito();
         // Calculamos de nuevo el precio
@@ -203,7 +206,7 @@ window.onload = function () {
         // Limpiamos precio anterior
         total = 0;
         // Recorremos el array del carrito
-        carrito.forEach(itemId => {
+        carrito.forEach(function (itemId) {
             //Filtramos en array_items el que tenga de id lo que hay carrito (itemId) y obtenemos es objeto
             let itemSeleccionado = menu_array.filter(function (item_of_array_items) {
                 return item_of_array_items['id'] == itemId;
