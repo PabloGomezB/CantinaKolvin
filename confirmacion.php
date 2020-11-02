@@ -108,6 +108,18 @@
             }
 */
 
+
+            if(isset($_POST['inputHidden'])){
+
+                //let comandaArrayJSON = JSON.parse(comandaArray);
+                $arrayObject = json_encode($_POST["inputHidden"]);
+                echo $arrayObject;
+
+            }
+
+
+
+
             if(isset($_POST['totalHidden'])){
 
                 print_r($_POST['totalHidden']);

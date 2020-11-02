@@ -34,7 +34,7 @@
         <input type="text" name="nombre" placeholder="Nombre y apellido" class="formInput" required>
         
         <label>Teléfono: <span>*</span></label>
-        <input type="email" name="telefono" placeholder="Telefeno" class="formInput" required>
+        <input type="number" name="telefono" placeholder="Telefeno" class="formInput" required>
         
         <label>Email: <span>*</span></label>
         <input type="email" name="email" placeholder="Email" class="formInput" required>

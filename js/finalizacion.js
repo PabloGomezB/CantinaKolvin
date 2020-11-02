@@ -1,6 +1,7 @@
 window.onload = function () {
 
     let comandaArray = localStorage.getItem("carrito");
+    let total = localStorage.getItem("total");
     console.log(comandaArray);
 
     let comandaArrayJSON = JSON.parse(comandaArray);
@@ -34,7 +35,7 @@ window.onload = function () {
 
     document.getElementById("inputHidden").setAttribute("value", comandaArray);
 
-    document.getElementById("totalHidden").setAttribute("value", 2342334543);
+    document.getElementById("totalHidden").setAttribute("value", total);
 
     console.log(document.getElementById("totalHidden").value);
 }
