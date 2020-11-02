@@ -9,6 +9,8 @@ window.onload = function () {
     tablaHTML += "<tr>";
     tablaHTML += "<td>Nombre</td>"
     tablaHTML += "<td>Precio</td>"
+    tablaHTML += "<td>Cantidad</td>"
+    tablaHTML += "<td>Total</td>"
     tablaHTML += "</tr>";
     comandaArrayJSON.forEach(function (element) {
         tablaHTML += "<tr>";
@@ -18,10 +20,16 @@ window.onload = function () {
 
         tablaHTML += "<td>"
         tablaHTML += element.precio;
+        tablaHTML += "€"
         tablaHTML += "</td>"
 
         tablaHTML += "<td>"
         tablaHTML += element.cantidad; // <-- AQUI
+        tablaHTML += "</td>"
+
+        tablaHTML += "<td>"
+        tablaHTML += element.precio*element.cantidad; // <-- AQUI
+        tablaHTML += "€"
         tablaHTML += "</td>"
         tablaHTML += "</tr>";
 
