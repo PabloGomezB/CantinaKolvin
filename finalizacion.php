@@ -30,9 +30,7 @@
     <h3>Productos del carrito</h3>
     <div id="tabla"></div>
     </table>
-    <button class="buttonFinalizacion buttonFinalizacionAzul" onclick="">Confirmar</button>
 
-    <form action="confirmacion.php" method="POST">
         
   
     <form action="confirmacion.php" method="POST"  class="form">
