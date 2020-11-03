@@ -1,21 +1,22 @@
 <?php
-    ob_start();
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <?php include("include/includes.inc") ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script type="text/javascript" src="js/menu.js"></script>
+    <?php include("include/includes.inc") ?>
 
-    </head>
+    <script type="text/javascript" src="js/menu.js"></script>
+
+</head>
 
 <body>
 
-<!-- HEADER -->
+    <!-- HEADER -->
     <header style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
@@ -24,24 +25,24 @@
 
     <div class="container">
         <div class="row">
-            <main id="items" class="col-md-8 row"></main>
+            <main id="items" class="col-md-8 row" style="margin-right: 10px;"></main>
             <aside class="col-md-4">
                 <h2>Carrito</h2>
                 <ul id="carrito"></ul>
                 <hr>
                 <p class="text-right">Total: <span id="total"></span></p>
-                <button id="botonVaciar" class="btn btn-danger">Vaciar</button>
-                <button id="comprar" class="btn btn-danger">Comprar</button>
+                <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar</button>
+                <button id="comprar" class="btn btn-primary" style="float: right;">Comprar</button>
             </aside>
         </div>
     </div>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer>
 
-            <?php include("include/footer.php"); ?>
+        <?php include("include/footer.php"); ?>
 
-        </footer>
+    </footer>
 </body>
 
 </html>

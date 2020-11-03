@@ -1,5 +1,5 @@
 window.onload = function () {
-
+    //Creo un array donde tengo todos los items que pueden estar en el menu.
     let array_items = [{
         "id": 1,
         "nombre": "Café",
@@ -89,6 +89,7 @@ window.onload = function () {
     fechaCambio.setHours(11);
     fechaCambio.setMinutes(30);
 
+    //Dependiendo de la hora habrá un menu u otro.
     if (fechaAhora < fechaCambio) {
         menu_array = array_items.filter(item => item.hora == "hora_pati");
     } else {
@@ -193,8 +194,6 @@ window.onload = function () {
         carrito = carrito.filter(function (carritoId) {
             return carritoId !== id;
         });
-        console.log(carrito);
-
         
         // volvemos a renderizar
         renderizarCarrito();
@@ -226,15 +225,20 @@ window.onload = function () {
         carrito = [];
         // Renderizamos los cambios
         renderizarCarrito();
+        //Calculamos de nuevo el total.
         calcularTotal();
     }
 
-    function prepareJson() {
-        let arrayComanda = new Array();
 
+    //Preparo JSON para enviarlo en localStorage.
+    function prepareJson() {
+        //Creamos un array 
+        let arrayComanda = new Array();
+        //Transformamos carrito en un array sin duplicados.
+        //Esto serviá para obtener el objeto con esa id que hay en carritoSinDuplicado.
         let carritoSinDuplicados = [...new Set(carrito)];
 
-        carritoSinDuplicados.forEach(function (item, indice) {
+        carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
             let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
                 return item_of_menu_array['id'] == item;
@@ -244,31 +248,31 @@ window.onload = function () {
             let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
                 return itemId === item ? total += 1 : total;
             }, 0);
-
+            //Añado una nueva propiedad llamada cantidad para que finalizacion puedo obtenerlo.
             itemDelMenu_array[0].cantidad = numeroUnidadesItem;
-
+            //Añado este objeto en un array.
             arrayComanda.push(itemDelMenu_array[0]);
 
         })
-
-        console.log(arrayComanda);
-
+        //Converts a JavaScript value to a JavaScript Object Notation (JSON) string
         return JSON.stringify(arrayComanda);
     }
 
     comprarElement.addEventListener('click', function () {
+        //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
         if (carrito.length == 0) {
             alert("ERROR. Añade al menos un item a tu compra.");
         } else {
-            // prepareJson();
             localStorage.setItem("carrito", prepareJson());
-            localStorage.setItem("total",total)
+            localStorage.setItem("total",total);
+            //Redireccion a finalizacion.php
             window.location.href = "finalizacion.php";
         }
     });
-
+    //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);
 
+    //Inicializa el renderizado del menu.
     renderItems();
 
 }
