@@ -10,3 +10,15 @@
 |> TOTAL: 4 €
 |------------------------------------]
 
+|------------------------------ Pedido número: 2 ------------------------------]
+|> Nombre: NOMBREEE
+|> Teléfono: 346345634
+|> Email: todalacacaaqui@gmail.com
+|
+|--> Macarrones: 3
+|--> Espaguetis carbonara: 4
+|--> Sopa: 13
+|
+|> TOTAL: 23 €
+|------------------------------------]
+
