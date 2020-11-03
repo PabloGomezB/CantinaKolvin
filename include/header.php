@@ -27,5 +27,5 @@
     <nav id="navOpciones">
         <a class="opciones" href="index.php">Inicio</a>
         <a class="opciones" href="menu.php">Carta</a>
-        <a class="opciones" href="admin.php">Administración</a>
+        <a class="opciones" href="./admin/admin.php">Administración</a>
     </nav>

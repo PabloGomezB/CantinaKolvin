@@ -326,6 +326,7 @@ label span {
     overflow: auto;
     height: 80%;
     display: grid;
+    grid-template-columns: 10% 10%;
 }
 
 .celda {
@@ -336,13 +337,11 @@ label span {
 .div-right{
     float:right;
     margin-right: 5%;
-    /**/
     padding: 30px 30px;
     font: 20px;
-    width: 50%;
+    /* width: 50%; */
     height: 70%;
     overflow: auto;
-
     /* border: 50px solid rgb(190, 240, 255); */
     border-top: 5px solid #008CBA;
     border-left: 20px solid #008CBA;

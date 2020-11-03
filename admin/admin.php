@@ -18,12 +18,7 @@ ob_start();
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #e3f2fd;">
-            <a class="navbar-brand" href="../index.php"><img src="../img/logo.png" width="130" height="60"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
+        
     </header>
 
     <h1>Mostrando comandas</h1>
@@ -44,8 +39,8 @@ ob_start();
         else{
     ?>
 
-        <div class="div-left">
-        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
+        <!-- <div class="div-left"> -->
+        <form class="div-left" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
 
     <?php
 
@@ -56,7 +51,7 @@ ob_start();
         }
 
         echo '</form>';
-        echo '</div>';
+        // echo '</div>';
         
         
         echo '<div class="div-right">';
@@ -66,41 +61,12 @@ ob_start();
         echo nl2br(file_get_contents($rutaComandaSeleccionada));
         
         echo '</div>';
-    }
-
-        //print_r($ficheros);
-        
+    }        
 
     ?>
 
     <footer>
-        <table class="centrar">
-            <td>
-                <a target="_blank" href="http://www.institutpedralbes.cat/">&copy; 2020 Institut Pedralbes</a> &middot;<a href="#">Términos y Condiciones</a>
-            </td>
-            <td>
-                <ul>
-                    <li class="list-inline-item mr-3">
-                        <a href="#">
-                        <i class="fab fa-facebook fa-2x fa-fw"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item mr-3">
-                        <a href="#">
-                        <i class="fab fa-twitter-square fa-2x fa-fw"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="#">
-                        <i class="fab fa-instagram fa-2x fa-fw"></i>
-                        </a>
-                    </li>
-                </ul>
-            </td>
-            <td>
-                <a class="float-right" href="#">Ir arriba</a>
-        </td>
-        </table>
+        
     </footer>
 </body>
 
