@@ -19,13 +19,17 @@
         <?php include("include/header.php"); ?>
     </header>
 
-    <h1>FINALIZACION</h1>
+    <h1>Pantalla de finalización</h1>
 
     <br>
 
     <div id="tabla"></div>
     
     <br>
+
+    <h3>Productos del carrito</h3>
+    </table>
+
         
   
     <form action="confirmacion.php" method="POST"  class="form">

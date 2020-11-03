@@ -160,13 +160,10 @@ window.onload = function () {
         // Generamos los Nodos a partir de carrito
         carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
-            let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
-                return item_of_menu_array['id'] == item;
-            });
+            //let itemk = function()
+            let itemDelMenu_array = obtenerObjetoPorId(menu_array, item);
             // Cuenta el número de veces que se repite el producto
-            let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
-                return itemId === item ? total += 1 : total;
-            }, 0);
+            let numeroUnidadesItem = contarProducto(carrito, item);
 
             // Creamos el nodo del item del carrito
             let itemCarritoElement = document.createElement('li');
@@ -183,6 +180,18 @@ window.onload = function () {
             itemCarritoElement.appendChild(miBoton);
             carritoElement.appendChild(itemCarritoElement);
         })
+    }
+
+    function obtenerObjetoPorId(menu_array, item){
+        menu_array.filter(function (item_of_menu_array) {
+            return item_of_menu_array['id'] == item;
+        });
+    }
+
+    function contarProducto(carrito, item){
+        carrito.reduce(function (total, itemId) {
+            return itemId === item ? total += 1 : total;
+        }, 0);
     }
 
     function borrarItemCarrito() {
@@ -234,16 +243,12 @@ window.onload = function () {
 
         let carritoSinDuplicados = [...new Set(carrito)];
 
-        carritoSinDuplicados.forEach(function (item, indice) {
+        carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
-            let itemDelMenu_array = menu_array.filter(function (item_of_menu_array) {
-                return item_of_menu_array['id'] == item;
-            });
+            let itemDelMenu_array = obtenerObjetoPorId(menu_array, item);
 
             // Cuenta el número de veces que se repite el producto
-            let numeroUnidadesItem = carrito.reduce(function (total, itemId) {
-                return itemId === item ? total += 1 : total;
-            }, 0);
+            let numeroUnidadesItem = contarProducto(carrito, item);
 
             itemDelMenu_array[0].cantidad = numeroUnidadesItem;
 

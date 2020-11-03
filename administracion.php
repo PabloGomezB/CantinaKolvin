@@ -34,9 +34,6 @@
         <div id="contra">
             <input type="password" name="contra" placeholder="Contraseña" class="usuPass">
         </div>
-        <!-- <div id="recordar">
-            <label for=""><input type="checkbox" name="recordar">Recordar</label>
-        </div> -->
         <div id="enviar">
             <input type="submit" value="Iniciar sesión" id="login">
         </div>
