@@ -35,7 +35,7 @@ ob_start();
         if (!isset($_COOKIE['fecha'])) {
             //setcookie("fecha[dia]", $dia, time() + 24 * 3600);
             //setcookie('fecha[hora]', $hora, time() + 24 * 3600);
-            setcookie("fecha[dia]", $fecha, time() + 3);
+            //setcookie("fecha[dia]", $fecha, time() + 3);
             setcookie('fecha[hora]', $hora, time() + 3);
         }
 
