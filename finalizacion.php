@@ -28,7 +28,7 @@
     <br>
         
   
-    <form action="confirmacion.php" method="POST"  class="form">
+    <!-- <form action="confirmacion.php" method="POST"  class="form">
         <img src="img/finalizacion/contacto.png" class="formImg"/>
         <label>Nombre y apellidos: <span>*</span></label>
         <input type="text" name="nombre" placeholder="Nombre y apellido" class="formInput" required>
@@ -42,7 +42,14 @@
         <input id="inputHidden" name="inputHidden" type="hidden" value="">
         <input id="totalHidden" name="totalHidden" type="hidden" value="">
         <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
+    </form> -->
+
+    <form action="confirmacion.php" method="POST"  class="form">
+        <input id="inputHidden" name="inputHidden" type="hidden" value="">
+        <input id="totalHidden" name="totalHidden" type="hidden" value="">
+        <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
     </form>
+
 
 
 <!-- HEADER -->
