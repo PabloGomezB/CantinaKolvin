@@ -1,4 +1,4 @@
-<table class="centrar">
+<!-- <table class="centrar">
     <td>
         <a target="_blank" href="http://www.institutpedralbes.cat/">&copy; 2020 Institut Pedralbes</a> &middot;<a href="#">Términos y Condiciones</a>
     </td>
@@ -24,7 +24,7 @@
     <td>
         <a class="float-right" href="#">Ir arriba</a>
 </td>
-</table>
+</table> -->
 
 
 <!-- <footer class="container">
@@ -51,3 +51,18 @@
           </ul>
         </div>
 </footer> -->
+  <div class="contentFooter">
+    <h5>Horarios</h5>
+    <h5>Lunes - Viernes: 7 a.m. - 9 p.m.</h5>
+  </div>
+  <div class="contentFooter">
+    <h5>Dirección: Av. Esplugues 13 Barcelona, España</h5>
+    <h5>Teléfono: 999-999-999</h5>
+    <h5>E-mail: cantinakolvin@inspedralbes.cat</h5>
+  </div>
+  <div class="contentFooter">
+    <h5>Encuéntranos</h5>
+    <i class="fab fa-instagram fa-2x fa-fw"></i>
+    <i class="fab fa-facebook fa-2x fa-fw"></i>
+    <i class="fab fa-twitter fa-2x fa-fw"></i>
+  </div>

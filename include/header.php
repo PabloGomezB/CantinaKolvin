@@ -20,11 +20,12 @@
         <input style="width: 150px; border-radius: 10px; padding: 20px;" type="submit" name="login" value="Login"/>
     </form>
 </nav -->
-<div id="hindex">
-    <a href="index.php"><img src="img/logo.png" width="130" height="60"></a>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Carta</a>
-        <a href="#">Administración</a>
+
+    <div id="logo">
+        <a href="index.php"><img src="img/logo.png" width="150" height="80"></a>
+    </div>
+    <nav id="navOpciones">
+        <a class="opciones" href="index.php">Inicio</a>
+        <a class="opciones" href="menu.php">Carta</a>
+        <a class="opciones" href="admin.php">Administración</a>
     </nav>
-</div>
