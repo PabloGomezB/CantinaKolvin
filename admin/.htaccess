@@ -1,5 +1,7 @@
 AuthType Basic
-AuthName "Restricted Content"
+AuthName "Iniciar sesión"
 AuthBasicProvider file
-AuthUserFile ./.htpasswd
+AuthUserFile /home/a18pabgombra/public_html/CantinaKolvin/admin/.htpasswd
 Require valid-user
+
+# RUTA SOLO VALIDA PARA EL LABS

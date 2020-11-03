@@ -1,0 +1,12 @@
+|------------------------------ Pedido número: 1 ------------------------------]
+|> Nombre: NOMBREEE6
+|> Teléfono: 45675
+|> Email: todalacacaaqui@gmail.com
+|
+|--> Macarrones: 1
+|--> Sopa: 1
+|--> Escudella: 1
+|
+|> TOTAL: 4 €
+|------------------------------------]
+
