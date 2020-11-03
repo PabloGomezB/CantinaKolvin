@@ -19,7 +19,7 @@
         <?php include("include/header.php"); ?>
     </header>
 
-    <h1>FINALIZACION</h1>
+    <h1>Pantalla de finalización</h1>
 
     <br>
 
@@ -28,7 +28,6 @@
     <br>
 
     <h3>Productos del carrito</h3>
-    <div id="tabla"></div>
     </table>
 
         
