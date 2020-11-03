@@ -13,7 +13,7 @@ window.onload = function () {
         "nombre": "Croissant",
         "descripcion": "",
         "precio": 1,
-        "url_image": "img/menu/croissant.jpg",
+        "url_image": "img/menu/cruasan.jpg",
         "hora": "hora_pati"
     },
     {
@@ -77,7 +77,7 @@ window.onload = function () {
         "nombre": "Escudella",
         "descripcion": "",
         "precio": 1,
-        "url_image": "img/menu/escudella.jpg",
+        "url_image": "img/menu/escudella.jpeg",
         "hora": "hora_dinar"
     }
     ];
