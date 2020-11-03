@@ -48,7 +48,7 @@
             <!-- </div> -->
             
         </header>
-        <section id="index">
+        <div id="index">
             <div id="banner"></div>
             <div id="descripcion">
                 <h1 style="margin-bottom: 2%; margin-top: 2%;">Cantina Kolvin</h1>
@@ -74,7 +74,7 @@
                     <p id="cruasan">Cruasan</p>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- <section class="features-icons text-center" style="margin-top: 60px;">
             <div class="container">

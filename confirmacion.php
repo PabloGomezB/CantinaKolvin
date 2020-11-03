@@ -18,130 +18,130 @@ ob_start();
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header id="hindex">
         <?php include("include/header.php"); ?>
     </header>
+    <div>
+        <h1>CONFIRMACION</h1>
 
-    <h1>CONFIRMACION</h1>
+        <?php
 
-    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (!isset($_COOKIE['fecha'])) {
+                $dia = date('d-m-Y');
+                $hora = date(' H:i');
+                //setcookie("fecha[dia]", $dia, time() + 24 * 3600);
+                //setcookie('fecha[hora]', $hora, time() + 24 * 3600);
+                //setcookie("fecha[dia]", $fecha, time() + 3);
+                setcookie('fecha[hora]', $hora, time() + 3);
+            }
 
-        if (!isset($_COOKIE['fecha'])) {
-            $dia = date('d-m-Y');
-            $hora = date(' H:i');
-            //setcookie("fecha[dia]", $dia, time() + 24 * 3600);
-            //setcookie('fecha[hora]', $hora, time() + 24 * 3600);
-            //setcookie("fecha[dia]", $fecha, time() + 3);
-            setcookie('fecha[hora]', $hora, time() + 3);
-        }
+            if (isset($_POST['inputHidden'])) {
+                $total = 0;
+                //$file = fopen("comandas/$dia.txt", "w");
 
-        if (isset($_POST['inputHidden'])) {
-            $total = 0;
-            //$file = fopen("comandas/$dia.txt", "w");
+                $array_items = array("Café" => 0, "Croissant" => 0, "Caracola" => 0, "Pizza" => 0, "Monster" => 0, "Ensaimada" => 0);
 
-            $array_items = array("Café" => 0, "Croissant" => 0, "Caracola" => 0, "Pizza" => 0, "Monster" => 0, "Ensaimada" => 0);
+                $arrayObject = json_decode($_POST["inputHidden"], true);
 
-            $arrayObject = json_decode($_POST["inputHidden"], true);
+                foreach ($arrayObject as $object => $value) {
 
-            foreach ($arrayObject as $object => $value) {
+                    echo $value["cantidad"];
 
-                echo $value["cantidad"];
-
-                
+                    
 
 
 
-                // switch ($value["nombre"]) {
+                    // switch ($value["nombre"]) {
 
-                //     case "cafe":
-                //         $array_items["Café"] += 1;
-                //         break;
-                //     case "bocadillo de queso":
-                //         $array_items["Croissant"] += 1;
-                //         break;
-                //     case "cruasan":
-                //         $array_items["Caracola"] += 1;
-                //         break;
-                //     case "ensaimada":
-                //         $array_items["Pizza"] += 1;
-                //         break;
-                //     case "bocadillo de fuet":
-                //         $array_items["Monster"] += 1;
-                //         break;
-                //     case "Monster":
-                //         $array_items["Ensaimada"] += 1;
-                //         break;
-                //     case "Monster":
-                //         $array_items["Sopa"] += 1;
-                //         break;
-                //     case "Monster":
-                //         $array_items["Macarrones"] += 1;
-                //         break;
-                //     case "Monster":
-                //         $array_items["Ensaimada"] += 1;
-                //         break;
-                //     case "Monster":
-                //         $array_items["Ensaimada"] += 1;
-                //         break;
-                //     default:
-                //         echo "<br>error<br>";
-                //         break;
-                //}
+                    //     case "cafe":
+                    //         $array_items["Café"] += 1;
+                    //         break;
+                    //     case "bocadillo de queso":
+                    //         $array_items["Croissant"] += 1;
+                    //         break;
+                    //     case "cruasan":
+                    //         $array_items["Caracola"] += 1;
+                    //         break;
+                    //     case "ensaimada":
+                    //         $array_items["Pizza"] += 1;
+                    //         break;
+                    //     case "bocadillo de fuet":
+                    //         $array_items["Monster"] += 1;
+                    //         break;
+                    //     case "Monster":
+                    //         $array_items["Ensaimada"] += 1;
+                    //         break;
+                    //     case "Monster":
+                    //         $array_items["Sopa"] += 1;
+                    //         break;
+                    //     case "Monster":
+                    //         $array_items["Macarrones"] += 1;
+                    //         break;
+                    //     case "Monster":
+                    //         $array_items["Ensaimada"] += 1;
+                    //         break;
+                    //     case "Monster":
+                    //         $array_items["Ensaimada"] += 1;
+                    //         break;
+                    //     default:
+                    //         echo "<br>error<br>";
+                    //         break;
+                    //}
 
-                //       echo "nombre: ".$value->nombre;
-                //       echo "<br>";
-                //echo($value["nombre"]);
-                //echo $array_items["Monster"];
-                //       echo "<br>";
-                //       $total += $value->precio;
+                    //       echo "nombre: ".$value->nombre;
+                    //       echo "<br>";
+                    //echo($value["nombre"]);
+                    //echo $array_items["Monster"];
+                    //       echo "<br>";
+                    //       $total += $value->precio;
 
-                //fwrite($file, "Nombre: " . $value->nombre . PHP_EOL);
+                    //fwrite($file, "Nombre: " . $value->nombre . PHP_EOL);
 
+                }
+
+
+
+                /*
+                    $arrayLimpio = array_unique($arrayObject);
+                    print_r($arrayLimpio);
+                    
+                    echo "<br>";
+                    print_r($array_items["Monster"]);
+
+                    // foreach($arrayLimpio as $objeto => $valor){
+
+                    //     echo "<br>";
+                    //     print_r($valor["nombre"]);
+                    //     echo "<br>";
+                    // }
+
+
+
+                    // echo $array_items["cafe"] . "<br>";
+                    // echo $array_items["bocadillo de queso"] . "<br>";
+                    //echo $total;
+                    //fwrite($file, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++" . PHP_EOL . "TOTAL: " . $total);
+                    //fclose($file);
+    */
+            }
+
+
+            if (isset($_POST['totalHidden'])) {
+
+                print_r($_POST['totalHidden']);
             }
 
 
 
-            /*
-                $arrayLimpio = array_unique($arrayObject);
-                print_r($arrayLimpio);
-                
-                echo "<br>";
-                print_r($array_items["Monster"]);
-
-                // foreach($arrayLimpio as $objeto => $valor){
-
-                //     echo "<br>";
-                //     print_r($valor["nombre"]);
-                //     echo "<br>";
-                // }
-
-
-
-                // echo $array_items["cafe"] . "<br>";
-                // echo $array_items["bocadillo de queso"] . "<br>";
-                //echo $total;
-                //fwrite($file, "++++++++++++++++++++++++++++++++++++++++++++++++++++++++" . PHP_EOL . "TOTAL: " . $total);
-                //fclose($file);
-*/
+            echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
 
-
-        if (isset($_POST['totalHidden'])) {
-
-            print_r($_POST['totalHidden']);
-        }
-
-
-
-        echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
-    }
-
-    ?>
-
+        ?>
+    </div>
     <!-- HEADER -->
-    <footer>
+    <footer id="findex">
         <?php include("include/footer.php"); ?>
     </footer>
 </body>

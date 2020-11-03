@@ -16,7 +16,7 @@
 <body>
 
 <!-- HEADER -->
-    <header style="margin-bottom: 80px;">
+    <header id="hindex" style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
 
@@ -37,7 +37,7 @@
     </div>
 
 <!-- FOOTER -->
-    <footer>
+    <footer id="findex">
 
         <?php include("include/footer.php"); ?>
 

@@ -15,20 +15,22 @@
 <body>
 
 <!-- HEADER -->
-    <header>
+    <header id="hindex">
         <?php include("include/header.php"); ?>
     </header>
 
-    <h1>Pantalla de finalización</h1>
+    <div>
+        <h1>Pantalla de finalización</h1>
 
-    <br>
+        <br>
 
-    <div id="tabla"></div>
+        <div id="tabla"></div>
+
+        <br>
+
+        <h3>Productos del carrito</h3>
     
-    <br>
-
-    <h3>Productos del carrito</h3>
-    </table>
+    
 
         
   
@@ -48,16 +50,16 @@
         <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
     </form> -->
 
-    <form action="confirmacion.php" method="POST"  class="form">
-        <input id="inputHidden" name="inputHidden" type="hidden" value="">
-        <input id="totalHidden" name="totalHidden" type="hidden" value="">
-        <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
-    </form>
+        <form action="confirmacion.php" method="POST"  class="form">
+            <input id="inputHidden" name="inputHidden" type="hidden" value="">
+            <input id="totalHidden" name="totalHidden" type="hidden" value="">
+            <input name="inputConfirmar" type="submit" class="buttonFinalizacion buttonFinalizacionAzul" value="Confirmar">
+        </form>
 
-
+    </div>
 
 <!-- HEADER -->
-    <footer>
+    <footer id="findex">
         <?php include("include/footer.php"); ?>
     </footer>
 </body>
