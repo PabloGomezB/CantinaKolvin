@@ -1,12 +1,21 @@
 |------------------------------ Pedido número: 1 ------------------------------]
-|> Nombre: NOMBREEE6
-|> Teléfono: 45675
-|> Email: todalacacaaqui@gmail.com
+|> Nombre: Kevin Larriega
+|> Teléfono: 324324234
+|> Email: kevinlarriega@outlook.com
 |
-|--> Macarrones: 1
-|--> Sopa: 1
-|--> Escudella: 1
+|--> Sopa: 4
 |
 |> TOTAL: 4 €
+|------------------------------------]
+
+|------------------------------ Pedido número: 2 ------------------------------]
+|> Nombre: Kevin Larriega
+|> Teléfono: 3243432434
+|> Email: kevinlarriega@gmail.com
+|
+|--> Macarrones: 3
+|--> Espaguetis carbonara: 4
+|
+|> TOTAL: 10 €
 |------------------------------------]
 
