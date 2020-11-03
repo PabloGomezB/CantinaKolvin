@@ -15,20 +15,24 @@
 <body>
 
 <!-- HEADER -->
-    <header>
+    <header id="hindex">
         <?php include("include/header.php"); ?>
     </header>
 
-    <h1>Pantalla de finalización</h1>
+    <div>
+        <h1>Pantalla de finalización</h1>
 
-    <br>
+        <br>
 
-    <div id="tabla"></div>
+        <div id="tabla"></div>
+
+        <br>
+
+        <h3>Productos del carrito</h3>
     
-    <br>
+    
 
-    <h3>Productos del carrito</h3>
-    </table>
+        
   
     <form action="confirmacion.php" method="POST"  class="form">
         <img src="img/finalizacion/contacto.png" class="formImg"/>
@@ -47,7 +51,7 @@
     </form>
 
 <!-- HEADER -->
-    <footer>
+    <footer id="findex">
         <?php include("include/footer.php"); ?>
     </footer>
 </body>

@@ -1,28 +1,18 @@
 body, html {
-    height: 100%;
-    min-height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-}
-
-footer {
-    background-color: #e3f2fd;
-    color:white;
-    text-align:center;
-    bottom:0;
-    width:100%;
-    margin-top: 50%;
-    position: relative;
-    width:100%;
-}
-
-header {
-    margin-bottom: 90px;
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .centrar{
     margin-left: auto;
     margin-right: auto;
+}
+
+div {
+    flex: 1;
 }
 /*****************************************************************************************************************************************/
 
@@ -30,8 +20,7 @@ header {
 
 
 /* index.php ************************************************************************************/
-#headerDiv {
-    margin-top: 90px;
+/*#headerDiv {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/index/banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -44,7 +33,7 @@ header {
     font-family: Arial;
     text-align: center;
 }
-/*
+
 a#entrar {
     display: block;
     text-align: center;
@@ -58,7 +47,7 @@ a#entrar {
     text-decoration: none;
     border-radius: 10px;
 }
-*/
+
 #inputIndex{
     display: block;
     text-align: center;
@@ -70,6 +59,101 @@ a#entrar {
     border: 1px solid #fff;
     text-decoration: none;
     border-radius: 10px;
+}*/
+
+/*Nuevo index **********************************************/
+#hindex{
+    text-align: center;
+    background-color: #E8E1D3;
+}
+
+#logo{
+    padding-top: 2%;
+}
+
+#navOpciones{
+    margin-top: 2%;
+    background-color: #1B3353;
+    padding: 1%;
+}
+
+.opciones{
+    color: #FFFFFF;
+    margin: 2%;
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: bold;
+}
+
+#banner{
+    background-image: url("../img/index/banner.jpg");  
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+}
+
+#index{
+    text-align: center;
+}
+
+#descripcion{
+    background-color: #E8E1D3;
+    padding: 1%;
+}
+
+#eslogan{
+    background-color: #9C917E;
+    padding: 3%;
+    color: #FFFFFF;
+}
+
+h1{
+    font-family: "Open Sans";
+    font-size: 48px;
+    font-style: bold;
+}
+
+h3{
+    font-family: "Open Sans";
+    font-style: bold;
+}
+
+#carta{
+    background-color: #E8E1D3;
+    padding: 4%;
+}
+
+.imagenes{
+    border-radius: 150px;
+    margin-left: 19%;
+}
+
+#cafe{
+    margin-left: 22.5%;
+}
+
+#sopa{
+    margin-left: 26%;
+}
+
+#cruasan{
+    margin-left: 25.5%;
+}
+
+#findex{
+    background-color: #1B3353;
+    height: 270px;
+    display: flex;
+}
+
+h5{
+    color: #FFFFFF;
+}
+
+.contentFooter{
+    margin-left: 15%;
+    margin-top: 2%;
 }
 /*****************************************************************************************************************************************/
 

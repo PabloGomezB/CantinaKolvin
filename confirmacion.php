@@ -18,11 +18,13 @@ ob_start();
 <body>
 
     <!-- HEADER -->
-    <header>
+    <header id="hindex">
         <?php include("include/header.php"); ?>
     </header>
+    <div>
+        <h1>CONFIRMACION</h1>
 
-    <h1>CONFIRMACION</h1>
+        <?php
 
     <?php
 
@@ -92,9 +94,9 @@ ob_start();
 
 
     ?>
-
+    </div>
     <!-- HEADER -->
-    <footer>
+    <footer id="findex">
         <?php include("include/footer.php"); ?>
     </footer>
 </body>
