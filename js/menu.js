@@ -144,6 +144,7 @@ window.onload = function () {
     }
 
     function anadirCarrito() {
+        console.log("Entra");
         //Elemento que hemos clickado se añade en el array carrito
         carrito.push(this.getAttribute('marcador'));
         //Renderizamos carrito
@@ -183,13 +184,13 @@ window.onload = function () {
     }
 
     function obtenerObjetoPorId(menu_array, item){
-        menu_array.filter(function (item_of_menu_array) {
+        return menu_array.filter(function (item_of_menu_array) {
             return item_of_menu_array['id'] == item;
         });
     }
 
     function contarProducto(carrito, item){
-        carrito.reduce(function (total, itemId) {
+        return carrito.reduce(function (total, itemId) {
             return itemId === item ? total += 1 : total;
         }, 0);
     }
