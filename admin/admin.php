@@ -9,46 +9,64 @@ ob_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de administración</title>
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-    <?php include("include/includes.inc") ?>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link href="../libs/fontawesome5/css/all.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header>
-        <?php include("include/header.php"); ?>
+        
     </header>
 
     <h1>Mostrando comandas</h1>
 
     <?php
+    
+        $botones = '<input name="comanda" type="submit" class="display comanda" value="';
+        $ruta = "../comandas/";
 
+        // scandir: Escanea la ruta y devuelve todo su contenido (en sistemas Lunix devuelve "." y ".." tambien)
+        // array_diff: Elimina los elementos del array que indiques en este caso array('..', '.').
+        // array_slice: Reordena el array ya que al hacer array_diff las posiciones del array se mantienen intactas
+        $ficheros = array_slice(array_diff(scandir($ruta), array('..', '.')), 0);
 
+        if (empty($ficheros)){
+            echo "No hay comandas";
+        }
+        else{
+    ?>
 
-        $ruta = "../comandas";
+        <!-- <div class="div-left"> -->
+        <form class="div-left" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
 
-        function dir_is_empty($ruta) {
-            $handle = opendir($ruta);
-            while (false !== ($entry = readdir($handle))) {
-              if ($entry != "." && $entry != "..") {
-                closedir($handle);
-                return FALSE;
-              }
-            }
-            closedir($handle);
-            return TRUE;
+    <?php
+
+        foreach ($ficheros as $comanda) {
+            echo '<div class="celda">';
+            echo $botones . $comanda . '"</input>';
+            echo '</div>';
         }
 
-        print_r(dir_is_empty($ruta));
+        echo '</form>';
+        // echo '</div>';
+        
+        
+        echo '<div class="div-right">';
+
+        $rutaComandaSeleccionada = $ruta . $_POST['comanda'];
+        
+        echo nl2br(file_get_contents($rutaComandaSeleccionada));
+        
+        echo '</div>';
+    }        
 
     ?>
 
-    <!-- HEADER -->
     <footer>
-        <?php include("include/footer.php"); ?>
+        
     </footer>
 </body>
 
