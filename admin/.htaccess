@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "Iniciar sesión"
+AuthBasicProvider file
+AuthUserFile /home/a18pabgombra/public_html/CantinaKolvin/admin/.htpasswd
+Require valid-user
+
+# RUTA SOLO VALIDA PARA EL LABS

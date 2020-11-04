@@ -16,8 +16,8 @@ ob_start();
 
 <body>
 
-    <!-- HEADER -->
-    <header style="margin-bottom: 80px;">
+<!-- HEADER -->
+    <header id="hindex" style="margin-bottom: 80px;">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
 
@@ -37,8 +37,8 @@ ob_start();
         </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
+<!-- FOOTER -->
+    <footer id="findex">
 
         <?php include("include/footer.php"); ?>
 
