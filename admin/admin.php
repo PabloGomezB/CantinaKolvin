@@ -25,7 +25,7 @@ ob_start();
 
     <?php
     
-        $botones = '<input name="comanda" type="submit" class="display comanda" value="';
+        //$botones = `<input name='comanda' type='submit' class='display comanda' value='`;
         $ruta = "../comandas/";
 
         // scandir: Escanea la ruta y devuelve todo su contenido (en sistemas Lunix devuelve "." y ".." tambien)
@@ -39,34 +39,51 @@ ob_start();
         else{
     ?>
 
-        <!-- <div class="div-left"> -->
-        <form class="div-left" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
+
+
+    <div id="stylized" class="div-total">
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
+            <div id="0" class="div-left">
+                
+            </div>
+            <div id="1" class="div-left">
+                
+            </div>
+
 
     <?php
-
+        
+        $columna = 0;
+        echo '<script>';
+        
         foreach ($ficheros as $comanda) {
-            echo '<div class="celda">';
-            echo $botones . $comanda . '"</input>';
-            echo '</div>';
+            
+            echo 'document.getElementById("'.$columna.'").insertAdjacentHTML(`beforeend`,`<input name="comanda" type="submit" class="display comanda" value="'. $comanda.'">`);';
+
+            if($columna == 0){
+                $columna++;
+            }
+            else{
+                $columna--;
+            }
+            
         }
-
-        echo '</form>';
-        // echo '</div>';
+        echo '</script>';
+     
         
-        
-        echo '<div class="div-right">';
-
         $rutaComandaSeleccionada = $ruta . $_POST['comanda'];
         
-        echo nl2br(file_get_contents($rutaComandaSeleccionada));
+            echo '<div class="div-right">';
+                echo nl2br(file_get_contents($rutaComandaSeleccionada)); 
+            echo '</div>';
+        echo '</form>';
+    echo '</div>';
         
-        echo '</div>';
     }        
 
     ?>
 
     <footer>
-        
     </footer>
 </body>
 

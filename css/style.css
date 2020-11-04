@@ -87,7 +87,7 @@ a#entrar {
 }
 
 #banner{
-    background-image: url("../img/index/banner.jpg");  
+    background-image: url("../img/index/banner.jpg");
     background-position: center;
     background-size: cover;
     height: 500px;
@@ -180,8 +180,8 @@ h5{
     top: 0;
     right: 0;
     background-color: #F5F2F5;
-    overflow-x: hidden; 
-     padding-top: 60px; 
+    overflow-x: hidden;
+     padding-top: 60px;
 }
 
 #no_bar {
@@ -251,11 +251,11 @@ h5{
 }
 
 .buttonFinalizacionAzul {
-    background-color: rgb(190, 240, 255); 
-    color: black; 
+    background-color: rgb(190, 240, 255);
+    color: black;
     border: 2px solid #008CBA;
 }
-  
+
 .buttonFinalizacionAzul:hover {
     background-color: #008CBA;
     color: white;
@@ -269,12 +269,12 @@ h5{
 }
 
 .formInput {
-    width:100%; 
+    width:100%;
     height:36px;
     margin:2px 0 30px;
     padding-left:6px;
     box-sizing: border-box;
-    border-radius:10px; 
+    border-radius:10px;
     border:0;
     font-family: 'Source Sans Pro', sans-serif;
     font-size:1em;
@@ -311,8 +311,8 @@ label span {
 }
 
 .comanda {
-    background-color: rgb(190, 240, 255); 
-    color: black; 
+    background-color: rgb(190, 240, 255);
+    color: black;
     border: 2px solid #008CBA;
 }
 
@@ -321,12 +321,9 @@ label span {
     color: white;
 }
 
-.div-left{
-    float:left;
-    overflow: auto;
-    height: 80%;
-    display: grid;
-    grid-template-columns: 10% 10%;
+.div-total{
+    /* height: 80%;
+    width: auto; */
 }
 
 .celda {
@@ -336,12 +333,13 @@ label span {
 
 .div-right{
     float:right;
-    margin-right: 5%;
+    width: 50%;
+    margin-right: 200px;
+    height: 500px;
     padding: 30px 30px;
     font: 20px;
-    /* width: 50%; */
-    height: 70%;
     overflow: auto;
+
     /* border: 50px solid rgb(190, 240, 255); */
     border-top: 5px solid #008CBA;
     border-left: 20px solid #008CBA;
@@ -369,5 +367,14 @@ label span {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #008CBA;  
+    background: #008CBA;
+}
+
+.div-left{
+    border: solid 4px firebrick;
+    float: left;
+    width: 10%;
+    padding: 10px;
+    height: 200px;
+    overflow: auto;
 }
