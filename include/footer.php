@@ -53,7 +53,7 @@
 </footer> -->
   <div class="contentFooter">
     <h5>Horarios</h5>
-    <h5>Lunes - Viernes: 7 a.m. - 9 p.m.</h5>
+    <h5>Lunes - Viernes: 7:00h - 18:00h</h5>
   </div>
   <div class="contentFooter">
     <h5>Dirección: Av. Esplugues 13 Barcelona, España</h5>
@@ -62,7 +62,7 @@
   </div>
   <div class="contentFooter">
     <h5>Encuéntranos</h5>
-    <i class="fab fa-instagram fa-2x fa-fw"></i>
-    <i class="fab fa-facebook fa-2x fa-fw"></i>
-    <i class="fab fa-twitter fa-2x fa-fw"></i>
+    <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x fa-fw" style="color: white;"></i></a>
+    <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x fa-fw" style="color: white;"></i></a>
+    <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x fa-fw" style="color: white;"></i></a>
   </div>

@@ -3,3 +3,5 @@
 <link href="libs/fontawesome5/css/all.min.css" rel="stylesheet">
 
 <link href="css/style.css" rel="stylesheet">
+
+<script src="js/header.js"></script>

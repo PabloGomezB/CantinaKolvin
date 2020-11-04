@@ -4,6 +4,7 @@ body, html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: "Open Sans", sans-serif;
 }
 
 .centrar{
@@ -13,53 +14,9 @@ body, html {
 
 div {
     flex: 1;
+    display: block;
 }
 /*****************************************************************************************************************************************/
-
-
-
-
-/* index.php ************************************************************************************/
-/*#headerDiv {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/index/banner.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-}
-
-.h1Index {
-    color: white;
-    font-family: Arial;
-    text-align: center;
-}
-
-a#entrar {
-    display: block;
-    text-align: center;
-    width: 150px;
-    margin: 0px auto;
-    padding: 20px;
-    color: white;
-    text-transform: uppercase;
-    font-family: Arial;
-    border: 1px solid #fff;
-    text-decoration: none;
-    border-radius: 10px;
-}
-
-#inputIndex{
-    display: block;
-    text-align: center;
-    width: 100px;
-    margin: 0px auto;
-    padding: 10px;
-    text-transform: uppercase;
-    font-family: Arial;
-    border: 1px solid #fff;
-    text-decoration: none;
-    border-radius: 10px;
-}*/
 
 /*Nuevo index **********************************************/
 #hindex{
@@ -68,11 +25,11 @@ a#entrar {
 }
 
 #logo{
-    padding-top: 2%;
+    padding-top: 1%;
+    margin-bottom: 1%;
 }
 
 #navOpciones{
-    margin-top: 2%;
     background-color: #1B3353;
     padding: 1%;
 }
@@ -81,7 +38,6 @@ a#entrar {
     color: #FFFFFF;
     margin: 2%;
     text-align: center;
-    font-family: "Open Sans";
     font-size: 16px;
     font-style: bold;
 }
@@ -109,19 +65,21 @@ a#entrar {
 }
 
 h1{
-    font-family: "Open Sans";
     font-size: 48px;
     font-style: bold;
 }
 
-h3{
-    font-family: "Open Sans";
+#descripcionContenido{
     font-style: bold;
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+    line-height: 30pt;
 }
 
 #carta{
     background-color: #E8E1D3;
-    padding: 4%;
+    padding: 6%;
 }
 
 .imagenes{
@@ -143,7 +101,7 @@ h3{
 
 #findex{
     background-color: #1B3353;
-    height: 270px;
+    height: 250px;
     display: flex;
 }
 
@@ -152,7 +110,7 @@ h5{
 }
 
 .contentFooter{
-    margin-left: 15%;
+    margin-left: 13%;
     margin-top: 2%;
 }
 /*****************************************************************************************************************************************/
