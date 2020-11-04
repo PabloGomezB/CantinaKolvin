@@ -257,12 +257,12 @@ label span {
 .display {
     border: none;
     color: white;
-    padding: 10px 10px;
+    padding: 5px 5px;
     /* display: block; */
-    width: 150px;
+    width: 220px;
     /* margin-left: auto;
     margin-right: auto; */
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     font-size: 20px;
     transition-duration: 0.6s;
     cursor: pointer;
@@ -279,60 +279,39 @@ label span {
     color: white;
 }
 
-.div-total{
-    /* height: 80%;
-    width: auto; */
+@media screen and (min-width: 676px) {
+    .modal-dialog {
+      max-width: 520px; /* New width for default modal */
+    }
 }
 
-.celda {
-    border-radius: 5px;
-    padding: 5px;
+.modal .modal-content{
+    overflow:hidden;
 }
 
-.div-right{
-    float:right;
-    width: 50%;
-    margin-right: 200px;
-    height: 500px;
-    padding: 30px 30px;
-    font: 20px;
-    overflow: auto;
-
-    /* border: 50px solid rgb(190, 240, 255); */
-    border-top: 5px solid #008CBA;
-    border-left: 20px solid #008CBA;
-    border-right: 20px solid #008CBA;
-    border-bottom: 5px solid #008CBA;
-    border-radius: 5%;
-    background-color: #e3f2fd;
+.modal-dialog{
+    overflow-y: initial !important;
 }
 
-/* Scrollbar styles */
-.div-right::-webkit-scrollbar {
-    width: 15px;
+.modal-body{
+    height: 400px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
 }
 
-.div-right::-webkit-scrollbar-track {
-    /* border: 1px solid #04aee7; */
-    border-radius: 5px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.btn-secondary {
+    margin-left:50%;
+    height: 40px;
 }
 
-.div-right::-webkit-scrollbar-thumb {
-    background: #04aee7;
-    border-radius: 10px;
-}
+.blur {
 
-::-webkit-scrollbar-thumb:hover {
-    background: #008CBA;
-}
+    /* Any browser which supports CSS3 */
+   filter: blur(5px);
 
-.div-left{
-    border: solid 4px firebrick;
-    float: left;
-    width: 10%;
-    padding: 10px;
-    height: 200px;
-    overflow: auto;
+   /* Firefox version 34 and earlier */
+   filter: url("./svg/blur.svg#gaussian_blur");
+
+   /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
+   -webkit-filter: blur(5px);
 }
