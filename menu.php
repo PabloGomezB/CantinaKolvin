@@ -16,13 +16,26 @@
 <body>
 
 <!-- HEADER -->
-    <header id="hindex" style="margin-bottom: 80px;">
+    <header id="hindex">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
 
     </header>
 
-    <div class="container">
+    <div style="background-color: green;">
+        <p style="color: red;">Hola, soy el menú</p>
+        <div id="items"></div>
+        <aside class="col-md-4">
+            <h2>Carrito</h2>
+            <ul id="carrito"></ul>
+            <hr>
+            <p class="text-right">Total: <span id="total"></span></p>
+            <button id="botonVaciar" class="btn btn-danger">Vaciar</button>
+            <button id="comprar" class="btn btn-danger">Comprar</button>
+        </aside>
+    </div>
+
+    <!-- <div class="container">
         <div class="row">
             <main id="items" class="col-md-8 row"></main>
             <aside class="col-md-4">
@@ -34,7 +47,7 @@
                 <button id="comprar" class="btn btn-danger">Comprar</button>
             </aside>
         </div>
-    </div>
+    </div> -->
 
 <!-- FOOTER -->
     <footer id="findex">

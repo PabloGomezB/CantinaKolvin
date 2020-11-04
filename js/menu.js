@@ -127,9 +127,9 @@ window.onload = function () {
             priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
             // Boton 
-            let agregarCarritoElement = document.createElement('svg');
-            agregarCarritoElement.setAttribute('width','1em');
-            agregarCarritoElement.setAttribute('height','1em');
+            let agregarCarritoElement = document.createElement('button');
+            agregarCarritoElement.setAttribute('width','50px');
+            agregarCarritoElement.setAttribute('height','50px');
             agregarCarritoElement.setAttribute('viewBox','0 0 16 16');
             agregarCarritoElement.classList.add('bi', 'bi-cart-plus-fill');
             agregarCarritoElement.setAttribute('fill','currentColor');
