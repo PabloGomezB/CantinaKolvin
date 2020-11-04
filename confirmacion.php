@@ -27,7 +27,7 @@ ob_start();
         <?php
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        
+
             $dia = date('d-m-Y');
             $hora = date(' H:i');
             $ruta = "./comandas/$dia.txt";
@@ -50,43 +50,59 @@ ob_start();
                 $numeroPedido = contadorPedidos($ruta);
 
                 $file = fopen($ruta, "a") or die("Unable to open file!");
-                
+
                 $arrayObject = json_decode($_POST["inputHidden"], true);
 
                 fwrite($file, "|------------------------------ Pedido número: " . $numeroPedido . " ------------------------------]" . PHP_EOL .
-                "|> Nombre: " . $nombre . PHP_EOL .
-                "|> Teléfono: " . $telefono . PHP_EOL .
-                "|> Email: " . $email . PHP_EOL .
-                "|" . PHP_EOL);
+                    "|> Nombre: " . $nombre . PHP_EOL .
+                    "|> Teléfono: " . $telefono . PHP_EOL .
+                    "|> Email: " . $email . PHP_EOL .
+                    "|" . PHP_EOL);
 
                 foreach ($arrayObject as $object => $value) {
 
-                    echo $value["nombre"] .": " . $value["cantidad"] . "<br>";
-                    fwrite($file, "|--> " . $value["nombre"] .": " . $value["cantidad"] . PHP_EOL);
-
+                    echo $value["nombre"] . ": " . $value["cantidad"] . "<br>";
+                    fwrite($file, "|--> " . $value["nombre"] . ": " . $value["cantidad"] . PHP_EOL);
                 }
 
-                fwrite($file, "|" . PHP_EOL . 
-                "|> TOTAL: " . $total . " €" . PHP_EOL . 
-                "|------------------------------------]\n\n");
+                fwrite($file, "|" . PHP_EOL .
+                    "|> TOTAL: " . $total . " €" . PHP_EOL .
+                    "|------------------------------------]\n\n");
                 fclose($file);
-            
             }
+
+            enviarEmail($email,$numeroPedido);
 
             echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
 
+        function enviarEmail($email,$numeroPedido)
+        {
+            ini_set('display_errors', 1);
+            error_reporting(E_ALL);
+            $from = "a18jorcalari@inspedralbes.cat";
+            $to = $email;
+            $subject = "Resumen de la comanda";
+            $message = "Gracias por utilizar este servicio.";
+            $headers = 'From: '.$from. "\r\n" .
+                'Reply-To: '. $to . "\r\n" .
+                'X-Mailer: PHP/' . phpversion();
+            mail($to, $subject, $message, $headers);
+            echo "The email message was sent.";
+        }
 
-        function contadorPedidos($ruta){
+
+        function contadorPedidos($ruta)
+        {
             $contador = 0;
             $fichero = fopen($ruta, "r");
             while (($buffer = fgets($fichero)) !== false) {
                 if (strpos($buffer, '€') !== false) {
-                    $contador ++;
-                }      
+                    $contador++;
+                }
             }
             fclose($fichero);
-            $contador ++;
+            $contador++;
             return $contador;
         }
 
