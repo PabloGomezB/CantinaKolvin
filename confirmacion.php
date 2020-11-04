@@ -79,14 +79,13 @@ ob_start();
         function enviarEmail($email)
         {
             ini_set('display_errors', 1);
-            ini_set('smtp_port',"25");
             error_reporting(E_ALL);
             $from = "a18jorcalari@inspedralbes.cat";
-            $to = "a18jorcalari@inspedralbes.cat";
+            $to = $email;
             $subject = "Checking PHP mail";
             $message = "PHP mail works just fine";
-            $headers = 'From: a18jorcalari@inspedralbes.cat' . "\r\n" .
-                'Reply-To: a18jorcalari@inspedralbes.cat' . "\r\n" .
+            $headers = 'From: '.$from. "\r\n" .
+                'Reply-To: '. $to . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $message, $headers);
             echo "The email message was sent.";
