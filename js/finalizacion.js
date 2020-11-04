@@ -1,65 +1,62 @@
 window.onload = function () {
-
     let comandaArray = localStorage.getItem("carrito");
     let total = localStorage.getItem("total");
-    console.log(comandaArray);
 
     let comandaArrayJSON = JSON.parse(comandaArray);
 
-    
-
-    let tablaHTML = '<table border=1 style="width: 500px;">';
-    tablaHTML += "<tr style='text-align: center;'>";
-    tablaHTML += "<td><h4>Nombre</h4></td>"
-    tablaHTML += "<td><h4>Precio</h4></td>"
-    tablaHTML += "<td><h4>Cantidad</h4></td>"
-    tablaHTML += "<td><h4>Total</h4></td>"
+    let tablaHTML = '<table>';
+    tablaHTML += "<tr style='border-bottom: 1px solid grey;'>";
+    tablaHTML += "<td style='text-align: left;' width='400px' ><h4>Mi carrito (" + comandaArrayJSON.length + ")</h4></td>";
+    tablaHTML += "<td width='250px' style='text-align: center;'><h4>Precio</h4></td>"
+    tablaHTML += "<td width='250px' style='text-align: center;'><h4>Cant.</h4></td>"
+    tablaHTML += "<td style='text-align: right;' width='250px'><h4>Total</h4></td>"
     tablaHTML += "</tr>";
     comandaArrayJSON.forEach(function (element) {
-        tablaHTML += "<tr style='text-align: center; width: 500px;'>";
-        tablaHTML += "<td>"
+        tablaHTML += "<tr>";
+        tablaHTML += "<td style='text-align: left; padding: 10px;'>"
         tablaHTML += `<img src="${element.url_image}" alt='Producto' width='100px;'>`
-        tablaHTML += element.nombre;
+        tablaHTML += "<span style='margin-left: 10px;'>"+ element.nombre +"</span>";
         tablaHTML += "</td>"
 
-        tablaHTML += "<td style='text-align: center; width: 100px;'>"
+        tablaHTML += "<td style='text-align: center;'>"
         tablaHTML += element.precio;
         tablaHTML += "€"
         tablaHTML += "</td>"
 
-        tablaHTML += "<td style='text-align: center; width: 100px;'>"
+        tablaHTML += "<td style='text-align: center;'>"
         tablaHTML += element.cantidad;
         tablaHTML += "</td>"
 
-        tablaHTML += "<td style='text-align: center; width: 100px;'>"
-        tablaHTML += element.precio*element.cantidad;
+        tablaHTML += "<td style='text-align: right;'>"
+        tablaHTML += element.precio * element.cantidad;
         tablaHTML += "€"
         tablaHTML += "</td>"
 
-        
+
 
         tablaHTML += "</tr>";
 
     });
+
+    tablaHTML += "<tr style='border-top: 1px solid grey;'>";
+    tablaHTML += "<td>"
+    tablaHTML += "</td>"
+
+    tablaHTML += "<td>"
+    tablaHTML += "</td>"
+
+    tablaHTML += "<td style='text-align: center;'>"
+    tablaHTML += "Total:"
+    tablaHTML += "</td>"
+
+    tablaHTML += "<td style='text-align: right;'>"
     
-    tablaHTML += "<tr>";
-    tablaHTML += "<td>"
-    tablaHTML += "</td>"
-
-    tablaHTML += "<td>"
-    tablaHTML += "</td>"
-
-    tablaHTML += "<td>"
-    tablaHTML += "</td>"
-
-    tablaHTML += "<td style='text-align: center; height: 50px;'>"
-    tablaHTML += "Total: "
     tablaHTML += localStorage.getItem("total");
     tablaHTML += "€"
     tablaHTML += "</td>"
     tablaHTML += "</tr>";
     tablaHTML += "</table>";
-    
+
 
     let tablaDivElement = document.querySelector("#tabla");
     tablaDivElement.innerHTML = tablaHTML;

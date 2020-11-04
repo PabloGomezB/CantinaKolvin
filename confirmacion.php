@@ -71,19 +71,19 @@ ob_start();
                 fclose($file);
             }
 
-            enviarEmail($email);
+            enviarEmail($email,$numeroPedido);
 
             echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
 
-        function enviarEmail($email)
+        function enviarEmail($email,$numeroPedido)
         {
             ini_set('display_errors', 1);
             error_reporting(E_ALL);
             $from = "a18jorcalari@inspedralbes.cat";
             $to = $email;
-            $subject = "Checking PHP mail";
-            $message = "PHP mail works just fine";
+            $subject = "Resumen de la comanda";
+            $message = "Gracias por utilizar este servicio.";
             $headers = 'From: '.$from. "\r\n" .
                 'Reply-To: '. $to . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
