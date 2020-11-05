@@ -158,12 +158,13 @@ h5{
 /*Nuevo menú****************************************************************************************************************************************/
 #items{
     display: flex;
-    background-color: blue;
+    flex-wrap: wrap;
+    padding: 5%;
 }
 
 .contenido{
+    background-color:#E8E1D3;
     border: 1px solid black;
-    flex-wrap: nowrap;
     margin: 1%;
 }
 

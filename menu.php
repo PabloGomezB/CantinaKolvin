@@ -13,7 +13,6 @@ ob_start();
     <script type="text/javascript" src="js/menu.js"></script>
 
 </head>
-
 <body style="background-color: #E8E1D3;">
 
 <!-- HEADER -->
@@ -23,11 +22,12 @@ ob_start();
 
     </header>
 
-    <div style="padding: 2%; background-color: red; width: 100%;">
+    <div style="padding: 2%;">
         <h1 style="text-align: center;">MENÚ</h1>
         <div style="display: flex;">
             <div id="items"></div>
-            <aside class="col-md-4">
+            <aside class="col-md-4" style="display: none;" id="sidebar">
+                <button id="cerrar">Close &times;</button>
                 <h2>Carrito</h2>
                 <ul id="carrito"></ul>
                 <hr>

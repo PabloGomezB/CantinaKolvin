@@ -150,6 +150,12 @@
         renderizarCarrito();
         //Calculamos total
         calcularTotal();
+        document.getElementById("sidebar").style.display ="block";
+    }
+
+    function cerrar(){
+        console.log("Clica");
+        document.getElementById("sidebar").style.display = "none";
     }
 
     function renderizarCarrito() {
@@ -278,5 +284,7 @@
 
     //Inicializa el renderizado del menu.
     renderItems();
+
+    document.getElementById("cerrar").addEventListener("click", cerrar);
 
 }
