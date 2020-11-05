@@ -31,26 +31,18 @@ window.onload = function () {
         tablaHTML += element.precio * element.cantidad;
         tablaHTML += "€"
         tablaHTML += "</td>"
-
-
-
         tablaHTML += "</tr>";
 
     });
-
     tablaHTML += "<tr style='border-top: 1px solid grey;'>";
     tablaHTML += "<td>"
     tablaHTML += "</td>"
-
     tablaHTML += "<td>"
     tablaHTML += "</td>"
-
     tablaHTML += "<td style='text-align: center;'>"
     tablaHTML += "Total:"
     tablaHTML += "</td>"
-
     tablaHTML += "<td style='text-align: right;'>"
-    
     tablaHTML += localStorage.getItem("total");
     tablaHTML += "€"
     tablaHTML += "</td>"

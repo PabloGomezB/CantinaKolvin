@@ -101,7 +101,6 @@ window.onload = function () {
     let total = 0;
 
     let itemsElement = document.querySelector("#items");
-    let totalElement = document.querySelector('#total');
     let carritoElement = document.querySelector('#carrito');
     let botonVaciar = document.querySelector('#botonVaciar');
     let comprarElement = document.querySelector("#comprar");
@@ -111,33 +110,42 @@ window.onload = function () {
         menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
             let divElement = document.createElement('div');
-            divElement.classList.add('card', 'col-sm-4');
+            divElement.classList.add('col-md-4');
             // Body
             let divCardBodyElement = document.createElement('div');
-            divCardBodyElement.classList.add('card-body');
+            divCardBodyElement.classList.add('card', 'mb-4', 'shadow-sm');
+            divCardBodyElement.setAttribute('marcador', item.id);
+            divCardBodyElement.addEventListener('click', anadirCarrito);
             // Titulo
             let titleElement = document.createElement('h5');
             titleElement.classList.add('card-title');
             titleElement.textContent = item.nombre;
+            titleElement.style.textAlign = 'center';
             // Imagen
             let imageElement = document.createElement('img');
-            imageElement.classList.add('img-fluid');
+            imageElement.classList.add('mx-auto');
             imageElement.setAttribute('src', item.url_image);
+            imageElement.setAttribute('width', '200px');
+            imageElement.setAttribute('height', '200px');
+            imageElement.style.marginTop = "10%";
             // Precio
             let priceElement = document.createElement('p');
             priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
+            priceElement.style.textAlign = 'center';
             // Boton 
-            let buttonPlusElement = document.createElement('button');
-            buttonPlusElement.classList.add('btn', 'btn-primary');
-            buttonPlusElement.textContent = '+';
-            buttonPlusElement.setAttribute('marcador', item.id);
-            buttonPlusElement.addEventListener('click', anadirCarrito);
+            // let buttonPlusElement = document.createElement('button');
+            // buttonPlusElement.classList.add('btn', 'btn-primary');
+            // buttonPlusElement.textContent = '+';
+
+
+
+
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
             divCardBodyElement.appendChild(priceElement);
-            divCardBodyElement.appendChild(buttonPlusElement);
+            // divCardBodyElement.appendChild(buttonPlusElement);
             divElement.appendChild(divCardBodyElement);
             itemsElement.appendChild(divElement);
         });
@@ -145,7 +153,6 @@ window.onload = function () {
     }
 
     function anadirCarrito() {
-        console.log("Entra");
         //Elemento que hemos clickado se añade en el array carrito
         carrito.push(this.getAttribute('marcador'));
         //Renderizamos carrito
@@ -160,37 +167,81 @@ window.onload = function () {
         // Quitamos los duplicados
         let carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
+
+        let tablaHTML = '<table>';
+        tablaHTML += "<tr style='border-bottom: 1px solid grey;'>";
+        tablaHTML += "<td style='text-align: left;' width='400px' ><h4>Mi carrito (" + carritoSinDuplicados.length + ")</h4></td>";
+        tablaHTML += "<td width='250px' style='text-align: center;'><h4>Cant.</h4></td>"
+        tablaHTML += "<td width='250px' style='text-align: center;'><h4></h4></td>"
+        tablaHTML += "</tr>";
+
         carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
-            //let itemk = function()
             let itemDelMenu_array = obtenerObjetoPorId(menu_array, item);
             // Cuenta el número de veces que se repite el producto
             let numeroUnidadesItem = contarProducto(carrito, item);
 
             // Creamos el nodo del item del carrito
-            let itemCarritoElement = document.createElement('li');
-            itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
-            itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
-            // Boton de borrar
-            let miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-            miBoton.textContent = 'X';
-            miBoton.style.marginLeft = '1rem';
-            miBoton.setAttribute('item', item);
-            miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
-            itemCarritoElement.appendChild(miBoton);
-            carritoElement.appendChild(itemCarritoElement);
+
+
+            tablaHTML += "<tr>";
+
+            tablaHTML += "<td style='text-align: left; padding: 10px;'>"
+            tablaHTML += "<span style='margin-left: 10px;'>" + itemDelMenu_array[0].nombre + "</span>";
+            tablaHTML += "</td>"
+
+            tablaHTML += "<td style='text-align: center;'>"
+            tablaHTML += numeroUnidadesItem;
+            tablaHTML += "</td>"
+
+            tablaHTML += "<td style='text-align: center;'>"
+            tablaHTML += "<button onclick='borrarItemCarrito()'>Borrar</button>";
+            tablaHTML += "</td>"
+
+            tablaHTML += "</tr>";
+
+            // let itemCarritoElement = document.createElement('li');
+            // itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
+            // itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
+            // // Boton de borrar
+            // let restarItem = document.createElement('button');
+            // restarItem.classList.add('btn', 'btn-danger', 'mx-5');
+            // restarItem.textContent = 'X';
+            // restarItem.style.marginLeft = '1rem';
+            // restarItem.setAttribute('item', item);
+            // restarItem.addEventListener('click', borrarItemCarrito);
+            // // Mezclamos nodos
+            // itemCarritoElement.appendChild(restarItem);
+            // carritoElement.appendChild(itemCarritoElement);
         })
+
+        tablaHTML += "<tr style='border-top: 1px solid grey;'>";
+
+        tablaHTML += "<td style='text-align: center;'>"
+        tablaHTML += "Total:"
+        tablaHTML += "</td>"
+
+        tablaHTML += "<td>"
+        tablaHTML += "</td>"
+
+        tablaHTML += "<td id='total' style='text-align: right;'>"
+        tablaHTML += "€"
+        tablaHTML += "</td>"
+        tablaHTML += "</tr>";
+        tablaHTML += "</table>";
+
+        console.log(tablaHTML);
+
+        carritoElement.innerHTML = tablaHTML;
     }
 
-    function obtenerObjetoPorId(menu_array, item){
+    function obtenerObjetoPorId(menu_array, item) {
         return menu_array.filter(function (item_of_menu_array) {
             return item_of_menu_array['id'] == item;
         });
     }
 
-    function contarProducto(carrito, item){
+    function contarProducto(carrito, item) {
         return carrito.reduce(function (total, itemId) {
             return itemId === item ? total += 1 : total;
         }, 0);
@@ -204,7 +255,7 @@ window.onload = function () {
         carrito = carrito.filter(function (carritoId) {
             return carritoId !== id;
         });
-        
+
         // volvemos a renderizar
         renderizarCarrito();
         // Calculamos de nuevo el precio
@@ -270,15 +321,31 @@ window.onload = function () {
             alert("ERROR. Añade al menos un item a tu compra.");
         } else {
             localStorage.setItem("carrito", prepareJson());
-            localStorage.setItem("total",total);
+            localStorage.setItem("total", total);
             //Redireccion a finalizacion.php
             window.location.href = "finalizacion.php";
         }
     });
+
+    // function openNav() {
+    //     document.getElementById("mySidebar").style.width = "250px";
+    //     document.getElementById("items").style.marginLeft = "250px";
+    // }
+
+    // function closeNav() {
+    //     document.getElementById("mySidebar").style.width = "0";
+    //     document.getElementById("items").style.marginLeft = "0";
+    // }
+
+    // document.getElementsByClassName("openbtn")[0].addEventListener("click",openNav);
+    // document.getElementsByClassName("closebtn")[0].addEventListener("click",closeNav);
     //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);
 
     //Inicializa el renderizado del menu.
     renderItems();
+
+    renderizarCarrito();
+    let totalElement = document.querySelector('#total');
 
 }

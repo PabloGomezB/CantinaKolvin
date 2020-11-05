@@ -110,3 +110,5 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])) {
 
     <!-- FOOTER -->
     <?php include("include/footer.php"); ?>
+    
+</body>

@@ -64,10 +64,6 @@ h1{
     color: #FFFFFF;
 }
 
-.direccion{
-    margin-top: 25px;    
-}
-
 /* INDEX */
 
 .index{
@@ -106,7 +102,7 @@ h1{
 
 /* MENU */
 
-/* .lista_articulos {
+.lista_articulos {
     list-style: none;
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -114,7 +110,7 @@ h1{
 }
 
 .sidebar {
-    margin-top: 80px;
+    /* margin-top: 80px;
     height: 100%;
     width: 200px;
     position: fixed;
@@ -123,10 +119,12 @@ h1{
     right: 0;
     background-color: #F5F2F5;
     overflow-x: hidden;
-     padding-top: 60px;
+     padding-top: 60px; */
+    display: block;
+    background-color: white;
 }
 
-#no_bar {
+/* #no_bar {
     padding: 16px;
 }
 

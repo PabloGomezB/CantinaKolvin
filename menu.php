@@ -16,28 +16,41 @@ ob_start();
 
 <body>
 
-<!-- HEADER -->
-    <header id="hindex" style="margin-bottom: 80px;">
+    <!-- HEADER -->
+    <header id="hindex">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
 
     </header>
+    <div style="background-color: #E8E1D3;">
 
-    <div class="container">
-        <div class="row">
-            <main id="items" class="col-md-8 row" style="margin-right: 10px;"></main>
-            <aside class="col-md-4">
-                <h2>Carrito</h2>
-                <ul id="carrito"></ul>
-                <hr>
-                <p class="text-right">Total: <span id="total"></span></p>
-                <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar</button>
-                <button id="comprar" class="btn btn-primary" style="float: right;">Comprar</button>
+        <div style="display: flex;">
+
+            <div class="container">
+                <h1 style="text-align: center; padding-bottom: 20px;">MENU</h1>
+                <div class="row">
+
+                    <div id="items" class="col-md-12 row"></div>
+                </div>
+            </div>
+
+            <aside id="mySidebar" class="sidebar col-md-4">
+                <div>
+                    <!-- <span style="font-size: 48px;">Carrito</span> -->
+                    <button id="botonVaciar" class="btn btn-primary" style="float: right; margin-top: 15px;">Vaciar</button>
+                </div>
+                <div>
+                    <div id="carrito" style="padding: 25px;"></div>
+                </div>
+                <div>
+                    <button id="comprar" class="btn btn-primary" style="width: 100%;">Finalizar compra</button>
+                    <!-- <p class="text-right">Total: <span id="total"></span></p> -->
+                </div>
             </aside>
         </div>
     </div>
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer id="findex">
 
         <?php include("include/footer.php"); ?>
