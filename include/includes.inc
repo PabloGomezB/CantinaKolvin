@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">  
 <link href="libs/fontawesome5/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="libs/fontawesome5/css/font-awesome.min.css">
+
 <link href="css/style.css" rel="stylesheet">
 <script src="js/header.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
