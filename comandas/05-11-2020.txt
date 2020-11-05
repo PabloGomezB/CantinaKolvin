@@ -1,4 +1,5 @@
 |------------------------------ Pedido número: 1 ------------------------------]
+<<<<<<< HEAD
 |> Nombre: Jotyty
 |> Teléfono: 5
 |> Email: a18jorcalari@inspedralbes.cat
@@ -18,5 +19,26 @@
 |--> Croissant: 1
 |
 |> TOTAL: 2 €
+=======
+|> Fecha: 05-11-2020 [ 20:33]
+|> Nombre: NOMBREEE
+|> Teléfono: 675474567
+|> Email: a18pabgombra@inspedralbes.cat
+|
+|--> Espaguetis carbonara: 3
+|
+|> TOTAL: 3 €
+|------------------------------------]
+
+|------------------------------ Pedido número: 2 ------------------------------]
+|> Fecha: 05-11-2020 [ 20:34]
+|> Nombre: NOMBREE
+|> Teléfono: 675474569
+|> Email: a18pabgombra@inspedralbes.cat
+|
+|--> Espaguetis carbonara: 3
+|
+|> TOTAL: 3 €
+>>>>>>> pablo
 |------------------------------------]
 

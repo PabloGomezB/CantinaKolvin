@@ -196,23 +196,23 @@ h1{
     border: 2px solid #008CBA;
 }
 
-.buttonFinalizacionAzul:hover {
-    background-color: #008CBA;
-    color: white;
+.buttonFinalizacion:hover {
+    background-color: #E8E1D3;
+    color: black;
 }
 
-.form {
+/* .form {
     max-width: 400px;
     background: #e3f2fd;
     padding: 25px;
     font-family: 'Source Sans Pro', sans-serif;
-}
+} */
 
 .formInput {
-    width:100%;
+    width:80%;
     height:36px;
     margin:2px 0 30px;
-    padding-left:6px;
+    margin-left:26px;
     box-sizing: border-box;
     border-radius:10px;
     border:0;
@@ -228,10 +228,63 @@ label span {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    width: 80%;
-  }
+    margin-top: -40px;
+    width: 40%;
+}
+
+.icono{
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+
+*{box-sizing:border-box;}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+	width:60%;
+	padding:16px;
+	border-radius:10px;
+	/* margin:auto; */
+	background-color:rgba(175, 175, 175, 0.432);
+}
+
+form label{
+	width:100%;
+	font-weight:bold;
+    display:inline-block;
+}
+/*
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+*/
+form input[type="submit"]{
+	width:60%;
+	padding:8px 16px;
+    margin-top:30px;
+	border:1px solid #9C917E;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#9C917E;
+}
+
+/* form input[type="submit"]:hover{
+	cursor:pointer;
+} */
+
+
 /*****************************************************************************************************************************************/
 
 

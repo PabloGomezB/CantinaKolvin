@@ -58,7 +58,97 @@ window.onload = function () {
 
     document.getElementById("totalHidden").setAttribute("value", total);
 
-    console.log(document.getElementById("totalHidden").value);
+    /******************************************************************************************************************************** */
+
+    validarForm();
+
+    function validarForm(){
+
+        let OkNombre = false;
+        let OkTel = false;
+        let OkEmail = false;
+    
+        document.getElementById("confirmar").disabled=true;
+        document.getElementById("nombre").focus();
+
+        // - Validar que el nombre solo contenga letras
+        document.getElementById("nombre").addEventListener("keyup", function(){
+            let patron = /^[a-zA-Z ]+$/;
+            let valido = patron.test(this.value);
+
+            if (!valido){
+                toggleCheck("imgNombre",false);
+                OkNombre = false;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+            else{
+                toggleCheck("imgNombre",true);
+                OkNombre = true;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+        });
+
+
+        // - Validar que el email sea valido y con dominio "inspedralbes.cat"
+        document.getElementById("email").addEventListener("keyup", function(){
+            let patron = /^[\w]+@{1}[\w]+\.[a-z]{2,3}$/;
+            splited = this.value.split('@');
+            correo = splited[1];
+            let valido = patron.test(this.value);
+    
+            if (!valido || correo !== "inspedralbes.cat"){
+                toggleCheck("imgEmail",false);
+                OkTel=false;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+            else{
+                toggleCheck("imgEmail",true);
+                OkTel = true;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+        });
+    
+        // - Validar que el telefono tenga 9 digitos
+        document.getElementById("numero").addEventListener("keyup", function(){
+            let patron = /^[9|6]{1}([\d]{2}[-]*){3}[\d]{2}$/; //^(?:\D*\d){9}\D*$/;
+            let valido = patron.test(this.value);
+
+            if (!valido){
+                toggleCheck("imgNumero",false);
+                OkEmail = false;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+            else{
+                toggleCheck("imgNumero",true);
+                OkEmail = true;
+                toggleBoton(OkNombre, OkTel, OkEmail);
+            }
+        });
+    
+        /******************************************************************************************************************************** */
+        function toggleCheck(id, valido){
+            let img = document.getElementById(id);
+            if(valido){
+                img.removeAttribute("src");
+                img.setAttribute("src", "img/finalizacion/ok.png");
+            }
+            else{
+                img.removeAttribute("src");
+                img.setAttribute("src", "img/finalizacion/ko.png");
+            }
+            
+        }
+
+        function toggleBoton(n,t,e){
+            if(n && t && e){
+                document.getElementById("confirmar").disabled=false;
+            }else{
+                document.getElementById("confirmar").disabled=true;
+            }
+        };
+        
+    }
+
 }
 
 //Para recibir la cantidad de un elemento --> element.cantidad
