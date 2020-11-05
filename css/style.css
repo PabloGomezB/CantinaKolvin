@@ -77,6 +77,12 @@ h1{
     text-align: center;
 }
 
+.imagenesSlider{
+    margin-top: -500px;
+    height: 100%;
+    width: 100%;
+}
+
 .descripcion{
     background-color: #E8E1D3;
     padding: 4%;
