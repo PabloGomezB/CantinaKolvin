@@ -4,11 +4,18 @@ body, html {
     font-family: "Open Sans", sans-serif;
     background-color: #E8E1D3;
     font-style: italic;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .centrar{
     margin-left: auto;
     margin-right: auto;
+}
+
+div{
+    flex: 1;
 }
 
 h1{
@@ -76,7 +83,7 @@ h1{
 
 .descripcion{
     background-color: #E8E1D3;
-    padding: 10px;
+    padding: 4%;
 }
 
 .descripcionContenido{
@@ -86,13 +93,13 @@ h1{
 
 .eslogan{
     background-color: #9C917E;
-    padding: 3%;
+    padding: 4%;
     color: #FFFFFF;
 }
 
 .cartaIndex{
     background-color: #E8E1D3;
-    padding: 30px;
+    padding: 6.5%;
 }
 
 .imagenesCarta{
