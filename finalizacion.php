@@ -23,9 +23,8 @@ ob_start();
 <body>
 
     <!-- HEADER -->
-    <header id="hindex">
         <?php include("include/header.php"); ?>
-    </header>
+
         <div class="container-fluid" style="margin-bottom: 50px; margin-top: 50px; margin-left: 50px;">
             <div class="row mx-md-4">
                 <div id="tabla" class="col-md-6 col px-md-5"></div>
@@ -51,10 +50,9 @@ ob_start();
                 </div>
             </div>
         </div>
-    <!-- HEADER -->
-    <footer id="findex">
+
+    <!-- FOOTER -->
         <?php include("include/footer.php"); ?>
-    </footer>
 </body>
 
 </html>
