@@ -33,22 +33,18 @@ ob_start();
                     <div class="col-md-5 col px-md-4">
                         <img src="img/finalizacion/contacto.png" class="formImg" />
                         <form action="confirmacion.php" method="POST" class="form">
-                            <label>Nombre y apellidos: <span>*</span></label>
-                            <input id="nombre" type="text" name="nombre" placeholder="Nombre y apellidos" class="formInput" required>
+                            <label style="margin-top:20px;">Nombre y apellidos: <span>*</span></label>
+                            <input id="nombre" type="text" name="nombre" placeholder="Nombre y apellidos" style="height:30px;font-size:medium;" class="formInput" required>
                                 <span><img id="imgNombre" src="img/finalizacion/ko.png" class="icono"></span>
                             </input>
                             <label>Teléfono: <span>*</span></label>
-                            <span style="width:100%" class="input-append">
-                                <input id="numero" type="text" name="telefono" placeholder="Teléfono" class="formInput" required>
-                                    <img id="imgNumero" src="img/finalizacion/ko.png" class="icono" />
-                                </input>
-                            </span>
+                            <input id="numero" type="text" name="telefono" placeholder="Teléfono" style="height:30px;font-size:medium;" class="formInput" required>
+                                <img id="imgNumero" src="img/finalizacion/ko.png" class="icono" />
+                            </input>
                             <label>Email: <span>*</span></label>
-                            <span style="width:100%" class="input-append">
-                                <input id="email" type="email" name="email" placeholder="Correo electrónico" class="formInput" required>
-                                    <img id="imgEmail" src="img/finalizacion/ko.png" class="icono" />
-                                </input>
-                            <span>
+                            <input id="email" type="email" name="email" placeholder="Correo electrónico" style="height:30px;font-size:medium;" class="formInput" required>
+                                <img id="imgEmail" src="img/finalizacion/ko.png" class="icono" />
+                            </input>
                             <input id="inputHidden" name="inputHidden" type="hidden" value="">
                             <input id="totalHidden" name="totalHidden" type="hidden" value="">
                             <input id="confirmar" name="inputConfirmar" type="submit" class="buttonFinalizacion" value="Confirmar">
