@@ -60,12 +60,9 @@ ob_start();
                     "|> Email: " . $email . PHP_EOL .
                     "|" . PHP_EOL;
 
-                fwrite($file, $mensaje);
-
                 foreach ($arrayObject as $object => $value) {
                     $mensaje.="|--> " . $value["nombre"] . ": " . $value["cantidad"] . PHP_EOL;
                     echo $value["nombre"] . ": " . $value["cantidad"] . "<br>";
-                    fwrite($file, $mensaje);
                 }
 
                 $mensaje.="|" . PHP_EOL .
