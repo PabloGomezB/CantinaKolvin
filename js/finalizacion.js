@@ -72,7 +72,6 @@ window.onload = function () {
 
     function validarForm(){
 
-        let formularioValido = false;
         let OkNombre = false;
         let OkTel = false;
         let OkEmail = false;
@@ -84,18 +83,14 @@ window.onload = function () {
         document.getElementById("nombre").addEventListener("keyup", function(){
             let patron = /^[a-zA-Z ]+$/;
             let valido = patron.test(this.value);
-            let img = document.getElementById("imgNombre");
+
             if (!valido){
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ko.png");
-                formularioValido = false;
+                toggleCheck("imgNombre",false);
                 OkNombre = false;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
             else{
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ok.png");
-                formularioValido = true;
+                toggleCheck("imgNombre",true);
                 OkNombre = true;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
@@ -107,20 +102,15 @@ window.onload = function () {
             let patron = /^[\w]+@{1}[\w]+\.[a-z]{2,3}$/;
             splited = this.value.split('@');
             correo = splited[1];
-            let img = document.getElementById("imgEmail");
             let valido = patron.test(this.value);
     
             if (!valido || correo !== "inspedralbes.cat"){
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ko.png");
-                formularioValido = false;
+                toggleCheck("imgEmail",false);
                 OkTel=false;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
             else{
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ok.png");
-                formularioValido = true;
+                toggleCheck("imgEmail",true);
                 OkTel = true;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
@@ -129,28 +119,34 @@ window.onload = function () {
         // - Validar que el telefono tenga 9 digitos
         document.getElementById("numero").addEventListener("keyup", function(){
             let patron = /^[9|6]{1}([\d]{2}[-]*){3}[\d]{2}$/; //^(?:\D*\d){9}\D*$/;
-
-            let img = document.getElementById("imgNumero");
             let valido = patron.test(this.value);
-    
+
             if (!valido){
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ko.png");
-                formularioValido = false;
+                toggleCheck("imgNumero",false);
                 OkEmail = false;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
             else{
-                img.removeAttribute("src");
-                img.setAttribute("src", "img/finalizacion/ok.png");
-                formularioValido = true;
+                toggleCheck("imgNumero",true);
                 OkEmail = true;
                 toggleBoton(OkNombre, OkTel, OkEmail);
             }
         });
     
         /******************************************************************************************************************************** */
-    
+        function toggleCheck(id, valido){
+            let img = document.getElementById(id);
+            if(valido){
+                img.removeAttribute("src");
+                img.setAttribute("src", "img/finalizacion/ok.png");
+            }
+            else{
+                img.removeAttribute("src");
+                img.setAttribute("src", "img/finalizacion/ko.png");
+            }
+            
+        }
+
         function toggleBoton(n,t,e){
             if(n && t && e){
                 document.getElementById("confirmar").disabled=false;
