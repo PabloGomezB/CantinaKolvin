@@ -52,7 +52,7 @@ window.onload = function () {
         "id": 7,
         "nombre": "Sopa",
         "descripcion": "",
-        "precio": 1,
+        "precio": 1.5,
         "url_image": "img/menu/sopa.jpg",
         "hora": "hora_dinar"
     },
@@ -82,7 +82,6 @@ window.onload = function () {
     }
     ];
 
-
     let menu_array = [];
     let fechaAhora = new Date();
     let fechaCambio = new Date();
@@ -95,7 +94,6 @@ window.onload = function () {
     } else {
         menu_array = array_items.filter(item => item.hora == "hora_dinar");;
     }
-
 
     let carrito = [];
     let total = 0;
@@ -133,14 +131,6 @@ window.onload = function () {
             priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
             priceElement.style.textAlign = 'center';
-            // Boton 
-            // let buttonPlusElement = document.createElement('button');
-            // buttonPlusElement.classList.add('btn', 'btn-primary');
-            // buttonPlusElement.textContent = '+';
-
-
-
-
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
@@ -155,10 +145,11 @@ window.onload = function () {
     function anadirCarrito() {
         //Elemento que hemos clickado se añade en el array carrito
         carrito.push(this.getAttribute('marcador'));
-        //Renderizamos carrito
-        renderizarCarrito();
         //Calculamos total
         calcularTotal();
+        //Renderizamos carrito
+        renderizarCarrito();
+        
     }
 
     function renderizarCarrito() {
@@ -195,24 +186,11 @@ window.onload = function () {
             tablaHTML += "</td>"
 
             tablaHTML += "<td style='text-align: center;'>"
-            tablaHTML += "<button onclick='borrarItemCarrito()'>Borrar</button>";
+            tablaHTML += "<button item="+ item +" class='borrar bi bi-cart-dash'></button>";
             tablaHTML += "</td>"
 
             tablaHTML += "</tr>";
 
-            // let itemCarritoElement = document.createElement('li');
-            // itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
-            // itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
-            // // Boton de borrar
-            // let restarItem = document.createElement('button');
-            // restarItem.classList.add('btn', 'btn-danger', 'mx-5');
-            // restarItem.textContent = 'X';
-            // restarItem.style.marginLeft = '1rem';
-            // restarItem.setAttribute('item', item);
-            // restarItem.addEventListener('click', borrarItemCarrito);
-            // // Mezclamos nodos
-            // itemCarritoElement.appendChild(restarItem);
-            // carritoElement.appendChild(itemCarritoElement);
         })
 
         tablaHTML += "<tr style='border-top: 1px solid grey;'>";
@@ -225,14 +203,17 @@ window.onload = function () {
         tablaHTML += "</td>"
 
         tablaHTML += "<td id='total' style='text-align: right;'>"
-        tablaHTML += "€"
+        tablaHTML += total + "€"
         tablaHTML += "</td>"
         tablaHTML += "</tr>";
         tablaHTML += "</table>";
 
-        console.log(tablaHTML);
-
         carritoElement.innerHTML = tablaHTML;
+
+        let botonesBorrar = document.querySelectorAll(".borrar");
+        botonesBorrar.forEach(element => {
+            element.addEventListener('click',borrarItemCarrito);
+        });
     }
 
     function obtenerObjetoPorId(menu_array, item) {
@@ -256,10 +237,12 @@ window.onload = function () {
             return carritoId !== id;
         });
 
-        // volvemos a renderizar
-        renderizarCarrito();
         // Calculamos de nuevo el precio
         calcularTotal();
+
+        // volvemos a renderizar
+        renderizarCarrito();
+        
     }
 
     function calcularTotal() {
@@ -278,16 +261,18 @@ window.onload = function () {
         // Formateamos el total para que solo tenga dos decimales
         let totalDosDecimales = total.toFixed(2);
         // Renderizamos el precio en el HTML
-        totalElement.textContent = totalDosDecimales;
+        total = totalDosDecimales;
     }
 
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
-        // Renderizamos los cambios
-        renderizarCarrito();
+
         //Calculamos de nuevo el total.
         calcularTotal();
+        // Renderizamos los cambios
+        renderizarCarrito();
+        
     }
 
 
@@ -327,28 +312,15 @@ window.onload = function () {
         }
     });
 
-    // function openNav() {
-    //     document.getElementById("mySidebar").style.width = "250px";
-    //     document.getElementById("items").style.marginLeft = "250px";
-    // }
-
-    // function closeNav() {
-    //     document.getElementById("mySidebar").style.width = "0";
-    //     document.getElementById("items").style.marginLeft = "0";
-    // }
-
-    // document.getElementsByClassName("openbtn")[0].addEventListener("click",openNav);
-    // document.getElementsByClassName("closebtn")[0].addEventListener("click",closeNav);
     //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);
 
     //Inicializa el renderizado del menu.
     renderItems();
 
+    //Inicializa el renderizado del carrito.
     renderizarCarrito();
-    let totalElement = document.querySelector('#total');
-    calcularTotal();
 
-    
+
 
 }
