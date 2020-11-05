@@ -23,7 +23,7 @@ ob_start();
     <span class="blur">
         <header id="hindex">
             <div id="logo">
-                <a href="index.php"><img src="img/logo.png" width="150" height="80"></a>
+                <a href="index.php"><img src="../img/logo.png" width="150" height="80"></a>
             </div>
             <nav id="navOpciones">
                 <a class="opciones" href="index.php">Inicio</a>
@@ -47,9 +47,9 @@ ob_start();
             <div id="carta">
                 <h1 style="margin-bottom: 5%; margin-top: 2%;">Nuestra Carta</h1>
                 <div style="display: flex;">
-                    <img class="imagenes" src="img/menu/cafe.jpg" alt="Café" width="150px">
-                    <img class="imagenes" src="img/menu/sopa.jpg" alt="Sopa" width="150px">
-                    <img class="imagenes" src="img/menu/cruasan.jpg" alt="Cruasan" width="150px">          
+                    <img class="imagenes" src="../img/menu/cafe.jpg" alt="Café" width="150px">
+                    <img class="imagenes" src="../img/menu/sopa.jpg" alt="Sopa" width="150px">
+                    <img class="imagenes" src="../img/menu/cruasan.jpg" alt="Cruasan" width="150px">          
                 </div>
                 <div style="display: flex;">
                     <p id="cafe">Café</p>
