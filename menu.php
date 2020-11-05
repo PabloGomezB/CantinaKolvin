@@ -37,13 +37,13 @@ ob_start();
             <aside id="mySidebar" class="sidebar col-md-4">
                 <div>
                     <!-- <span style="font-size: 48px;">Carrito</span> -->
-                    <button id="botonVaciar" class="btn vaciar bi bi-cart-x" style="float: right; margin-top: 15px;"></button>
+                    <button id="botonVaciar" class="vaciar btn btn-danger" style="float: right; margin-top: 15px;"><i class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
                 </div>
                 <div>
                     <div id="carrito" style="padding: 25px;"></div>
                 </div>
                 <div>
-                    <button id="comprar" class="btn finalizar" style="width: 100%;">Finalizar compra</button>
+                    <button id="comprar" class="btn finalizar" style="width: 100%;"><i class="fa fa-lock" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Finalizar compra</button>
                     <!-- <p class="text-right">Total: <span id="total"></span></p> -->
                 </div>
             </aside>

@@ -186,7 +186,7 @@ window.onload = function () {
             tablaHTML += "</td>"
 
             tablaHTML += "<td style='text-align: center;'>"
-            tablaHTML += "<button item="+ item +" class='borrar bi bi-cart-dash'></button>";
+            tablaHTML += "<button item="+ item +" class='btn borrar'><i class='fa fa-minus' aria-hidden='true' style='color: red;'></i></button>";
             tablaHTML += "</td>"
 
             tablaHTML += "</tr>";
