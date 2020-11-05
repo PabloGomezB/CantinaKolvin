@@ -12,7 +12,10 @@ ob_start();
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
     <?php include("include/includes.inc") ?>
+    <style>
 
+    
+</style>
 </head>
 
 <body>
@@ -21,15 +24,16 @@ ob_start();
     <header id="hindex">
         <?php include("include/header.php"); ?>
     </header>
-    <div>
-        <h1>CONFIRMACION</h1>
+  
+    
+
 
         <?php
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $dia = date('d-m-Y');
-            $hora = date(' H:i');
+            $hora = date('H:i');
             $ruta = "./comandas/$dia.txt";
 
             if (!isset($_COOKIE['fecha'])) {
@@ -53,7 +57,7 @@ ob_start();
 
                 $arrayObject = json_decode($_POST["inputHidden"], true);
 
-                $mensaje="|------------------------------ Pedido número: " . $numeroPedido . " ------------------------------]" . PHP_EOL .
+                $mensaje="|---------------------------- Pedido número: " . $numeroPedido . " ----------------------------]" . PHP_EOL .
                     "|> Fecha: " . $dia . " [". $hora ."]" . PHP_EOL .
                     "|> Nombre: " . $nombre . PHP_EOL .
                     "|> Teléfono: " . $telefono . PHP_EOL .
@@ -62,7 +66,7 @@ ob_start();
 
                 foreach ($arrayObject as $object => $value) {
                     $mensaje.="|--> " . $value["nombre"] . ": " . $value["cantidad"] . PHP_EOL;
-                    echo $value["nombre"] . ": " . $value["cantidad"] . "<br>";
+                    //echo $value["nombre"] . ": " . $value["cantidad"] . "<br>";
                 }
 
                 $mensaje.="|" . PHP_EOL .
@@ -74,7 +78,6 @@ ob_start();
 
             enviarEmail($email,$numeroPedido,$mensaje);
 
-            echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
 
         function enviarEmail($email,$numeroPedido,$mensaje){
@@ -87,7 +90,7 @@ ob_start();
                 'Reply-To: '. $to . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
             mail($to, $subject, $mensaje, $headers);
-            echo "The email message was sent.";
+            //echo "The email message was sent.";
         }
 
 
@@ -104,14 +107,26 @@ ob_start();
             $contador++;
             return $contador;
         }
-
-
         ?>
-    </div>
     <!-- HEADER -->
     <footer id="findex">
         <?php include("include/footer.php"); ?>
     </footer>
+
+
+    <script type="text/javascript">
+
+        $('#modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        })
+
+        $('#modal').modal('show');
+
+        document.getElementById("volver").onclick = function () {
+            location.href = "../index.php";
+        };
+    </script>
 </body>
 
 </html>

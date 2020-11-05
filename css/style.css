@@ -144,10 +144,6 @@ h1{
     bottom: 0;
 } */
 
-
-/*****************************************************************************************************************************************/
-
-
 /* administracion.php ************************************************************************************/
 #usuario{
     margin-bottom: 25px;
@@ -179,9 +175,6 @@ h1{
     height: 30px;
     border-radius: 5px;
 }
-/*****************************************************************************************************************************************/
-
-
 
 /* finalizacion.php ************************************************************************************/
 .buttonFinalizacion {
@@ -195,12 +188,6 @@ h1{
     font-size: 26px;
     transition-duration: 0.6s;
     cursor: pointer;
-}
-
-.buttonFinalizacionAzul {
-    background-color: rgb(190, 240, 255);
-    color: black;
-    border: 2px solid #008CBA;
 }
 
 .buttonFinalizacion:hover {
@@ -242,7 +229,7 @@ label span {
 
 *{box-sizing:border-box;}
 
-form{
+.formFinalizacion{
     margin-left: auto;
     margin-right: auto;
     height: 400px;
@@ -252,7 +239,7 @@ form{
 	background-color:rgba(175, 175, 175, 0.432);
 }
 
-form label{
+.formFinalizacion label{
     width:100%;
     margin-top:20px;
     margin-bottom:10px;
@@ -261,7 +248,7 @@ form label{
     display:inline-block;
 }
 
-form input[type="submit"]{
+.formFinalizacion input[type="submit"]{
 	width:60%;
 	padding:8px 16px;
     margin-top:20px;
@@ -272,33 +259,22 @@ form input[type="submit"]{
 	background-color:#9C917E;
 }
 
-/*****************************************************************************************************************************************/
-
-
 /* admin.php ************************************************************************************/
 .display {
-    border: none;
-    color: white;
     padding: 5px 5px;
-    /* display: block; */
     width: 220px;
-    /* margin-left: auto;
-    margin-right: auto; */
-    /* margin-bottom: 30px; */
     font-size: 20px;
     transition-duration: 0.6s;
     cursor: pointer;
-}
-
-.comanda {
-    background-color: rgb(190, 240, 255);
-    color: black;
-    border: 2px solid #008CBA;
-}
-
-.comanda:hover {
-    background-color: #008CBA;
+    background-color: #9C917E;
     color: white;
+    border: 2px solid #9C917E;
+    border-radius:5px;
+}
+
+.display:hover {
+    background-color: #E8E1D3;
+    color: black;
 }
 
 @media screen and (min-width: 676px) {
@@ -308,6 +284,7 @@ form input[type="submit"]{
 }
 
 .modal .modal-content{
+    height: 600px;
     overflow:hidden;
 }
 

@@ -82,9 +82,9 @@ ob_start();
     <div id="modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header pb-3">
+                <span class="modal-header pb-3">
                     <div class="btn-group">
-                        <button type="button" class="display comanda dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button type="button" class="display buttonFinalizacion dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Comandas
                         </button>
                         <button id="volver" type="button" class="btn btn-secondary">Volver</button>
@@ -94,7 +94,7 @@ ob_start();
                             </div>
                         </form>
                     </div>
-                </div>
+                </span>
                 <div class="modal-body">
                     <div id="texto">
                         Selecciona un fichero para ver su contenido
@@ -108,7 +108,6 @@ ob_start();
   
     <?php
         
-        //$botones = `<input name='comanda' type='submit' class='display comanda' value='`;
         $ruta = "../comandas/";
 
         // scandir: Escanea la ruta y devuelve todo su contenido (en sistemas Lunix devuelve "." y ".." tambien)
