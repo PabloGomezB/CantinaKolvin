@@ -118,40 +118,24 @@ div{
 
 /* MENU */
 
-.lista_articulos {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
-}
-
 .sidebar {
-    /* margin-top: 80px;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #F5F2F5;
-    overflow-x: hidden;
-     padding-top: 60px; */
     display: block;
     background-color: white;
 }
 
-/* #no_bar {
-    padding: 16px;
-}
-
-.listaMenu {
-    margin: 100px;
-}
-
 #comprar{
-    position: fixed;
-    bottom: 0;
-} */
+    background-color: #9C917E;
+    color: white;
+    border: none;
+}
+
+#botonVaciar{
+    background-color: red;
+    color: white;
+    border: none;
+}
+
+
 
 
 /*****************************************************************************************************************************************/
