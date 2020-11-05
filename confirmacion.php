@@ -21,10 +21,7 @@ ob_start();
 <body>
 
     <!-- HEADER -->
-    <header id="hindex">
-        <?php include("include/header.php"); ?>
-    </header>
-  
+    <?php include("include/header.php"); ?>
     
 
 
@@ -106,10 +103,9 @@ ob_start();
             return $contador;
         }
         ?>
-    <!-- HEADER -->
-    <footer id="findex">
-        <?php include("include/footer.php"); ?>
-    </footer>
+    <h1 style="text-align: center;">PEDIDO REALIZADO CON ÉXITO</h1>
+    <!-- FOOTER -->
+    <?php include("include/footer.php"); ?>
 
 
     <script type="text/javascript">
