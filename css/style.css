@@ -201,23 +201,15 @@ h1{
     color: black;
 }
 
-/* .form {
-    max-width: 400px;
-    background: #e3f2fd;
-    padding: 25px;
-    font-family: 'Source Sans Pro', sans-serif;
-} */
+.buttonFinalizacion:hover:disabled{
+    cursor: not-allowed;
+}
 
 .formInput {
     width:80%;
-    height:36px;
-    margin:2px 0 30px;
+    height:800px;
     margin-left:26px;
-    box-sizing: border-box;
-    border-radius:10px;
-    border:0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:1em;
+    margin-bottom: 26px;
 }
 
 label span {
@@ -233,6 +225,7 @@ label span {
 }
 
 .icono{
+    margin-top: 5px;
     margin-left: 5px;
     width: 20px;
     height: 20px;
@@ -245,45 +238,32 @@ label span {
 form{
     margin-left: auto;
     margin-right: auto;
+    height: 400px;
 	width:60%;
 	padding:16px;
 	border-radius:10px;
-	/* margin:auto; */
 	background-color:rgba(175, 175, 175, 0.432);
 }
 
 form label{
-	width:100%;
+    width:100%;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size: large;
 	font-weight:bold;
     display:inline-block;
 }
-/*
-form input[type="text"],
-form input[type="email"]{
-	width:180px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
-}
-*/
+
 form input[type="submit"]{
 	width:60%;
 	padding:8px 16px;
-    margin-top:30px;
+    margin-top:20px;
 	border:1px solid #9C917E;
 	border-radius:5px;
 	display:block;
 	color:#fff;
 	background-color:#9C917E;
 }
-
-/* form input[type="submit"]:hover{
-	cursor:pointer;
-} */
-
 
 /*****************************************************************************************************************************************/
 
