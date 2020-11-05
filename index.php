@@ -48,15 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])) {
             <!-- Wrapper for slides -->
             <div class="carousel-inner" style="height: 500px;">
                 <div class="item active">
-                    <img src="img/menu/cafe.jpg" alt="Los Angeles" class="imagenesCarousel centrar">
+                    <img src="img/index/entradaCantina.jpg" alt="Entrada">
                 </div>
 
                 <div class="item">
-                    <img src="img/menu/cruasan.jpg" alt="Chicago" class="imagenesCarousel centrar">
+                    <img src="img/index/recepcionCantina.jpg" alt="Recepcion">
                 </div>
 
                 <div class="item">
-                    <img src="img/menu/sopa.jpg" alt="New york" class="imagenesCarousel centrar">
+                    <img src="img/index/comedorCantina.jpg" alt="Comedor">
                 </div>
             </div>
 
