@@ -347,5 +347,8 @@ window.onload = function () {
 
     renderizarCarrito();
     let totalElement = document.querySelector('#total');
+    calcularTotal();
+
+    
 
 }
