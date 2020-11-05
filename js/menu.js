@@ -319,7 +319,13 @@ window.onload = function () {
     comprarElement.addEventListener('click', function () {
         //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
         if (carrito.length == 0) {
-            alert("ERROR. Añade al menos un item a tu compra.");
+            
+            swal({
+                title: "ERROR",
+                text: "Parece que tu cesta esta vacía. ¿De verdad que no quieres comer nada?",
+                icon: "error",
+                button: "OK",
+              });
         } else {
             localStorage.setItem("carrito", prepareJson());
             localStorage.setItem("total", total);
