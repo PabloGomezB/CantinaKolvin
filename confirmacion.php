@@ -35,7 +35,7 @@ ob_start();
             if (!isset($_COOKIE['fecha'])) {
                 //setcookie("fecha[dia]", $dia, time() + 24 * 3600);
                 //setcookie('fecha[hora]', $hora, time() + 24 * 3600);
-                //setcookie("fecha[dia]", $fecha, time() + 3);
+                setcookie("fecha[dia]", $dia, time() + 3);
                 setcookie('fecha[hora]', $hora, time() + 3);
             }
 
@@ -53,41 +53,43 @@ ob_start();
 
                 $arrayObject = json_decode($_POST["inputHidden"], true);
 
-                fwrite($file, "|------------------------------ Pedido número: " . $numeroPedido . " ------------------------------]" . PHP_EOL .
+                $mensaje="|------------------------------ Pedido número: " . $numeroPedido . " ------------------------------]" . PHP_EOL .
+                    "|> Fecha: " . $dia . " [". $hora ."]" . PHP_EOL .
                     "|> Nombre: " . $nombre . PHP_EOL .
                     "|> Teléfono: " . $telefono . PHP_EOL .
                     "|> Email: " . $email . PHP_EOL .
-                    "|" . PHP_EOL);
+                    "|" . PHP_EOL;
+
+                fwrite($file, $mensaje);
 
                 foreach ($arrayObject as $object => $value) {
-
+                    $mensaje.="|--> " . $value["nombre"] . ": " . $value["cantidad"] . PHP_EOL;
                     echo $value["nombre"] . ": " . $value["cantidad"] . "<br>";
-                    fwrite($file, "|--> " . $value["nombre"] . ": " . $value["cantidad"] . PHP_EOL);
+                    fwrite($file, $mensaje);
                 }
 
-                fwrite($file, "|" . PHP_EOL .
-                    "|> TOTAL: " . $total . " €" . PHP_EOL .
-                    "|------------------------------------]\n\n");
+                $mensaje.="|" . PHP_EOL .
+                "|> TOTAL: " . $total . " €" . PHP_EOL .
+                "|------------------------------------]\n\n";
+                fwrite($file, $mensaje);
                 fclose($file);
             }
 
-            enviarEmail($email,$numeroPedido);
+            enviarEmail($email,$numeroPedido,$mensaje);
 
             echo '<h1>PEDIDO REALIZADO CON EXITO</h1>';
         }
 
-        function enviarEmail($email,$numeroPedido)
-        {
+        function enviarEmail($email,$numeroPedido,$mensaje){
             ini_set('display_errors', 1);
             error_reporting(E_ALL);
-            $from = "a18jorcalari@inspedralbes.cat";
+            $from = "cantina@kolvincorporation.com";
             $to = $email;
             $subject = "Resumen de la comanda";
-            $message = "Gracias por utilizar este servicio.";
             $headers = 'From: '.$from. "\r\n" .
                 'Reply-To: '. $to . "\r\n" .
                 'X-Mailer: PHP/' . phpversion();
-            mail($to, $subject, $message, $headers);
+            mail($to, $subject, $mensaje, $headers);
             echo "The email message was sent.";
         }
 

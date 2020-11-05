@@ -62,7 +62,7 @@
   </div>
   <div class="contentFooter">
     <h5>Encuéntranos</h5>
-    <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x fa-fw" style="color: white;"></i></a>
-    <a href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x fa-fw" style="color: white;"></i></a>
-    <a href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x fa-fw" style="color: white;"></i></a>
+    <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x fa-fw" style="color: white;"></i></a>
+    <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook fa-2x fa-fw" style="color: white;"></i></a>
+    <a target="_blank" href="https://www.twitter.com/"><i class="fab fa-twitter fa-2x fa-fw" style="color: white;"></i></a>
   </div>
