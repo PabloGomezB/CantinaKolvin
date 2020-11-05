@@ -27,7 +27,7 @@ ob_start();
         <div style="display: flex;">
 
             <div class="container">
-                <h1 style="text-align: center; padding-bottom: 20px;">MENU</h1>
+                <h1 style="text-align: center; padding-bottom: 20px;">MENÚ</h1>
                 <div class="row">
 
                     <div id="items" class="col-md-12 row"></div>
