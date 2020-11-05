@@ -1,0 +1,22 @@
+|------------------------------ Pedido número: 1 ------------------------------]
+|> Nombre: Jotyty
+|> Teléfono: 5
+|> Email: a18jorcalari@inspedralbes.cat
+|
+|--> Caracola: 1
+|--> Croissant: 1
+|
+|> TOTAL: 2 €
+|------------------------------------]
+
+|------------------------------ Pedido número: 2 ------------------------------]
+|> Nombre: Jotyty
+|> Teléfono: 5
+|> Email: a18jorcalari@inspedralbes.cat
+|
+|--> Caracola: 1
+|--> Croissant: 1
+|
+|> TOTAL: 2 €
+|------------------------------------]
+

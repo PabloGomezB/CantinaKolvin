@@ -42,12 +42,16 @@ div {
     font-style: bold;
 }
 
-#banner{
+/* #banner{
     background-image: url("../img/index/banner.jpg");
     background-position: center;
     background-size: cover;
     height: 500px;
-}
+} */
+
+
+ 
+
 
 #index{
     text-align: center;
@@ -79,24 +83,11 @@ h1{
 
 #carta{
     background-color: #E8E1D3;
-    padding: 6%;
+    padding: 10%;
 }
 
 .imagenes{
     border-radius: 150px;
-    margin-left: 19%;
-}
-
-#cafe{
-    margin-left: 22.5%;
-}
-
-#sopa{
-    margin-left: 26%;
-}
-
-#cruasan{
-    margin-left: 25.5%;
 }
 
 #findex{
@@ -106,7 +97,7 @@ h1{
 }
 
 h5{
-    color: #FFFFFF;
+    color:white;
 }
 
 .contentFooter{
