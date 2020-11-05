@@ -7,13 +7,14 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <?php include("include/includes.inc") ?>
 
     <script type="text/javascript" src="js/menu.js"></script>
 
 </head>
-<body style="background-color: #E8E1D3;">
+
+<body>
 
 <!-- HEADER -->
     <header id="hindex">
@@ -21,22 +22,26 @@ ob_start();
         <?php include("include/header.php"); ?>
 
     </header>
-
-    <div style="padding: 2%;">
-        <h1 style="text-align: center;">MENÚ</h1>
-        <div style="display: flex;">
-            <div id="items"></div>
-            <aside class="col-md-4" style="display: none;" id="sidebar">
-                <button id="cerrar">Close &times;</button>
-                <h2>Carrito</h2>
-                <ul id="carrito"></ul>
-                <hr>
-                <p class="text-right">Total: <span id="total"></span></p>
-                <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar</button>
-                <button id="comprar" class="btn btn-primary" style="float: right;">Comprar</button>
-            </aside>
+    
+    
+    <div style="display: flex;">
+        <div class="container-fluid">
+            <h1 style="margin-top: 1%; margin-left: 16%;">MENÚ</h1>
+            <div class="row">
+                <main id="items" class="col-md-8 row"></main>         
+            </div>
         </div>
+        <aside class="col-md-4" style="display: block; background-color: white;" id="sidebar">
+            <i class="material-icons" style="font-size:48px;" id="cerrar">&#xe5cd;</i>
+            <h2>Mi carrito</h2>
+            <ul id="carrito"></ul>
+            <hr>
+            <p class="text-right">Total: <span id="total"></span></p>
+            <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar <i class="fa fa-shopping-cart"></i></button>
+            <button id="comprar" style="float: right; background-color: #9C917E;">Comprar</button>
+        </aside>
     </div>
+    
 
 <!-- FOOTER -->
     <footer id="findex">

@@ -1,4 +1,4 @@
- window.onload = function () {
+window.onload = function () {
     //Creo un array donde tengo todos los items que pueden estar en el menu.
     let array_items = [{
         "id": 1,
@@ -111,12 +111,16 @@
         menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
             let divElement = document.createElement('div');
-            divElement.classList.add('contenido');
+            divElement.classList.add('card', 'col-sm-4');
+            
             // Body
             let divCardBodyElement = document.createElement('div');
-            // divCardBodyElement.classList.add('card-body');
+            divCardBodyElement.classList.add('card-body');
+            divCardBodyElement.addEventListener('click', anadirCarrito);
+            divCardBodyElement.setAttribute('marcador', item.id);
             // Titulo
             let titleElement = document.createElement('h5');
+            titleElement.classList.add('card-title');
             titleElement.textContent = item.nombre;
             // Imagen
             let imageElement = document.createElement('img');
@@ -124,18 +128,14 @@
             imageElement.setAttribute('src', item.url_image);
             // Precio
             let priceElement = document.createElement('p');
+            priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
             // Boton 
-            let buttonPlusElement = document.createElement('button');
-            buttonPlusElement.classList.add('btn', 'btn-primary');
-            buttonPlusElement.textContent = '+';
-            buttonPlusElement.setAttribute('marcador', item.id);
-            buttonPlusElement.addEventListener('click', anadirCarrito);
+            //buttonPlusElement.textContent = '+';
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
             divCardBodyElement.appendChild(priceElement);
-            divCardBodyElement.appendChild(buttonPlusElement);
             divElement.appendChild(divCardBodyElement);
             itemsElement.appendChild(divElement);
         });
@@ -154,7 +154,6 @@
     }
 
     function cerrar(){
-        console.log("Clica");
         document.getElementById("sidebar").style.display = "none";
     }
 
@@ -176,9 +175,9 @@
             itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
             itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
             // Boton de borrar
-            let miBoton = document.createElement('button');
-            miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-            miBoton.textContent = 'X';
+            let miBoton = document.createElement('i');
+            miBoton.classList.add('fas', 'fa-trash-alt');
+            //miBoton.textContent = 'X';
             miBoton.style.marginLeft = '1rem';
             miBoton.setAttribute('item', item);
             miBoton.addEventListener('click', borrarItemCarrito);
