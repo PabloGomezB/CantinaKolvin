@@ -74,23 +74,20 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])) {
         <!-- DESCRIPCION -->
 
         <div class="descripcion">
-            <h1 >Cantina Kolvin</h1>
-            <p class="descripcionContenido margenes">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam illum officiis tempore. Atque, sunt ratione asperiores dignissimos aperiam laborum odio dolor nostrum quis, exercitationem vero ducimus, tenetur nobis nesciunt veniam.
-                Aliquam optio voluptate ipsam omnis, ea voluptatem. Magnam reprehenderit sunt nisi aperiam, eius dicta laboriosam iure placeat ipsa. Molestias nostrum incidunt quos ad aut beatae ipsa culpa fugiat iusto quas.
-                Reprehenderit libero quidem velit quis dolorem. Quis, odit perferendis. Praesentium voluptates accusantium minima reiciendis? Rerum consectetur, tempora quo inventore reprehenderit, nulla dicta molestiae cupiditate quod autem, aut in maxime quis.
-                </p>
+            <h1 class="titulos">Cantina Kolvin</h1>
+            <p class="descripcionContenido margenes">En la cantina kolvin encontrarás un lugar dedicado a aperitivos caseros, como bocatas, pizza, bebidas, etc., junto a un ambiente agradable, el cual te dejará a gusto y satisfecho. Si no nos crees, ven y compruébalo tu mismo.</p>
         </div>
 
         <!-- SLOGAN -->
 
         <div class="eslogan">
-            <h1>Almorzar, mi momento favorito del día</h1>
+            <h1 class="titulos">Almorzar, mi momento favorito del día</h1>
         </div>
 
         <!-- CARTA -->
 
         <div class="cartaIndex">
-            <h1 style="margin-bottom: 5%;">Nuestra Carta</h1>
+            <h1 class="titulos" style="margin-bottom: 5%;">Nuestra Carta</h1>
             <div class="d-flex justify-content-around">
                 <div class="p-2">
                     <img class="imagenesCarta" src="img/menu/cafe.jpg" alt="Café" width="150px" height="150px">

@@ -18,7 +18,7 @@ div{
     flex: 1;
 }
 
-h1{
+.titulos{
     font-size: 48px;
     font-style: bold;
 }
@@ -85,6 +85,7 @@ h1{
 .descripcionContenido{
     text-align: justify;
     line-height: 30pt;
+    font-size: 20px;
 }
 
 .eslogan{
@@ -100,6 +101,18 @@ h1{
 
 .imagenesCarta{
     border-radius: 100%;
+}
+
+.cafe{
+    font-size: 20px;
+}
+
+.sopa{
+    font-size: 20px;
+}
+
+.cruasan{
+    font-size: 20px;
 }
 
 

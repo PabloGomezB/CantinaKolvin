@@ -79,6 +79,22 @@ window.onload = function () {
         "precio": 1,
         "url_image": "img/menu/escudella.jpeg",
         "hora": "hora_dinar"
+    },
+    {
+        "id": 11,
+        "nombre": "Paella",
+        "descripcion": "",
+        "precio": 3.5,
+        "url_image": "img/menu/paella.jpg",
+        "hora": "hora_dinar"
+    },
+    {
+        "id": 12,
+        "nombre": "Tortilla de patatas",
+        "descripcion": "",
+        "precio": 5,
+        "url_image": "img/menu/tortillaPatatas.jpg",
+        "hora": "hora_dinar"
     }
     ];
 
