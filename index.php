@@ -1,15 +1,6 @@
 <?php
 ob_start();
 ?>
-<?php
-
-// Este script se ejecuta cuando el user hace click en el boton entrar
-// Esta funcion revisa si hay una cookie con el timepo ya creada
-// Si existe redirige a la pagina error.php
-// Si no existe la crea para las proximas 24h y redirige al menu.php
-
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 
