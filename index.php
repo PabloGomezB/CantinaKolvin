@@ -7,16 +7,7 @@ ob_start();
 // Esta funcion revisa si hay una cookie con el timepo ya creada
 // Si existe redirige a la pagina error.php
 // Si no existe la crea para las proximas 24h y redirige al menu.php
-if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['entrar'])) {
-    if (!isset($_COOKIE['fecha'])) {
 
-        header("Location: ./menu.php");
-        die();
-    } else {
-        header("Location: ./error.php");
-        die();
-    }
-}
 
 ?>
 <!DOCTYPE html>

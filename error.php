@@ -23,7 +23,7 @@
 				<h1>Oops!</h1>
 			</div>
 			<h2>Máximo de pedidos realizados</h2>
-            <p>Solo se permite realizar un pedido cada 24 horas.<br>Lamentamos las molestias.</p>
+            <p>Solo se permite realizar un pedido por día.<br>Lamentamos las molestias.</p>
 			<a href="./index.php">Volver</a>
 		</div>
 	</div>

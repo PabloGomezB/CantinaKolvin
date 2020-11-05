@@ -16,6 +16,14 @@ ob_start();
 
 <body>
 
+    <?php
+    if (isset($_COOKIE['fecha'])) {
+        header("Location: ./error.php");
+        die();
+    }
+
+    ?>
+
     <!-- HEADER -->
     <header id="hindex">
         <!-- <div style="position: fixed; width: 100%"> -->

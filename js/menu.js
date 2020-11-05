@@ -165,7 +165,7 @@ window.onload = function () {
         calcularTotal();
         //Renderizamos carrito
         renderizarCarrito();
-        
+
     }
 
     function renderizarCarrito() {
@@ -202,7 +202,7 @@ window.onload = function () {
             tablaHTML += "</td>"
 
             tablaHTML += "<td style='text-align: center;'>"
-            tablaHTML += "<button item="+ item +" class='btn borrar'><i class='fa fa-minus' aria-hidden='true' style='color: red;'></i></button>";
+            tablaHTML += "<button item=" + item + " class='btn borrar'><i class='fa fa-minus' aria-hidden='true' style='color: red;'></i></button>";
             tablaHTML += "</td>"
 
             tablaHTML += "</tr>";
@@ -228,7 +228,7 @@ window.onload = function () {
 
         let botonesBorrar = document.querySelectorAll(".borrar");
         botonesBorrar.forEach(element => {
-            element.addEventListener('click',borrarItemCarrito);
+            element.addEventListener('click', borrarItemCarrito);
         });
     }
 
@@ -258,7 +258,7 @@ window.onload = function () {
 
         // volvemos a renderizar
         renderizarCarrito();
-        
+
     }
 
     function calcularTotal() {
@@ -288,7 +288,7 @@ window.onload = function () {
         calcularTotal();
         // Renderizamos los cambios
         renderizarCarrito();
-        
+
     }
 
 
@@ -319,13 +319,12 @@ window.onload = function () {
     comprarElement.addEventListener('click', function () {
         //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
         if (carrito.length == 0) {
-            
             swal({
                 title: "ERROR",
                 text: "Parece que tu cesta esta vacía. ¿De verdad que no quieres comer nada?",
                 icon: "error",
                 button: "OK",
-              });
+            });
         } else {
             localStorage.setItem("carrito", prepareJson());
             localStorage.setItem("total", total);
