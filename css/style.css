@@ -1,10 +1,9 @@
+/*GENERAL*/
+
 body, html {
-    margin:0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: "Open Sans", sans-serif;
+    background-color: #E8E1D3;
+    font-style: italic;
 }
 
 .centrar{
@@ -12,24 +11,30 @@ body, html {
     margin-right: auto;
 }
 
-div {
-    flex: 1;
-    display: block;
+h1{
+    font-size: 48px;
+    font-style: bold;
 }
-/*****************************************************************************************************************************************/
 
-/*Nuevo index **********************************************/
-#hindex{
+.margenes{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* HEADER */
+
+.hindex{
     text-align: center;
     background-color: #E8E1D3;
+    
 }
 
-#logo{
-    padding-top: 1%;
-    margin-bottom: 1%;
+.logo{
+    padding: 10px;
 }
 
-#navOpciones{
+.navOpciones{
+    z-index:100;
     background-color: #1B3353;
     padding: 1%;
 }
@@ -42,76 +47,64 @@ div {
     font-style: bold;
 }
 
-/* #banner{
-    background-image: url("../img/index/banner.jpg");
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-} */
+/* FOOTER */
 
+.findex{
+    padding-top: 25px;
+    background-color: #1B3353;
+    height: 175px;
+    display: flex;
 
- 
+}
 
+.contentFooter{
+    padding-left: 10%;
+    padding-right: 10%;
 
-#index{
+    color: #FFFFFF;
+}
+
+.direccion{
+    margin-top: 25px;    
+}
+
+/* INDEX */
+
+.index{
     text-align: center;
 }
 
-#descripcion{
-    background-color: #E8E1D3;
-    padding: 1%;
+.imagenesCarousel{
+    height:100%; 
 }
 
-#eslogan{
+.descripcion{
+    background-color: #E8E1D3;
+    padding: 10px;
+}
+
+.descripcionContenido{
+    text-align: justify;
+    line-height: 30pt;
+}
+
+.eslogan{
     background-color: #9C917E;
     padding: 3%;
     color: #FFFFFF;
 }
 
-h1{
-    font-size: 48px;
-    font-style: bold;
-}
-
-#descripcionContenido{
-    font-style: bold;
-    text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
-    line-height: 30pt;
-}
-
-#carta{
+.cartaIndex{
     background-color: #E8E1D3;
-    padding: 10%;
+    padding: 30px;
 }
 
-.imagenes{
-    border-radius: 150px;
+.imagenesCarta{
+    border-radius: 100%;
 }
 
-#findex{
-    background-color: #1B3353;
-    height: 250px;
-    display: flex;
-}
 
-h5{
-    color:white;
-}
-
-.contentFooter{
-    margin-left: 13%;
-    margin-top: 2%;
-}
-/*****************************************************************************************************************************************/
-
-
-
-
-
-/* menu.php ************************************************************************************/
-
+/* MENU */
 
 /* .lista_articulos {
     list-style: none;

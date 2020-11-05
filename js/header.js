@@ -1,6 +1,5 @@
 function changeCss () {
-    var bodyElement = document.querySelector("body");
-    var navElement = document.getElementById("navOpciones");
+    var navElement = document.getElementById("navBar");
     if(this.scrollY > 100){
         navElement.style.position = "fixed";
         navElement.style.top = 0;
