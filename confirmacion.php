@@ -33,7 +33,7 @@ ob_start();
             $ruta = "./comandas/$dia.txt";
 
             if (!isset($_COOKIE['fecha'])) {
-                setcookie("fecha[dia]", $dia, $hora, strtotime('today 23:59'));
+                setcookie("fecha[dia]", $dia, strtotime('today 23:59'));
                 setcookie('fecha[hora]', $hora, strtotime('today 23:59'));
             }
 
