@@ -1,5 +1,5 @@
-window.onload = function () {
-
+ window.onload = function () {
+    //Creo un array donde tengo todos los items que pueden estar en el menu.
     let array_items = [{
         "id": 1,
         "nombre": "Café",
@@ -89,6 +89,7 @@ window.onload = function () {
     fechaCambio.setHours(11);
     fechaCambio.setMinutes(30);
 
+    //Dependiendo de la hora habrá un menu u otro.
     if (fechaAhora < fechaCambio) {
         menu_array = array_items.filter(item => item.hora == "hora_pati");
     } else {
@@ -110,13 +111,12 @@ window.onload = function () {
         menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
             let divElement = document.createElement('div');
-            divElement.classList.add('card', 'col-sm-4');
+            divElement.classList.add('contenido');
             // Body
             let divCardBodyElement = document.createElement('div');
-            divCardBodyElement.classList.add('card-body');
+            // divCardBodyElement.classList.add('card-body');
             // Titulo
             let titleElement = document.createElement('h5');
-            titleElement.classList.add('card-title');
             titleElement.textContent = item.nombre;
             // Imagen
             let imageElement = document.createElement('img');
@@ -124,25 +124,18 @@ window.onload = function () {
             imageElement.setAttribute('src', item.url_image);
             // Precio
             let priceElement = document.createElement('p');
-            priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
             // Boton 
-            let agregarCarritoElement = document.createElement('button');
-            agregarCarritoElement.setAttribute('width','50px');
-            agregarCarritoElement.setAttribute('height','50px');
-            agregarCarritoElement.setAttribute('viewBox','0 0 16 16');
-            agregarCarritoElement.classList.add('bi', 'bi-cart-plus-fill');
-            agregarCarritoElement.setAttribute('fill','currentColor');
-            // buttonPlusElement.classList.add('bi', 'bi-cart-plus-fill');
-            // buttonPlusElement.textContent = '+';
-            agregarCarritoElement.innerHTML = `<path fill-rule="evenodd" d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM4 14a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm7 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>`;
-            agregarCarritoElement.setAttribute('marcador', item.id);
-            agregarCarritoElement.addEventListener('click', anadirCarrito);
+            let buttonPlusElement = document.createElement('button');
+            buttonPlusElement.classList.add('btn', 'btn-primary');
+            buttonPlusElement.textContent = '+';
+            buttonPlusElement.setAttribute('marcador', item.id);
+            buttonPlusElement.addEventListener('click', anadirCarrito);
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
             divCardBodyElement.appendChild(priceElement);
-            divCardBodyElement.appendChild(agregarCarritoElement);
+            divCardBodyElement.appendChild(buttonPlusElement);
             divElement.appendChild(divCardBodyElement);
             itemsElement.appendChild(divElement);
         });
@@ -209,8 +202,6 @@ window.onload = function () {
         carrito = carrito.filter(function (carritoId) {
             return carritoId !== id;
         });
-        console.log(carrito);
-
         
         // volvemos a renderizar
         renderizarCarrito();
@@ -242,12 +233,17 @@ window.onload = function () {
         carrito = [];
         // Renderizamos los cambios
         renderizarCarrito();
+        //Calculamos de nuevo el total.
         calcularTotal();
     }
 
-    function prepareJson() {
-        let arrayComanda = new Array();
 
+    //Preparo JSON para enviarlo en localStorage.
+    function prepareJson() {
+        //Creamos un array 
+        let arrayComanda = new Array();
+        //Transformamos carrito en un array sin duplicados.
+        //Esto serviá para obtener el objeto con esa id que hay en carritoSinDuplicado.
         let carritoSinDuplicados = [...new Set(carrito)];
 
         carritoSinDuplicados.forEach(function (item) {
@@ -258,29 +254,29 @@ window.onload = function () {
             let numeroUnidadesItem = contarProducto(carrito, item);
 
             itemDelMenu_array[0].cantidad = numeroUnidadesItem;
-
+            //Añado este objeto en un array.
             arrayComanda.push(itemDelMenu_array[0]);
 
         })
-
-        console.log(arrayComanda);
-
+        //Converts a JavaScript value to a JavaScript Object Notation (JSON) string
         return JSON.stringify(arrayComanda);
     }
 
     comprarElement.addEventListener('click', function () {
+        //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
         if (carrito.length == 0) {
             alert("ERROR. Añade al menos un item a tu compra.");
         } else {
-            // prepareJson();
             localStorage.setItem("carrito", prepareJson());
-            localStorage.setItem("total",total)
+            localStorage.setItem("total",total);
+            //Redireccion a finalizacion.php
             window.location.href = "finalizacion.php";
         }
     });
-
+    //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);
 
+    //Inicializa el renderizado del menu.
     renderItems();
 
 }

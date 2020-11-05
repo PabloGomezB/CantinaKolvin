@@ -1,19 +1,20 @@
 <?php
-    ob_start();
+ob_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <?php include("include/includes.inc") ?>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <script type="text/javascript" src="js/menu.js"></script>
+    <?php include("include/includes.inc") ?>
 
-    </head>
+    <script type="text/javascript" src="js/menu.js"></script>
 
-<body>
+</head>
+
+<body style="background-color: #E8E1D3;">
 
 <!-- HEADER -->
     <header id="hindex">
@@ -22,32 +23,20 @@
 
     </header>
 
-    <div style="background-color: green;">
-        <p style="color: red;">Hola, soy el menú</p>
-        <div id="items"></div>
-        <aside class="col-md-4">
-            <h2>Carrito</h2>
-            <ul id="carrito"></ul>
-            <hr>
-            <p class="text-right">Total: <span id="total"></span></p>
-            <button id="botonVaciar" class="btn btn-danger">Vaciar</button>
-            <button id="comprar" class="btn btn-danger">Comprar</button>
-        </aside>
-    </div>
-
-    <!-- <div class="container">
-        <div class="row">
-            <main id="items" class="col-md-8 row"></main>
+    <div style="padding: 2%; background-color: red; width: 100%;">
+        <h1 style="text-align: center;">MENÚ</h1>
+        <div style="display: flex;">
+            <div id="items"></div>
             <aside class="col-md-4">
                 <h2>Carrito</h2>
                 <ul id="carrito"></ul>
                 <hr>
                 <p class="text-right">Total: <span id="total"></span></p>
-                <button id="botonVaciar" class="btn btn-danger">Vaciar</button>
-                <button id="comprar" class="btn btn-danger">Comprar</button>
+                <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar</button>
+                <button id="comprar" class="btn btn-primary" style="float: right;">Comprar</button>
             </aside>
         </div>
-    </div> -->
+    </div>
 
 <!-- FOOTER -->
     <footer id="findex">
