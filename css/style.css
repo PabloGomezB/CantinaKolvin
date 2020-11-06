@@ -1,10 +1,12 @@
+/*GENERAL*/
+
 body, html {
-    margin:0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     font-family: "Open Sans", sans-serif;
+    background-color: #E8E1D3;
+    font-style: italic;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .centrar{
@@ -12,23 +14,34 @@ body, html {
     margin-right: auto;
 }
 
-div {
+div{
     flex: 1;
 }
-/*****************************************************************************************************************************************/
 
-/*Nuevo index **********************************************/
-#hindex{
+.titulos{
+    font-size: 48px;
+    font-style: bold;
+}
+
+.margenes{
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+/* HEADER */
+
+.hindex{
     text-align: center;
     background-color: #E8E1D3;
+    
 }
 
-#logo{
-    padding-top: 1%;
-    margin-bottom: 1%;
+.logo{
+    padding: 10px;
 }
 
-#navOpciones{
+.navOpciones{
+    z-index:100;
     background-color: #1B3353;
     padding: 1%;
 }
@@ -41,112 +54,91 @@ div {
     font-style: bold;
 }
 
-#banner{
-    background-image: url("../img/index/banner.jpg");  
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-}
+/* FOOTER */
 
-#index{
-    text-align: center;
-}
-
-#descripcion{
-    background-color: #E8E1D3;
-    padding: 1%;
-}
-
-#eslogan{
-    background-color: #9C917E;
-    padding: 3%;
-    color: #FFFFFF;
-}
-
-h1{
-    font-size: 48px;
-    font-style: bold;
-}
-
-#descripcionContenido{
-    font-style: bold;
-    text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
-    line-height: 30pt;
-}
-
-#carta{
-    background-color: #E8E1D3;
-    padding: 6%;
-}
-
-.imagenes{
-    border-radius: 150px;
-    margin-left: 19%;
-}
-
-#cafe{
-    margin-left: 22.5%;
-}
-
-#sopa{
-    margin-left: 26%;
-}
-
-#cruasan{
-    margin-left: 25.5%;
-}
-
-#findex{
+.findex{
+    padding-top: 25px;
     background-color: #1B3353;
-    height: 250px;
+    height: 175px;
     display: flex;
-}
 
-h5{
-    color: #FFFFFF;
 }
 
 .contentFooter{
-    margin-left: 13%;
-    margin-top: 2%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    color: #FFFFFF;
 }
-/*****************************************************************************************************************************************/
 
+/* INDEX */
 
-
-
-
-/* menu.php ************************************************************************************/
-
-
-/* .lista_articulos {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: 33% 33% 33%;
+.index{
+    text-align: center;
 }
+
+.imagenesSlider{
+    margin-top: -500px;
+    height: 100%;
+    width: 100%;
+}
+
+.descripcion{
+    background-color: #E8E1D3;
+    padding: 4%;
+}
+
+.descripcionContenido{
+    text-align: justify;
+    line-height: 30pt;
+    font-size: 20px;
+}
+
+.eslogan{
+    background-color: #9C917E;
+    padding: 4%;
+    color: #FFFFFF;
+}
+
+.cartaIndex{
+    background-color: #E8E1D3;
+    padding: 6.5%;
+}
+
+.imagenesCarta{
+    border-radius: 100%;
+}
+
+.cafe{
+    font-size: 20px;
+}
+
+.sopa{
+    font-size: 20px;
+}
+
+.cruasan{
+    font-size: 20px;
+}
+
+
+/* MENU */
 
 .sidebar {
-    margin-top: 80px;
-    height: 100%;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #F5F2F5;
-    overflow-x: hidden; 
-     padding-top: 60px; 
+    display: block;
+    background-color: white;
 }
 
-#no_bar {
-    padding: 16px;
+#comprar{
+    background-color: #9C917E;
+    color: white;
+    border: none;
 }
 
-.listaMenu {
-    margin: 100px;
+#botonVaciar{
+    background-color: red;
+    color: white;
+    border: none;
 }
 
 #comprar{
@@ -217,9 +209,6 @@ h5{
     height: 30px;
     border-radius: 5px;
 }
-/*****************************************************************************************************************************************/
-
-
 
 /* finalizacion.php ************************************************************************************/
 .buttonFinalizacion {
@@ -235,34 +224,20 @@ h5{
     cursor: pointer;
 }
 
-.buttonFinalizacionAzul {
-    background-color: rgb(190, 240, 255); 
-    color: black; 
-    border: 2px solid #008CBA;
-}
-  
-.buttonFinalizacionAzul:hover {
-    background-color: #008CBA;
-    color: white;
+.buttonFinalizacion:hover {
+    background-color: #E8E1D3;
+    color: black;
 }
 
-.form {
-    max-width: 400px;
-    background: #e3f2fd;
-    padding: 25px;
-    font-family: 'Source Sans Pro', sans-serif;
+.buttonFinalizacion:hover:disabled{
+    cursor: not-allowed;
 }
 
 .formInput {
-    width:100%; 
-    height:36px;
-    margin:2px 0 30px;
-    padding-left:6px;
-    box-sizing: border-box;
-    border-radius:10px; 
-    border:0;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size:1em;
+    width:80%;
+    height:800px;
+    margin-left:26px;
+    margin-bottom: 26px;
 }
 
 label span {
@@ -273,9 +248,129 @@ label span {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    width: 80%;
-  }
-/*****************************************************************************************************************************************/
+    margin-top: -40px;
+    width: 40%;
+}
 
+.icono{
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+
+*{box-sizing:border-box;}
+
+.formFinalizacion{
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+	width:60%;
+	padding:16px;
+	border-radius:10px;
+	background-color:rgba(175, 175, 175, 0.432);
+}
+
+.formFinalizacion label{
+    width:100%;
+    margin-top:20px;
+    margin-bottom:10px;
+    font-size: large;
+	font-weight:bold;
+    display:inline-block;
+}
+
+.formFinalizacion input[type="submit"]{
+	width:60%;
+	padding:8px 16px;
+    margin-top:20px;
+	border:1px solid #9C917E;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#9C917E;
+}
+
+/* admin.php ************************************************************************************/
+.display {
+    float: left;
+    padding: 5px 5px;
+    width: 200px;
+    font-size: 20px;
+    transition-duration: 0.6s;
+    cursor: pointer;
+    background-color: #9C917E;
+    color: white;
+    border: 2px solid #9C917E;
+    border-radius:5px;
+}
+
+.display:hover {
+    background-color: #E8E1D3;
+    color: black;
+}
+
+.btnVolver {
+    float: right;
+    background-color: #474747; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius:5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btnVolverNegro {
+    background-color: rgb(196, 194, 194);
+    color: black;
+    border: 2px solid #555555;
+}
+  
+.btnVolverNegro:hover {
+    background-color: #555555;
+    color: white;
+}
+
+@media screen and (min-width: 676px) {
+    .modal-dialog {
+      max-width: 520px; /* New width for default modal */
+    }
+}
+
+.modal .modal-content{
+    height: 600px;
+    overflow:hidden;
+}
+
+.modal-dialog{
+    overflow-y: initial !important;
+}
+
+.modal-body{
+    height: 400px;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+}
+
+.btn-secondary {
+    margin-left:50%;
+    height: 40px;
+}
+
+.blur {
+
+    /* Any browser which supports CSS3 */
+   filter: blur(5px);
+
+   /* Firefox version 34 and earlier */
+   filter: url("./svg/blur.svg#gaussian_blur");
+
+   /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
+   -webkit-filter: blur(5px);
+}

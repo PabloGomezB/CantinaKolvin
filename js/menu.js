@@ -52,7 +52,7 @@ window.onload = function () {
         "id": 7,
         "nombre": "Sopa",
         "descripcion": "",
-        "precio": 1,
+        "precio": 1.5,
         "url_image": "img/menu/sopa.jpg",
         "hora": "hora_dinar"
     },
@@ -79,9 +79,24 @@ window.onload = function () {
         "precio": 1,
         "url_image": "img/menu/escudella.jpeg",
         "hora": "hora_dinar"
+    },
+    {
+        "id": 11,
+        "nombre": "Paella",
+        "descripcion": "",
+        "precio": 3.5,
+        "url_image": "img/menu/paella.jpg",
+        "hora": "hora_dinar"
+    },
+    {
+        "id": 12,
+        "nombre": "Tortilla de patatas",
+        "descripcion": "",
+        "precio": 5,
+        "url_image": "img/menu/tortillaPatatas.jpg",
+        "hora": "hora_dinar"
     }
     ];
-
 
     let menu_array = [];
     let fechaAhora = new Date();
@@ -96,12 +111,10 @@ window.onload = function () {
         menu_array = array_items.filter(item => item.hora == "hora_dinar");;
     }
 
-
     let carrito = [];
     let total = 0;
 
     let itemsElement = document.querySelector("#items");
-    let totalElement = document.querySelector('#total');
     let carritoElement = document.querySelector('#carrito');
     let botonVaciar = document.querySelector('#botonVaciar');
     let comprarElement = document.querySelector("#comprar");
@@ -111,31 +124,34 @@ window.onload = function () {
         menu_array.forEach(item => {   //Por cada item en el array
             // Estructura
             let divElement = document.createElement('div');
-            divElement.classList.add('card', 'col-sm-4');
-            
+            divElement.classList.add('col-md-4');
             // Body
             let divCardBodyElement = document.createElement('div');
-            divCardBodyElement.classList.add('card-body');
-            divCardBodyElement.addEventListener('click', anadirCarrito);
+            divCardBodyElement.classList.add('card', 'mb-4', 'shadow-sm');
             divCardBodyElement.setAttribute('marcador', item.id);
+            divCardBodyElement.addEventListener('click', anadirCarrito);
             // Titulo
             let titleElement = document.createElement('h5');
             titleElement.classList.add('card-title');
             titleElement.textContent = item.nombre;
+            titleElement.style.textAlign = 'center';
             // Imagen
             let imageElement = document.createElement('img');
-            imageElement.classList.add('img-fluid');
+            imageElement.classList.add('mx-auto');
             imageElement.setAttribute('src', item.url_image);
+            imageElement.setAttribute('width', '200px');
+            imageElement.setAttribute('height', '200px');
+            imageElement.style.marginTop = "10%";
             // Precio
             let priceElement = document.createElement('p');
             priceElement.classList.add('card-text');
             priceElement.textContent = item.precio + '€';
-            // Boton 
-            //buttonPlusElement.textContent = '+';
+            priceElement.style.textAlign = 'center';
             // Insertamos
             divCardBodyElement.appendChild(imageElement);
             divCardBodyElement.appendChild(titleElement);
             divCardBodyElement.appendChild(priceElement);
+            // divCardBodyElement.appendChild(buttonPlusElement);
             divElement.appendChild(divCardBodyElement);
             itemsElement.appendChild(divElement);
         });
@@ -143,18 +159,13 @@ window.onload = function () {
     }
 
     function anadirCarrito() {
-        console.log("Entra");
         //Elemento que hemos clickado se añade en el array carrito
         carrito.push(this.getAttribute('marcador'));
-        //Renderizamos carrito
-        renderizarCarrito();
         //Calculamos total
         calcularTotal();
-        document.getElementById("sidebar").style.display ="block";
-    }
+        //Renderizamos carrito
+        renderizarCarrito();
 
-    function cerrar(){
-        document.getElementById("sidebar").style.display = "none";
     }
 
     function renderizarCarrito() {
@@ -163,37 +174,71 @@ window.onload = function () {
         // Quitamos los duplicados
         let carritoSinDuplicados = [...new Set(carrito)];
         // Generamos los Nodos a partir de carrito
+
+        let tablaHTML = '<table>';
+        tablaHTML += "<tr style='border-bottom: 1px solid grey;'>";
+        tablaHTML += "<td style='text-align: left;' width='400px' ><h4>Mi carrito (" + carritoSinDuplicados.length + ")</h4></td>";
+        tablaHTML += "<td width='250px' style='text-align: center;'><h4>Cant.</h4></td>"
+        tablaHTML += "<td width='250px' style='text-align: center;'><h4></h4></td>"
+        tablaHTML += "</tr>";
+
         carritoSinDuplicados.forEach(function (item) {
             // Obtenemos el item que necesitamos de la variable menu_array
-            //let itemk = function()
             let itemDelMenu_array = obtenerObjetoPorId(menu_array, item);
             // Cuenta el número de veces que se repite el producto
             let numeroUnidadesItem = contarProducto(carrito, item);
 
             // Creamos el nodo del item del carrito
-            let itemCarritoElement = document.createElement('li');
-            itemCarritoElement.classList.add('list-group-item', 'text-right', 'mx-2');
-            itemCarritoElement.textContent = `${numeroUnidadesItem} x ${itemDelMenu_array[0]['nombre']} - ${itemDelMenu_array[0]['precio']}€`;
-            // Boton de borrar
-            let miBoton = document.createElement('i');
-            miBoton.classList.add('fas', 'fa-trash-alt');
-            //miBoton.textContent = 'X';
-            miBoton.style.marginLeft = '1rem';
-            miBoton.setAttribute('item', item);
-            miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
-            itemCarritoElement.appendChild(miBoton);
-            carritoElement.appendChild(itemCarritoElement);
+
+
+            tablaHTML += "<tr>";
+
+            tablaHTML += "<td style='text-align: left; padding: 10px;'>"
+            tablaHTML += "<span style='margin-left: 10px;'>" + itemDelMenu_array[0].nombre + "</span>";
+            tablaHTML += "</td>"
+
+            tablaHTML += "<td style='text-align: center;'>"
+            tablaHTML += numeroUnidadesItem;
+            tablaHTML += "</td>"
+
+            tablaHTML += "<td style='text-align: center;'>"
+            tablaHTML += "<button item=" + item + " class='btn borrar'><i class='fa fa-minus' aria-hidden='true' style='color: red;'></i></button>";
+            tablaHTML += "</td>"
+
+            tablaHTML += "</tr>";
+
         })
+
+        tablaHTML += "<tr style='border-top: 1px solid grey;'>";
+
+        tablaHTML += "<td style='text-align: center;'>"
+        tablaHTML += "Total:"
+        tablaHTML += "</td>"
+
+        tablaHTML += "<td>"
+        tablaHTML += "</td>"
+
+        tablaHTML += "<td id='total' style='text-align: right;'>"
+        tablaHTML += total + "€"
+        tablaHTML += "</td>"
+        tablaHTML += "</tr>";
+        tablaHTML += "</table>";
+
+        carritoElement.innerHTML = tablaHTML;
+
+        let botonesBorrar = document.querySelectorAll(".borrar");
+        botonesBorrar.forEach(element => {
+            element.addEventListener('click', borrarItemCarrito);
+        });
     }
 
-    function obtenerObjetoPorId(menu_array, item){
+    function obtenerObjetoPorId(menu_array, item) {
         return menu_array.filter(function (item_of_menu_array) {
             return item_of_menu_array['id'] == item;
         });
     }
 
-    function contarProducto(carrito, item){
+    function contarProducto(carrito, item) {
         return carrito.reduce(function (total, itemId) {
             return itemId === item ? total += 1 : total;
         }, 0);
@@ -203,15 +248,26 @@ window.onload = function () {
         console.log(carrito);
         // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
-        // Borramos todos los productos
-        carrito = carrito.filter(function (carritoId) {
-            return carritoId !== id;
-        });
         
-        // volvemos a renderizar
-        renderizarCarrito();
+        //Borramos un elemento de carrito
+        const index = carrito.indexOf(id);
+        if (index > -1) {
+            carrito.splice(index, 1);
+        }
+
+        // Borramos todos los productos
+        // carrito = carrito.filter(function (carritoId) {
+        //     return carritoId !== id;
+        // });
+
+
+
         // Calculamos de nuevo el precio
         calcularTotal();
+
+        // volvemos a renderizar
+        renderizarCarrito();
+
     }
 
     function calcularTotal() {
@@ -230,16 +286,17 @@ window.onload = function () {
         // Formateamos el total para que solo tenga dos decimales
         let totalDosDecimales = total.toFixed(2);
         // Renderizamos el precio en el HTML
-        totalElement.textContent = totalDosDecimales;
+        total = totalDosDecimales;
     }
 
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
-        // Renderizamos los cambios
-        renderizarCarrito();
+
         //Calculamos de nuevo el total.
         calcularTotal();
+        // Renderizamos los cambios
+        renderizarCarrito();
     }
 
 
@@ -270,10 +327,15 @@ window.onload = function () {
     comprarElement.addEventListener('click', function () {
         //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
         if (carrito.length == 0) {
-            alert("ERROR. Añade al menos un item a tu compra.");
+            swal({
+                title: "ERROR",
+                text: "Parece que tu cesta esta vacía. ¿De verdad que no quieres comer nada?",
+                icon: "error",
+                button: "OK",
+            });
         } else {
             localStorage.setItem("carrito", prepareJson());
-            localStorage.setItem("total",total);
+            localStorage.setItem("total", total);
             //Redireccion a finalizacion.php
             window.location.href = "finalizacion.php";
         }
@@ -284,6 +346,9 @@ window.onload = function () {
     //Inicializa el renderizado del menu.
     renderItems();
 
-    document.getElementById("cerrar").addEventListener("click", cerrar);
+    //Inicializa el renderizado del carrito.
+    renderizarCarrito();
+
+
 
 }

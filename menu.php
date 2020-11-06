@@ -7,7 +7,7 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <?php include("include/includes.inc") ?>
 
     <script type="text/javascript" src="js/menu.js"></script>
@@ -16,20 +16,45 @@ ob_start();
 
 <body>
 
-<!-- HEADER -->
+    <?php
+    if (isset($_COOKIE['fecha'])) {
+        header("Location: ./error.php");
+        die();
+    }
+
+    ?>
+
+    <!-- HEADER -->
     <header id="hindex">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
 
     </header>
-    
-    
-    <div style="display: flex;">
-        <div class="container-fluid">
-            <h1 style="margin-top: 1%; margin-left: 16%;">MENÚ</h1>
-            <div class="row">
-                <main id="items" class="col-md-8 row"></main>         
+    <div style="background-color: #E8E1D3;">
+
+        <div style="display: flex;">
+
+            <div class="container">
+                <h1 style="text-align: center; padding-bottom: 20px;">MENÚ</h1>
+                <div class="row">
+
+                    <div id="items" class="col-md-12 row"></div>
+                </div>
             </div>
+
+            <aside id="mySidebar" class="sidebar col-md-4">
+                <div>
+                    <!-- <span style="font-size: 48px;">Carrito</span> -->
+                    <button id="botonVaciar" class="vaciar btn btn-danger" style="float: right; margin-top: 15px;"><i class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
+                </div>
+                <div>
+                    <div id="carrito" style="padding: 25px;"></div>
+                </div>
+                <div>
+                    <button id="comprar" class="btn finalizar" style="width: 100%;"><i class="fa fa-lock" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Finalizar compra</button>
+                    <!-- <p class="text-right">Total: <span id="total"></span></p> -->
+                </div>
+            </aside>
         </div>
         <aside class="col-md-4" style="display: block; background-color: white;" id="sidebar">
             <i class="material-icons" style="font-size:48px;" id="cerrar">&#xe5cd;</i>
@@ -43,7 +68,7 @@ ob_start();
     </div>
     
 
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <footer id="findex">
 
         <?php include("include/footer.php"); ?>
