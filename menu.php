@@ -22,33 +22,32 @@ ob_start();
         <?php include("include/header.php"); ?>
 
     </header>
-    <div style="background-color: #E8E1D3;">
 
-        <div style="display: flex;">
+    <div style="display: flex; background-color: #E8E1D3;">
 
-            <div class="container">
-                <h1 style="text-align: center; padding-bottom: 20px;">MENÚ</h1>
-                <div class="row">
+        <div class="container">
+            <h1 style="text-align: center; padding-bottom: 20px;">MENÚ</h1>
+            <div class="row">
 
-                    <div id="items" class="col-md-12 row"></div>
-                </div>
+                <div id="items" class="col-md-12 row"></div>
             </div>
-
-            <aside id="mySidebar" class="sidebar col-md-4">
-                <div>
-                    <!-- <span style="font-size: 48px;">Carrito</span> -->
-                    <button id="botonVaciar" class="vaciar btn btn-danger" style="float: right; margin-top: 15px;"><i class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
-                </div>
-                <div>
-                    <div id="carrito" style="padding: 25px;"></div>
-                </div>
-                <div>
-                    <button id="comprar" class="btn finalizar" style="width: 100%;"><i class="fa fa-lock" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Finalizar compra</button>
-                    <!-- <p class="text-right">Total: <span id="total"></span></p> -->
-                </div>
-            </aside>
         </div>
+
+        <aside id="mySidebar" class="sidebar col-md-4">
+            <div>
+                <!-- <span style="font-size: 48px;">Carrito</span> -->
+                <button id="botonVaciar" class="vaciar btn btn-danger" style="float: right; margin-top: 15px;"><i class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
+            </div>
+            <div>
+                <div id="carrito" style="padding: 25px;"></div>
+            </div>
+            <div>
+                <button id="comprar" class="btn finalizar" style="width: 100%;"><i class="fa fa-lock" aria-hidden="true" style="color: white; padding-right: 5px;"></i> Finalizar compra</button>
+                <!-- <p class="text-right">Total: <span id="total"></span></p> -->
+            </div>
+        </aside>
     </div>
+ 
     
 
     <!-- FOOTER -->
