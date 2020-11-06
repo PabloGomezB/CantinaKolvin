@@ -248,6 +248,7 @@ window.onload = function () {
         console.log(carrito);
         // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
+
         
         //Borramos un elemento de carrito
         const index = carrito.indexOf(id);
@@ -297,6 +298,7 @@ window.onload = function () {
         calcularTotal();
         // Renderizamos los cambios
         renderizarCarrito();
+
     }
 
 
@@ -340,6 +342,7 @@ window.onload = function () {
             window.location.href = "finalizacion.php";
         }
     });
+
     //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);
 
