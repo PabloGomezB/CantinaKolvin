@@ -248,10 +248,20 @@ window.onload = function () {
         console.log(carrito);
         // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
+
+        
+        //Borramos un elemento de carrito
+        const index = carrito.indexOf(id);
+        if (index > -1) {
+            carrito.splice(index, 1);
+        }
+
         // Borramos todos los productos
-        carrito = carrito.filter(function (carritoId) {
-            return carritoId !== id;
-        });
+        // carrito = carrito.filter(function (carritoId) {
+        //     return carritoId !== id;
+        // });
+
+
 
         // Calculamos de nuevo el precio
         calcularTotal();
