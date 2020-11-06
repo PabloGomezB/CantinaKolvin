@@ -129,11 +129,34 @@ div{
     background-color: white;
 }
 
-#comprar{
+.fa{
+    background-color: #9C917E;
+    color: white;
+    border: 2px black;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.fa:hover {
+    background-color: #E8E1D3;
+    color: black;
+}
+
+/* #comprar{
     background-color: #9C917E;
     color: white;
     border: none;
 }
+
+#comprar:hover {
+    background-color: #E8E1D3;
+    color: black;
+} */
+
+/* .fa-lock:hover{
+    color: black !important;
+} */
 
 #botonVaciar{
     background-color: red;
@@ -141,46 +164,19 @@ div{
     border: none;
 }
 
-
-
-/* administracion.php ************************************************************************************/
-#usuario{
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-#contra{
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-#recordar{
-    margin-left: 43%;
-    margin-bottom: 50px;
-}
-
-#enviar{
-    text-align: center;
-}
-
-.usuPass{
-    width: 250px;
-    height: 25px;
-    border-radius: 5px;
-}
-
-#login{
-    width: 255px;
-    height: 30px;
-    border-radius: 5px;
-}
-
 /* finalizacion.php ************************************************************************************/
+.formFinalizacion input[type="submit"]{
+	width:60%;
+	padding:8px 16px;
+    margin-top:20px;
+    background-color:#9C917E;
+}
+
 .buttonFinalizacion {
-    border: none;
+    border:1px solid #9C917E;
+	border-radius:5px;
     color: white;
     padding: 10px 36px;
-    text-decoration: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -195,6 +191,7 @@ div{
 }
 
 .buttonFinalizacion:hover:disabled{
+    background-color: #E8E1D3;
     cursor: not-allowed;
 }
 
@@ -245,17 +242,6 @@ label span {
     font-size: large;
 	font-weight:bold;
     display:inline-block;
-}
-
-.formFinalizacion input[type="submit"]{
-	width:60%;
-	padding:8px 16px;
-    margin-top:20px;
-	border:1px solid #9C917E;
-	border-radius:5px;
-	display:block;
-	color:#fff;
-	background-color:#9C917E;
 }
 
 /* admin.php ************************************************************************************/

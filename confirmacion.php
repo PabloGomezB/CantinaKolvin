@@ -84,14 +84,13 @@ ob_start();
     function enviarEmail($email,$numeroPedido,$mensaje){
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
-        $from = "cantina@kolvincorporation.com";
+        $from = "cantina@kolvincorp.com";
         $to = $email;
         $subject = "Resumen de la comanda";
         $headers = 'From: '.$from. "\r\n" .
             'Reply-To: '. $to . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
         mail($to, $subject, $mensaje, $headers);
-        //echo "The email message was sent.";
     }
 
 

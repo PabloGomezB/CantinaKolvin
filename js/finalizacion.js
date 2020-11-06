@@ -89,7 +89,7 @@ window.onload = function () {
         });
 
 
-        // - Validar que el email sea valido y con dominio "inspedralbes.cat"
+        //- Validar que el email sea valido y con dominio "inspedralbes.cat"
         document.getElementById("email").addEventListener("keyup", function(){
             let patron = /^[\w]+@{1}[\w]+\.[a-z]{2,3}$/;
             splited = this.value.split('@');
@@ -150,8 +150,3 @@ window.onload = function () {
     }
 
 }
-
-//Para recibir la cantidad de un elemento --> element.cantidad
-//Para el total lo cojeis de localStorage con id "total"
-//VAMOOS KEVIIIIIIIIIIIIIN
-//De nada chavales
