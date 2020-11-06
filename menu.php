@@ -16,15 +16,7 @@ ob_start();
 
 <body>
 
-    <?php
-    if (isset($_COOKIE['fecha'])) {
-        header("Location: ./error.php");
-        die();
-    }
-
-    ?>
-
-    <!-- HEADER -->
+<!-- HEADER -->
     <header id="hindex">
         <!-- <div style="position: fixed; width: 100%"> -->
         <?php include("include/header.php"); ?>
@@ -56,15 +48,6 @@ ob_start();
                 </div>
             </aside>
         </div>
-        <aside class="col-md-4" style="display: block; background-color: white;" id="sidebar">
-            <i class="material-icons" style="font-size:48px;" id="cerrar">&#xe5cd;</i>
-            <h2>Mi carrito</h2>
-            <ul id="carrito"></ul>
-            <hr>
-            <p class="text-right">Total: <span id="total"></span></p>
-            <button id="botonVaciar" class="btn btn-primary" style="float: left;">Vaciar <i class="fa fa-shopping-cart"></i></button>
-            <button id="comprar" style="float: right; background-color: #9C917E;">Comprar</button>
-        </aside>
     </div>
     
 

@@ -141,42 +141,7 @@ div{
     border: none;
 }
 
-#comprar{
-    position: fixed;
-    bottom: 0;
-} */
 
-
-/*Nuevo menú****************************************************************************************************************************************/
-
-.card{
-    background-color:#FFFFFF;
-    border: 1px solid black;
-    margin: 1%;
-    justify-content: center;
-      
-}
-
-.container-fluid{
-    background-color: #E8E1D3;
-    
-}
-
-.card-title{
-    margin-top: 5px;
-    color: black;
-    font-size: 15px;
-    text-align: center;
-}
-
-.card-text{
-    text-align: center;
-}
-
-.img-fluid{
-    width: 150px;
-    height: 100px;
-}
 
 /* administracion.php ************************************************************************************/
 #usuario{
