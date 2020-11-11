@@ -13,7 +13,7 @@ http://labs.iam.cat/~a18pabgombra/CantinaKolvin/
 https://trello.com/b/5Auy0Tev/proyecto-cantina
 
 ## Gantt
-![Diagrama de Gantt](img\gantt\proyecto_cantina.png)
+![Diagrama de Gantt](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/gantt/proyecto_cantina.png)
 
 ## Disseny
 Disseny fet amb Moqup.
