@@ -18,15 +18,14 @@ https://trello.com/b/5Auy0Tev/proyecto-cantina
 ## Disseny
 Disseny fet amb Moqup.
 - WireFrame:
-    - ![Landing Wireframe](img\disseny\wireframe\landingWireframe.png)
-    - ![Menu Wireframe](img\disseny\wireframe\menuWireframe.png)
-    - ![Finalizacion Wireframe](img\disseny\wireframe\finalizar_wireframe.png)
+    - ![Landing Wireframe](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/wireframe/landingWireframe.png)
+    - ![Menu Wireframe](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/wireframe/menuWireframe.png)
+    - ![Finalizacion Wireframe](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/wireframe/finalizar_wireframe.png)
 
 - Mockup:
-    - ![Landing Mockup](img\disseny\mockup\landingMockup.png)
-    - ![Menu Mockup](img\disseny\mockup\menu_mockup.png)
-    - ![Finalizacion Mockup](img\disseny\mockup\finalizacion_mockup.png)
-
+    - ![Landing Mockup](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/mockup/landingMockup.png)
+    - ![Menu Mockup](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/mockup/menu_mockup.png)
+    - ![Finalizacion Mockup](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/mockup/finalizacion_mockup.png)
 ## Author
 * Kevin Larriega
 * Pablo Gómez
