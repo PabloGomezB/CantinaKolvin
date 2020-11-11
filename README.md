@@ -16,7 +16,7 @@ https://trello.com/b/5Auy0Tev/proyecto-cantina
 ![Diagrama de Gantt](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/gantt/proyecto_cantina.png)
 
 ## Disseny
-Hoja de estilo: https://docs.google.com/document/d/12HZG7cnI8DavcTdzT17skHv4LtM-s8nMFS6YurhW4Qw/edit?usp=sharing
+* Hoja de estilo: https://docs.google.com/document/d/12HZG7cnI8DavcTdzT17skHv4LtM-s8nMFS6YurhW4Qw/edit?usp=sharing
 Disseny fet amb Moqup.
 - WireFrame:
     - ![Landing Wireframe](https://github.com/PabloGomezB/CantinaKolvin/blob/main/img/disseny/wireframe/landingWireframe.png)
