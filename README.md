@@ -18,20 +18,14 @@ https://trello.com/b/5Auy0Tev/proyecto-cantina
 ## Disseny
 Disseny fet amb Moqup.
 - WireFrame:
-    - Landing Wireframe
-    ![Landing Wireframe](img\disseny\wireframe\landingWireframe.png)
-    - Menu Wireframe
-    ![Menu Wireframe](img\disseny\wireframe\menuWireframe.png)
-    - Finalizacion Wireframe
-    ![Finalizacion Wireframe](img\disseny\wireframe\finalizar_wireframe.png)
+    - ![Landing Wireframe](img\disseny\wireframe\landingWireframe.png)
+    - ![Menu Wireframe](img\disseny\wireframe\menuWireframe.png)
+    - ![Finalizacion Wireframe](img\disseny\wireframe\finalizar_wireframe.png)
 
 - Mockup:
-    - Landing Mockup
-    ![Landing Mockup](img\disseny\mockup\landingMockup.png)
-    - Menu Mockup
-    ![Menu Mockup](img\disseny\mockup\menu_mockup.png)
-    - Finalizacion Mockup
-    ![Finalizacion Mockup](img\disseny\mockup\finalizacion_mockup.png)
+    - ![Landing Mockup](img\disseny\mockup\landingMockup.png)
+    - ![Menu Mockup](img\disseny\mockup\menu_mockup.png)
+    - ![Finalizacion Mockup](img\disseny\mockup\finalizacion_mockup.png)
 
 ## Author
 * Kevin Larriega
