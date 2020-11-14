@@ -1,102 +1,106 @@
 window.onload = function () {
     //Creo un array donde tengo todos los items que pueden estar en el menu.
-    let array_items = [{
-        "id": 1,
-        "nombre": "Café",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/cafe.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 2,
-        "nombre": "Croissant",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/cruasan.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 3,
-        "nombre": "Caracola",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/caracola.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 4,
-        "nombre": "Pizza",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/pizza.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 5,
-        "nombre": "Monster",
-        "descripcion": "",
-        "precio": 2,
-        "url_image": "img/menu/monster.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 6,
-        "nombre": "Ensaimada",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/ensaimada.jpg",
-        "hora": "hora_pati"
-    },
-    {
-        "id": 7,
-        "nombre": "Sopa",
-        "descripcion": "",
-        "precio": 1.5,
-        "url_image": "img/menu/sopa.jpg",
-        "hora": "hora_dinar"
-    },
-    {
-        "id": 8,
-        "nombre": "Macarrones",
-        "descripcion": "",
-        "precio": 2,
-        "url_image": "img/menu/macarrones.jpg",
-        "hora": "hora_dinar"
-    },
-    {
-        "id": 9,
-        "nombre": "Espaguetis carbonara",
-        "descripcion": "s",
-        "precio": 1,
-        "url_image": "img/menu/espaguetis_carbonara.jpg",
-        "hora": "hora_dinar"
-    },
-    {
-        "id": 10,
-        "nombre": "Escudella",
-        "descripcion": "",
-        "precio": 1,
-        "url_image": "img/menu/escudella.jpeg",
-        "hora": "hora_dinar"
-    },
-    {
-        "id": 11,
-        "nombre": "Paella",
-        "descripcion": "",
-        "precio": 3.5,
-        "url_image": "img/menu/paella.jpg",
-        "hora": "hora_dinar"
-    },
-    {
-        "id": 12,
-        "nombre": "Tortilla de patatas",
-        "descripcion": "",
-        "precio": 5,
-        "url_image": "img/menu/tortillaPatatas.jpg",
-        "hora": "hora_dinar"
-    }
-    ];
+    // let array_items = [{
+    //     "id": 1,
+    //     "nombre": "Café",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/cafe.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 2,
+    //     "nombre": "Croissant",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/cruasan.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 3,
+    //     "nombre": "Caracola",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/caracola.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 4,
+    //     "nombre": "Pizza",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/pizza.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 5,
+    //     "nombre": "Monster",
+    //     "descripcion": "",
+    //     "precio": 2,
+    //     "url_image": "img/menu/monster.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 6,
+    //     "nombre": "Ensaimada",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/ensaimada.jpg",
+    //     "hora": "hora_pati"
+    // },
+    // {
+    //     "id": 7,
+    //     "nombre": "Sopa",
+    //     "descripcion": "",
+    //     "precio": 1.5,
+    //     "url_image": "img/menu/sopa.jpg",
+    //     "hora": "hora_dinar"
+    // },
+    // {
+    //     "id": 8,
+    //     "nombre": "Macarrones",
+    //     "descripcion": "",
+    //     "precio": 2,
+    //     "url_image": "img/menu/macarrones.jpg",
+    //     "hora": "hora_dinar"
+    // },
+    // {
+    //     "id": 9,
+    //     "nombre": "Espaguetis carbonara",
+    //     "descripcion": "s",
+    //     "precio": 1,
+    //     "url_image": "img/menu/espaguetis_carbonara.jpg",
+    //     "hora": "hora_dinar"
+    // },
+    // {
+    //     "id": 10,
+    //     "nombre": "Escudella",
+    //     "descripcion": "",
+    //     "precio": 1,
+    //     "url_image": "img/menu/escudella.jpeg",
+    //     "hora": "hora_dinar"
+    // },
+    // {
+    //     "id": 11,
+    //     "nombre": "Paella",
+    //     "descripcion": "",
+    //     "precio": 3.5,
+    //     "url_image": "img/menu/paella.jpg",
+    //     "hora": "hora_dinar"
+    // },
+    // {
+    //     "id": 12,
+    //     "nombre": "Tortilla de patatas",
+    //     "descripcion": "",
+    //     "precio": 5,
+    //     "url_image": "img/menu/tortillaPatatas.jpg",
+    //     "hora": "hora_dinar"
+    // }
+    // ];
+
+    let array_items = JSON.parse(document.getElementById("input_array_items").getAttribute("value"));
+
+    console.log(array_items);
 
     let menu_array = [];
     let fechaAhora = new Date();
@@ -249,19 +253,12 @@ window.onload = function () {
         // Obtenemos el producto ID que hay en el boton pulsado
         let id = this.getAttribute('item');
 
-        
+
         //Borramos un elemento de carrito
         const index = carrito.indexOf(id);
         if (index > -1) {
             carrito.splice(index, 1);
         }
-
-        // Borramos todos los productos
-        // carrito = carrito.filter(function (carritoId) {
-        //     return carritoId !== id;
-        // });
-
-
 
         // Calculamos de nuevo el precio
         calcularTotal();
@@ -293,7 +290,6 @@ window.onload = function () {
     function vaciarCarrito() {
         // Limpiamos los productos guardados
         carrito = [];
-
         //Calculamos de nuevo el total.
         calcularTotal();
         // Renderizamos los cambios
@@ -326,8 +322,7 @@ window.onload = function () {
         return JSON.stringify(arrayComanda);
     }
 
-    comprarElement.addEventListener('click', function () {
-        //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
+    $("#form_carrito").submit(function () {
         if (carrito.length == 0) {
             swal({
                 title: "ERROR",
@@ -335,13 +330,34 @@ window.onload = function () {
                 icon: "error",
                 button: "OK",
             });
+            return false;
         } else {
-            localStorage.setItem("carrito", prepareJson());
-            localStorage.setItem("total", total);
-            //Redireccion a finalizacion.php
-            window.location.href = "finalizacion.php";
+            // localStorage.setItem("carrito", prepareJson());
+            // localStorage.setItem("total", total);
+            // Redireccion a finalizacion.php
+            // window.location.href = "finalizacion.php";
+            document.getElementById("carrito_submit").setAttribute("value",prepareJson());
+            document.getElementById("total_submit").setAttribute("value",total);
+            return true;
         }
     });
+
+    // comprarElement.addEventListener('click', function () {
+    //     //Si carrito está vacío muestra un alert si no lo guarda en localStorage el arrayComanda y el total.
+    //     if (carrito.length == 0) {
+    //         swal({
+    //             title: "ERROR",
+    //             text: "Parece que tu cesta esta vacía. ¿De verdad que no quieres comer nada?",
+    //             icon: "error",
+    //             button: "OK",
+    //         });
+    //     } else {
+    //         localStorage.setItem("carrito", prepareJson());
+    //         localStorage.setItem("total", total);
+    //         //Redireccion a finalizacion.php
+    //         window.location.href = "finalizacion.php";
+    //     }
+    // });
 
     //Para vaciar el carrito.
     botonVaciar.addEventListener('click', vaciarCarrito);

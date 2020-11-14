@@ -1,6 +1,10 @@
 window.onload = function () {
-    let comandaArray = localStorage.getItem("carrito");
-    let total = localStorage.getItem("total");
+
+    // let comandaArray = localStorage.getItem("carrito");
+    // let total = localStorage.getItem("total");
+    
+    let comandaArray=document.getElementById("carrito_submit").getAttribute("value");
+    let total = parseFloat(document.getElementById("total_submit").getAttribute("value"));
 
     let comandaArrayJSON = JSON.parse(comandaArray);
 
@@ -43,7 +47,7 @@ window.onload = function () {
     tablaHTML += "Total:"
     tablaHTML += "</td>"
     tablaHTML += "<td style='text-align: right;'>"
-    tablaHTML += localStorage.getItem("total");
+    tablaHTML += total;
     tablaHTML += "€"
     tablaHTML += "</td>"
     tablaHTML += "</tr>";
