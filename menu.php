@@ -7,29 +7,22 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <?php include("include/includes.inc") ?>
-
     <script type="text/javascript" src="js/menu.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
 
 <body>
-
     <?php
     if (isset($_COOKIE['fecha'])) {
         header("Location: ./error.php");
         die();
     }
-
     ?>
-
     <!-- HEADER -->
-    <header id="hindex">
-        <!-- <div style="position: fixed; width: 100%"> -->
-        <?php include("include/header.php"); ?>
+    <?php include("include/header.php"); ?>
 
-    </header>
     <div style="background-color: #E8E1D3;">
 
         <div style="display: flex;">
@@ -37,7 +30,6 @@ ob_start();
             <div class="container">
                 <h1 style="text-align: center; padding-bottom: 20px;">MENÚ</h1>
                 <div class="row">
-
                     <div id="items" class="col-md-12 row"></div>
                 </div>
             </div>
@@ -45,7 +37,7 @@ ob_start();
             <aside id="mySidebar" class="sidebar col-md-4">
                 <div>
                     <!-- <span style="font-size: 48px;">Carrito</span> -->
-                    <button id="botonVaciar" class="btn btn-danger" style="float: right; margin-top: 15px;"><i style="background-color:transparent;height:auto;" class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
+                    <button id="botonVaciar" class="btn btn-danger"><i style="background-color:transparent;height:auto;" class="fa fa-trash" aria-hidden="true" style="color: white;"></i></button>
                 </div>
                 <div>
                     <div id="carrito" style="padding: 25px;"></div>
@@ -58,11 +50,7 @@ ob_start();
     </div>
 
     <!-- FOOTER -->
-    <footer id="findex">
-
-        <?php include("include/footer.php"); ?>
-
-    </footer>
+    <?php include("include/footer.php"); ?>
 </body>
 
 </html>

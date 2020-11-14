@@ -8,6 +8,7 @@ ob_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include("include/includes.inc") ?>
+
     <title>Bienvenido</title>
 </head>
 
@@ -73,7 +74,7 @@ ob_start();
             <div class="d-flex justify-content-around">
                 <div class="p-2">
                     <img class="imagenesCarta" src="img/menu/cafe.jpg" alt="Café" width="300px" height="300px">
-                    <div class="cafe" style="">Café</div>
+                    <div class="cafe">Café</div>
                 </div>
                 <div class="p-2">
                     <img class="imagenesCarta" src="img/menu/sopa.jpg" alt="Sopa" width="300px" height="300px">
@@ -89,5 +90,5 @@ ob_start();
 
     <!-- FOOTER -->
     <?php include("include/footer.php"); ?>
-    
+
 </body>

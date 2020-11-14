@@ -143,25 +143,12 @@ div{
     color: black;
 }
 
-/* #comprar{
-    background-color: #9C917E;
-    color: white;
-    border: none;
-}
-
-#comprar:hover {
-    background-color: #E8E1D3;
-    color: black;
-} */
-
-/* .fa-lock:hover{
-    color: black !important;
-} */
-
 #botonVaciar{
     background-color: red;
     color: white;
     border: none;
+    float: right;
+    margin-top: 15px;
 }
 
 /* finalizacion.php ************************************************************************************/
