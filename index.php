@@ -7,8 +7,8 @@ ob_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php include("include/includes.inc") ?>
 
+    <?php include("include/includes.inc") ?>
     <title>Bienvenido</title>
 </head>
 
@@ -30,10 +30,9 @@ ob_start();
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner" style="height: 500px;">
-                <div class="item active">
+                <div class="item active" style="align-content: center;">
                     <img src="img/index/entradaCantina.jpg" alt="Entrada" class="imagenesSlider">
                 </div>
-
                 <div class="item">
                     <img src="img/index/recepcionCantina.jpg" alt="Recepcion" class="imagenesSlider">
                 </div>

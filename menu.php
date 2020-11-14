@@ -22,7 +22,7 @@ ob_start();
 
     require_once("array_items.php");
 
-    echo("<input id='input_array_items' type='hidden' value='". $array_items_json ."'");
+    echo ("<input id='input_array_items' type='hidden' value='" . $array_items_json . "'");
 
     ?>
     <!-- HEADER -->
@@ -51,10 +51,8 @@ ob_start();
                     <form action="finalizacion.php" method="POST" id="form_carrito">
                         <input id="carrito_submit" name="carrito_submit" type="hidden" value="">
                         <input id="total_submit" name="total_submit" type="hidden" value="">
-                        <input type="submit">
-
+                        <input type="submit" class="fa fa-lock" style="width: 100%;" value="Finalizar compra">
                     </form>
-                    <!-- <button id="comprar" class="fa fa-lock" style="width: 100%;"><span style="margin-left:20px;">Finalizar compra</span></button> -->
                 </div>
             </aside>
         </div>
